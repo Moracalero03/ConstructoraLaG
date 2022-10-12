@@ -12,6 +12,11 @@
         <title>JSP Page</title>
     </head>
     <body>
+<<<<<<< HEAD
         <h1>Prueba Paul</h1>
+=======
+        <h1>Prueba Final</h1>
+<%@include file="template/pie.jsp"%>
     </body>
+    
 </html>

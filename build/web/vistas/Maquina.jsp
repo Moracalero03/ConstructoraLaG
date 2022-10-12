@@ -1,7 +1,7 @@
 <%-- 
-    Document   : index
-    Created on : 10-12-2022, 10:10:46 AM
-    Author     : marce
+    Document   : Maquina
+    Created on : 12 oct. 2022, 11:25:45
+    Author     : Ernesto Navarro
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,11 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-<<<<<<< HEAD
-        <h1>Prueba Paul</h1>
-=======
-        <h1>Prueba Final</h1>
-<%@include file="template/pie.jsp"%>
+        <h1>Hello World!</h1>
     </body>
-    
 </html>
