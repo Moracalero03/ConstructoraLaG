@@ -12,7 +12,8 @@
         <title>Inicio</title> 
     </head>
     <body>  
-        <%@include file="template/menu.jsp"%>
+        <%@include file="template/menu.jsp"%> 
+        
         <center><h1>"Constructora La Gerencia"</h1></center> 
         <div class="container-fluid">
             <div class="row mb-3 justify-content-center">
@@ -93,5 +94,7 @@
                  </div> 
             </div>
         </div> 
+
     </body>
+    <jsp:include page="template/pie.jsp"/>
 </html>
