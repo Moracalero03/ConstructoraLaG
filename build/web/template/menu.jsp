@@ -18,16 +18,48 @@
     </script>
 </head>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Sistema de gestion</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+ <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+  <a class="navbar-brand" href="#"><img src="${pageContext.servletContext.contextPath}/img/logo.png" width="120px" height="40px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-    <a class="nav-item nav-link" href="${pageContext.servletContext.contextPath}/Inicio.jsp">Inicio</a>
-    <a class="nav-item nav-link" href="${pageContext.servletContext.contextPath}/vistas/departamento.jsp">Departamentos</a>
-      <a class="nav-item nav-link" href="${pageContext.servletContext.contextPath}/vistas/empleado.jsp">Empleados</a>
-    </div>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="${pageContext.servletContext.contextPath}/index.jsp">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Empleado</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Proyecto</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Maquina</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Reportes
+        </a> 
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Reporte 1</a>
+          <a class="dropdown-item" href="#">Reporte 2</a>
+          <a class="dropdown-item" href="#">Reporte 3</a>
+          <a class="dropdown-item" href="#">Reporte 4</a>
+          <a class="dropdown-item" href="#">Reporte 5</a>
+        </div>
+      </li>            
+    </ul> <lu class="navbar-nav col-2">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Usuario
+        </a>
+          
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Cerrar sesión</a>
+        </div>
+      </li>
+    </lu>   
   </div>
-</nav>
+ </nav>
