@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
+        <%@include file="template/menu.jsp"  %>
     <body>
         <h1>Prueba Final</h1>
     </body>
