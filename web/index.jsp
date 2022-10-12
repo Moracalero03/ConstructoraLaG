@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Prueba Ernesto</h1>
+        <h1>Prueba Final</h1>
     </body>
 </html>
