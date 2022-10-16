@@ -94,7 +94,6 @@
                  </div> 
             </div>
         </div> 
-
     </body>
     <jsp:include page="template/pie.jsp"/>
 </html>
