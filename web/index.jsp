@@ -11,13 +11,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Inicio</title> 
     </head>
-    <body>  
+    <body  style="background-color: #EFF0EB">  
         <%@include file="template/menu.jsp"%> 
         
+        <br>
         <center><h1>"Constructora La Gerencia"</h1></center> 
         <div class="container-fluid">
             <div class="row mb-3 justify-content-center">
-                <div class="col-6 ">
+                <div class="col-6">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
@@ -27,7 +28,7 @@
                             <img src="img/construccion2.jpg" class="d-block w-90" alt="construccion" width="750px" height="375px">
                           </div>
                           <div class="carousel-item">
-                            <img src="img/casa.jpg" class="d-block w-90" alt="..." width="750px" height="375px">
+                            <img src="img/casa.jpg" class="d-block w-90" alt="construccion" width="750px" height="375px">
                           </div>
                         </div>
                        <button class="carousel-control-prev" style="background-color: transparent ;border: none;" type="button" data-target="#carouselExampleControls" data-slide="prev">
@@ -42,7 +43,7 @@
                 </div>
             </div>
             <div class="row">
-                 <div class="col-6">
+                 <div class="col-12">
                     <div class="card border-secondary mb-3">
                         <div class="card-header" style="background-color: #B6E6E9;">
                           MISIÓN
@@ -57,7 +58,10 @@
                         </div>
                     </div> 
                  </div> 
-                <div class="col-6">
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
                      <div class="card border-secondary mb-3">
                         <div class="card-header" style="background-color: #F5BA8C;">
                           VALORES
@@ -78,7 +82,6 @@
                     </div>
                  </div>
             </div>
-
             
              <div class="row"> 
                  <div class="col-12">
