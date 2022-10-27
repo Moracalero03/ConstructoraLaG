@@ -39,7 +39,7 @@ public class MaquinasServlet extends HttpServlet {
             String marca = request.getParameter("txtMarca");
             String tipo = request.getParameter("txtTipo");
             double operativo = Double.parseDouble(request.getParameter("txtOperatividad"));
-            String estado = request.getParameter("txtEstado");
+            String estado = request.getParameter("sEstado");
             
             Maquinaria maquinaria = new Maquinaria(idMaquinaria, nombre, modelo, marca, tipo, operativo, estado);
             MaquinariaDAO maquinariaDAO = new MaquinariaDAO();

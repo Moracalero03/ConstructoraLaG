@@ -28,7 +28,8 @@ function llenarFormulario(fila){
     $('#txtMarca').val(marca);
     $('#txtTipo').val(tipo);
     $('#txtOperatividad').val(Operativo);
-    $('#txtEstado').val(estado);
+    //$('#txtEstado').val(estado);
+    $('#sEstado option:contains('+estado+')').attr('selected',true);
     
 }
 

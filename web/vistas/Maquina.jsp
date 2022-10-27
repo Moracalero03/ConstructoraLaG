@@ -24,7 +24,7 @@
             <center><h1>Maquina</h1> </center>
             <div class="row m-4 justify-content-center">
             <div class="col mt-4>"> 
-                <button type="button" onclick="limpiarFormulario()" value="Limpiar formulario" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlMaquina">Agregar maquinaria</button>
+                <button type="button" value="Limpiar formulario" onclick="limpiarFormulario()" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlMaquina">Agregar maquinaria</button>
                 <br>
         <table id="tblMaquina" class="table table-light table-bordered" style="width:100%">
             <thead class="thead-dark">
@@ -73,11 +73,11 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">Jugador</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" onclick="limpiarFormulario()" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <form action="${pageContext.servletContext.contextPath}/MaquinasServlet" method="POST">
+                        <form action="${pageContext.servletContext.contextPath}/MaquinasServlet" method="POST" id="modalM">
                             <div class="modal-body">
                                 ID Maquinaria
                                 <input type="number" name="txtIdM" id="txtIdM" class="form-control" value="0" readonly>
@@ -92,10 +92,17 @@
                                 Operatividad
                                 <input type="text" name="txtOperatividad" id="txtOperatividad" class="form-control">
                                 Estado
-                                <input type="text" name="txtEstado" id="txtEstado" class="form-control">
+                                <!--<input type="text" name="txtEstado" id="txtEstado" class="form-control">-->
+                                <select name="sEstado" id="sEstado" class="form-control">
+                                 <option value="Ingresado">Ingresado</option>
+                                 <option value="Confirmado">Confirmado</option>
+                                 <option value="Entregado">Entregado</option>
+                                 <option value="Cancelado">Cancelado</option>   
+                             </select>
+                                </select>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button class="btn btn-secondary" data-dismiss="modal" onclick="limpiarFormulario()">Cerrar</button>
                                 <button class="btn btn-primary" name="btnAgregar" id="btnAgregar">Agregar</button>
                                 <button class="btn btn-warning" name="btnEditar" id="btnEditar">Editar</button>
                                 <button class="btn btn-danger" name="btnEliminar" id="btnEliminar">Eliminar</button>
