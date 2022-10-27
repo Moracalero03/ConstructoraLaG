@@ -4,6 +4,8 @@
  */
 package com.controlador;
 
+import com.modelo.Maquinaria;
+import com.modelo.MaquinariaDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -30,16 +32,33 @@ public class MaquinasServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet MaquinasServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet MaquinasServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            /* captura de datos */
+            int idMaquinaria = Integer.parseInt(request.getParameter("txtIdM"));
+            String nombre = request.getParameter("txtNombreM");
+            String modelo = request.getParameter("txtModelo");
+            String marca = request.getParameter("txtMarca");
+            String tipo = request.getParameter("txtTipo");
+            double operativo = Double.parseDouble(request.getParameter("txtOperatividad"));
+            String estado = request.getParameter("txtEstado");
+            
+            Maquinaria maquinaria = new Maquinaria(idMaquinaria, nombre, modelo, marca, tipo, operativo, estado);
+            MaquinariaDAO maquinariaDAO = new MaquinariaDAO();
+            //CRUD
+            String mensaje="";
+            if (request.getParameter("btnAgregar")!=null) {
+                int res = maquinariaDAO.insertarMaquinaria(maquinaria);
+                mensaje = (res!=0)?"Maquinaria insertada":"Error";
+            }else if (request.getParameter("btnEditar")!=null) {
+                int res = maquinariaDAO.modificarMaquinaria(maquinaria);
+                mensaje = (res!=0)?"Maquinaria actualizada":"Error";
+            }else if (request.getParameter("btnEliminar")!=null) {
+                int res = maquinariaDAO.eliminarMaquinaria(maquinaria);
+                mensaje = (res!=0)?"Maquinaria Eliminada":"Error";
+            }
+            //enviar data a la vista
+            request.setAttribute("mensaje", mensaje);
+            //redirecionar
+            request.getRequestDispatcher("/vistas/Maquina.jsp").forward(request, response);
         }
     }
 
