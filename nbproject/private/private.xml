@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Ernesto%20Navarro/Desktop/CICLO%20II%202022/DESARROLLO%20DE%20APLICACIONES%20USANDO%20TECNOLOGIAS%20EMERGENTES/Proyecto/ConstructoraLaG/web/vistas/Proyecto.jsp</file>
+            <file>file:/C:/Users/Ernesto%20Navarro/Desktop/CICLO%20II%202022/DESARROLLO%20DE%20APLICACIONES%20USANDO%20TECNOLOGIAS%20EMERGENTES/Proyecto/ConstructoraLaG/src/java/com/modelo/Detalle_ProyectoDAO.java</file>
+            <file>file:/C:/Users/Ernesto%20Navarro/Desktop/CICLO%20II%202022/DESARROLLO%20DE%20APLICACIONES%20USANDO%20TECNOLOGIAS%20EMERGENTES/Proyecto/ConstructoraLaG/src/java/com/controlador/MaquinasServlet.java</file>
+            <file>file:/C:/Users/Ernesto%20Navarro/Desktop/CICLO%20II%202022/DESARROLLO%20DE%20APLICACIONES%20USANDO%20TECNOLOGIAS%20EMERGENTES/Proyecto/ConstructoraLaG/src/java/com/controlador/ProyectoServlet.java</file>
+            <file>file:/C:/Users/Ernesto%20Navarro/Desktop/CICLO%20II%202022/DESARROLLO%20DE%20APLICACIONES%20USANDO%20TECNOLOGIAS%20EMERGENTES/Proyecto/ConstructoraLaG/src/java/com/modelo/Maquinaria.java</file>
         </group>
     </open-files>
 </project-private>
