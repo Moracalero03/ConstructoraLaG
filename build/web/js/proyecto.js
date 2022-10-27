@@ -4,7 +4,9 @@ $('body').on('click', '#modificar', function(){
 
 $('body').on('click', '#eliminar', function (){
     llenarFormulario($(this).closest("tr"));
-});
+}); 
+
+//limpiar formulario
 $("#mdlProyecto").on('hide.bs.model', function (){
    $('#mdlProyecto input').val("");
    $("#txtId").val(0);
