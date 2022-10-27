@@ -2,10 +2,21 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Ernesto%20Navarro/Desktop/CICLO%20II%202022/DESARROLLO%20DE%20APLICACIONES%20USANDO%20TECNOLOGIAS%20EMERGENTES/Proyecto/ConstructoraLaG/web/vistas/Proyecto.jsp</file>
+=======
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/modelo/Maquinaria.java</file>
+            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/conexion/Conexion.java</file>
+            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/controlador/MaquinasServlet.java</file>
+            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/modelo/MaquinariaDAO.java</file>
+            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/js/Maquina.js</file>
+            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/vistas/Maquina.jsp</file>
+>>>>>>> 954ee2940a1cb861f0035cbcbad3055c87b8c237
         </group>
     </open-files>
 >>>>>>> 98033f8129c641dcb30561b63d44f4b6f44413a8
