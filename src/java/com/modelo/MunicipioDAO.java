@@ -8,6 +8,7 @@ package com.modelo;
 import com.conexion.Conexion;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -15,12 +16,13 @@ import java.util.ArrayList;
  * @author Josue Palacios - The Big Pili - Eriatsu Slorzan
  */
 public class MunicipioDAO extends Conexion{
+   
     
-    public ArrayList<Municipio> mostrarMunicipio(){
+    public ArrayList<Municipio> mostrarMunicipio(int idDepartamento){
         ArrayList<Municipio> listaMun = new ArrayList<>();
         try {
             this.conectar();  
-            String sql = "select * from municipio"; 
+            String sql = ("select * from municipio where idDepartamento = " + idDepartamento); 
             PreparedStatement pre = this.getCon().prepareStatement(sql);
             ResultSet rs = pre.executeQuery();
             
@@ -32,7 +34,7 @@ public class MunicipioDAO extends Conexion{
                
                listaMun.add(m);
             }
-        } catch (Exception e) { 
+        } catch (SQLException e) { 
             System.out.println("Error al mostrar: "+ e.getMessage());
         } 
         
