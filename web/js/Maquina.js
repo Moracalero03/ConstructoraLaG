@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/JavaScript.js to edit this template
  */
 
-
+alert("Bienvenido");
 $('body').on('click','#editar', function(){
     llenarFormulario($(this).closest('tr'))
 });

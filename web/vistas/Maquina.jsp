@@ -14,13 +14,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Maquina</title>
     </head>
-    <body>
+    <body> 
         <%!
             MaquinariaDAO maquinariaDAO = new MaquinariaDAO();
         %>
         <%@include file="../template/menu.jsp" %>
         <div class="container-fluid">
-            <br>
+             <br>
             <center><h1>Maquina</h1> </center>
             <div class="row m-4 justify-content-center">
             <div class="col mt-4>"> 
@@ -43,20 +43,20 @@
                     <%
                         ArrayList<Maquinaria> listaMaquinaria = maquinariaDAO.mostrarMaquinaria();
                         for (Maquinaria elem : listaMaquinaria) {
-                    %>            
+                    %>                 
                             
                     
                     <tr>
-                        <td><%=elem.getIdMaquinaria() %></td>
+                        <td><%=elem.getIdMaquinaria()%></td>
                         <td><%=elem.getMaquinaria() %></td>
                         <td><%=elem.getModelo() %></td>
-                        <td><%=elem.getMarca()%></td>
-                        <td><%=elem.getTipo()%></td>
-                        <td>$ <%=elem.getOperatividad()%></td>
-                        <td><%=elem.getEstado()%></td> 
+                        <td><%=elem.getMarca() %></td>
+                        <td><%=elem.getTipo() %></td>
+                        <td><%=elem.getOperatividad() %></td>
+                        <td><%=elem.getEstado() %></td>
                         <td>
                             <div class="btn-group">
-                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#mdlMaquina" id="editar">Editar</button>
+                                <button type="button" class="btn" style="background:#F4D859" data-toggle="modal" data-target="#mdlMaquina" id="editar">Editar</button>
                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#mdlMaquina" id="eliminar">Eliminar</button>
                             </div>
                         </td>
@@ -65,21 +65,22 @@
                         }
                     %>
                 </tbody>
-    </table> 
-                
-                    <div class="modal" tabindex="-1" role="dialog" id="mdlMaquina">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Maquinaria CRUD</h5>
+            </table>
+
+            <!-- Modal para agregar-->
+             <div class="modal" tabindex="-1" role="dialog" id="mdlMaquina">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Jugador</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true">&times;</span>
                             </button>
-                          </div>
-                            <form action="${pageContext.servletContext.contextPath}/MaquinasServlet" method="POST" id="modalM">
-                          <div class="modal-body">
+                        </div>
+                        <form action="${pageContext.servletContext.contextPath}/MaquinasServlet" method="POST">
+                            <div class="modal-body">
                                 ID Maquinaria
-                                <input type="text" name="txtIdM" id="txtIdM" class="form-control" value="0" readonly>
+                                <input type="number" name="txtIdM" id="txtIdM" class="form-control" value="0" readonly>
                                 Maquinaria
                                 <input type="text" name="txtNombreM" id="txtNombreM" class="form-control">
                                 Modelo
@@ -92,23 +93,21 @@
                                 <input type="text" name="txtOperatividad" id="txtOperatividad" class="form-control">
                                 Estado
                                 <input type="text" name="txtEstado" id="txtEstado" class="form-control">
-                          </div>
-                          <div class="modal-footer">
-                              <button type="submit" class="btn btn-success" id="btnGuardar" name="btnGuardar" class="form-control">Guardar</button>
-                            <button type="submit" class="btn btn-warning" id="btnModificar" name="btnModificar" class="form-control">Modificar</button> 
-                            <button type="submit" class="btn btn-danger" id="btnEliminar" name="btnEliminar" class="form-control">Eliminar</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          </div>
-                            </form>
-                        </div>
-                      </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button class="btn btn-primary" name="btnAgregar" id="btnAgregar">Agregar</button>
+                                <button class="btn btn-warning" name="btnEditar" id="btnEditar">Editar</button>
+                                <button class="btn btn-danger" name="btnEliminar" id="btnEliminar">Eliminar</button>
+                            </div>
+                        </form>
                     </div>
-            </div>
+                </div>
             </div>
         </div>
-               
-        
-        <script>
+            </div>
+        </div>
+         <script>
             $(document).ready(function () {
                 $('#tblMaquina').DataTable({
                      "language": {

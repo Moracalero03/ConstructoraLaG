@@ -45,15 +45,15 @@ public class MaquinasServlet extends HttpServlet {
             MaquinariaDAO maquinariaDAO = new MaquinariaDAO();
             //CRUD
             String mensaje="";
-            if (request.getParameter("btnGuardar")!=null) {
+            if (request.getParameter("btnAgregar")!=null) {
                 int res = maquinariaDAO.insertarMaquinaria(maquinaria);
-                mensaje = (res!=0)?"Maquinaria insertado":"Error";
-            }else if (request.getParameter("btnModificar")!=null) {
+                mensaje = (res!=0)?"Maquinaria insertada":"Error";
+            }else if (request.getParameter("btnEditar")!=null) {
                 int res = maquinariaDAO.modificarMaquinaria(maquinaria);
-                mensaje = (res!=0)?"Maquinaria actualizado":"Error";
+                mensaje = (res!=0)?"Maquinaria actualizada":"Error";
             }else if (request.getParameter("btnEliminar")!=null) {
                 int res = maquinariaDAO.eliminarMaquinaria(maquinaria);
-                mensaje = (res!=0)?"Maquinaria Eliminado":"Error";
+                mensaje = (res!=0)?"Maquinaria Eliminada":"Error";
             }
             //enviar data a la vista
             request.setAttribute("mensaje", mensaje);
