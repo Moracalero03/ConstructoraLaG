@@ -37,7 +37,7 @@
         <a class="nav-link" href="#">Empleado</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Proyecto</a>
+        <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Proyecto.jsp">Proyecto</a>
       </li>
       <li class="nav-item">
           <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Maquina.jsp">Maquina</a>

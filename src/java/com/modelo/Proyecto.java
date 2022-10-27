@@ -9,19 +9,32 @@ package com.modelo;
  * @author Ernesto Navarro
  */
 public class Proyecto {
-    private int idProyecto;
-    private int idMunicipio;
-    private String proyecto;
-    private String municipio;
+
+private int idProyecto;
+private String proyecto;
+private int idMunicipio;
+private String municipio;
+private String estadoP;
+private String comentario;
+private double costoInicial;
+private double costoFinal;
+private String fechaInicio;
+private String fechaFinal;
 
     public Proyecto() {
     }
 
-    public Proyecto(int idProyecto, int idMunicipio, String proyecto, String municipio) {
+    public Proyecto(int idProyecto, String proyecto, int idMunicipio, String municipio, String estadoP, String comentario, double costoInicial, double costoFinal, String fechaInicio, String fechaFinal) {
         this.idProyecto = idProyecto;
-        this.idMunicipio = idMunicipio;
         this.proyecto = proyecto;
+        this.idMunicipio = idMunicipio;
         this.municipio = municipio;
+        this.estadoP = estadoP;
+        this.comentario = comentario;
+        this.costoInicial = costoInicial;
+        this.costoFinal = costoFinal;
+        this.fechaInicio = fechaInicio;
+        this.fechaFinal = fechaFinal;
     }
 
     public int getIdProyecto() {
@@ -32,20 +45,20 @@ public class Proyecto {
         this.idProyecto = idProyecto;
     }
 
-    public int getIdMunicipio() {
-        return idMunicipio;
-    }
-
-    public void setIdMunicipio(int idMunicipio) {
-        this.idMunicipio = idMunicipio;
-    }
-
     public String getProyecto() {
         return proyecto;
     }
 
     public void setProyecto(String proyecto) {
         this.proyecto = proyecto;
+    }
+
+    public int getIdMunicipio() {
+        return idMunicipio;
+    }
+
+    public void setIdMunicipio(int idMunicipio) {
+        this.idMunicipio = idMunicipio;
     }
 
     public String getMunicipio() {
@@ -55,6 +68,57 @@ public class Proyecto {
     public void setMunicipio(String municipio) {
         this.municipio = municipio;
     }
+
+    public String getEstadoP() {
+        return estadoP;
+    }
+
+    public void setEstadoP(String estadoP) {
+        this.estadoP = estadoP;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
+
+    public double getCostoInicial() {
+        return costoInicial;
+    }
+
+    public void setCostoInicial(double costoInicial) {
+        this.costoInicial = costoInicial;
+    }
+
+    public double getCostoFinal() {
+        return costoFinal;
+    }
+
+    public void setCostoFinal(double costoFinal) {
+        this.costoFinal = costoFinal;
+    }
+
+    public String getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public void setFechaInicio(String fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public String getFechaFinal() {
+        return fechaFinal;
+    }
+
+    public void setFechaFinal(String fechaFinal) {
+        this.fechaFinal = fechaFinal;
+    }
+
+
+
 
     
               
