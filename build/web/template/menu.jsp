@@ -34,7 +34,7 @@
         <a class="nav-link" href="${pageContext.servletContext.contextPath}/index.jsp">Inicio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Empleado</a>
+        <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Empleado.jsp">Empleado</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Proyecto.jsp">Proyecto</a>

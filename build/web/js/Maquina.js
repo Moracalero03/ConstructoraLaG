@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/JavaScript.js to edit this template
  */
 
-alert("Bienvenido");
+//alert("Bienvenido");
 $('body').on('click','#editar', function(){
     llenarFormulario($(this).closest('tr'))
 });
@@ -11,7 +11,9 @@ $('body').on('click','#editar', function(){
 $('body').on('click','#eliminar', function(){
     llenarFormulario($(this).closest('tr'))
 });
-
+function limpiarFormulario() {
+    document.getElementById("modalM").reset();
+  }
 
 function llenarFormulario(fila){
     var codigo = $(fila).children('td:eq(0)').html();
@@ -33,6 +35,3 @@ function llenarFormulario(fila){
     
 }
 
-function limpiarFormulario() {
-    document.getElementById("modalM").reset();
-  }

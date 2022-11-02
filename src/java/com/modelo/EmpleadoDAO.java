@@ -15,6 +15,11 @@ import java.util.ArrayList;
  * @author canel
  */
 public class EmpleadoDAO extends Conexion {
+    
+    
+    //funcion para insertar imagen
+
+    
     public int insertarEmpleado(Empleado em){
     int res =0;
         try {
@@ -26,7 +31,7 @@ public class EmpleadoDAO extends Conexion {
             pre.setString(3, em.getUsuario());
             pre.setString(4, em.getPassword());
             pre.setDouble(5, em.getSalario());
-            pre.setBlob(6, em.getArchivoimg());
+            pre.setString(6, em.getRuta());
             pre.setString(7, em.getEstadoE());
             
              res= pre.executeUpdate();
@@ -38,6 +43,8 @@ public class EmpleadoDAO extends Conexion {
         return res;
     
     }
+    
+    
     
     public ArrayList<Empleado>mostrarEmpleados(){
         ArrayList<Empleado> lista = new ArrayList<>();
@@ -55,7 +62,7 @@ public class EmpleadoDAO extends Conexion {
                 c.setUsuario(rs.getString(4));
                 c.setPassword(rs.getString(5));
                 c.setSalario(rs.getDouble(6));
-                c.setArchivoimg2(rs.getBytes(7));
+                c.setRuta(rs.getString(7));
                 c.setEstadoE(rs.getString(8));
                 c.setRol(rs.getString(10));
                 lista.add(c);
@@ -69,18 +76,24 @@ public class EmpleadoDAO extends Conexion {
     }
     
     
+    
+    
+    
+    
+    
     public int modificarEmpleado(Empleado c){
     int res = 0;
         try {
             this.conectar();
             String sql = "UPDATE empleado SET idRol=?, empleado=?, usuario=?, contraseña=?, salario=?, foto=?, estadoE=? WHERE idEmpleado=?";
             PreparedStatement pre = this.getCon().prepareStatement(sql);
+            
             pre.setInt(1, c.getIdRol());
             pre.setString(2, c.getEmpleado());
             pre.setString(3, c.getUsuario());
             pre.setString(4, c.getPassword());
             pre.setDouble(5, c.getSalario());
-            pre.setBlob(6, c.getArchivoimg());
+            pre.setString(6, c.getRuta());
             pre.setString(7, c.getEstadoE());
             pre.setInt(8, c.getIdEmpleado());
             
@@ -94,27 +107,9 @@ public class EmpleadoDAO extends Conexion {
         return res;
     }
     
-    public int modificarEmpleado2(Empleado c){
-    int res = 0;
-        try {
-            this.conectar();
-            String sql = "UPDATE empleado SET empleado=? WHERE idEmpleado=?";
-            PreparedStatement pre = this.getCon().prepareStatement(sql);
-            pre.setString(1, c.getEmpleado());
-            pre.setInt(2, c.getIdEmpleado());
-            
-            res= pre.executeUpdate();
-        } catch (Exception e) {
-            System.out.println("Error al mostrar wacha: "+e.getMessage());
-
-        } finally {
-            this.desconectar();
-        }
-        return res;
-    }
     
     
-    public int eliminarJugador(Empleado c){
+    public int eliminarEmpleado(Empleado c){
         int res = 0;
             try {
                 this.conectar();
@@ -131,42 +126,5 @@ public class EmpleadoDAO extends Conexion {
             }
             return res;
     }
-    
-    
-    public Empleado getImagenVOById(int studentId) {
-        Empleado vo = new Empleado();
-        Conexion db = new Conexion();
-        PreparedStatement preparedStatement = null;
-        ResultSet rs = null;
-        String query = "SELECT * FROM empleado WHERE idEmpleado = ?;";
-        try {
-            preparedStatement = db.getCon().prepareStatement(query);
-            preparedStatement.setInt(1, studentId);
-            rs = preparedStatement.executeQuery();
-            while (rs.next()) {
-            vo.setIdRol(rs.getInt(1));
-            vo.setEmpleado(rs.getString(2));
-            vo.setUsuario(rs.getString(3));
-            vo.setPassword(rs.getString(4));
-            vo.setSalario(rs.getDouble(5));
-            vo.setArchivoimg2(rs.getBytes(6));
-            vo.setEstadoE(rs.getString(7));
-            vo.setIdEmpleado(rs.getInt(8));
-            }
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        } finally {
-            try {
-                rs.close();
-                preparedStatement.close();
-                db.desconectar();
-            } catch (Exception ex) {
-            }
-        }
-        return vo;
-    }
-
     
 }

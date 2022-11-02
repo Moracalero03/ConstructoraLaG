@@ -72,7 +72,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Jugador</h5>
+                            <h5 class="modal-title">Maquinaria</h5>
                             <button type="button" onclick="limpiarFormulario()" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -94,10 +94,8 @@
                                 Estado
                                 <!--<input type="text" name="txtEstado" id="txtEstado" class="form-control">-->
                                 <select name="sEstado" id="sEstado" class="form-control">
-                                 <option value="Ingresado">Ingresado</option>
-                                 <option value="Confirmado">Confirmado</option>
-                                 <option value="Entregado">Entregado</option>
-                                 <option value="Cancelado">Cancelado</option>   
+                                 <option value="Disponible">Disponible</option>
+                                 <option value="Asignado">Asignado</option>   
                              </select>
                                 </select>
                             </div>

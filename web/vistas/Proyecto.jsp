@@ -20,7 +20,6 @@
           <%!
             ProyectoDAO proyectoDAO = new ProyectoDAO();
             MunicipioDAO municipioDAO = new MunicipioDAO();
-
             %>
         <%@include file="../template/menu.jsp" %>
         <div class="container-fluid">
