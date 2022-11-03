@@ -20,7 +20,7 @@ public class DepartamentoDAO extends Conexion{
         ArrayList<Departamento> listaDep = new ArrayList<>();
         try {
             this.conectar();  
-            String sql = "select * from departamento"; 
+            String sql = "select idDepartamento,departamento from departamento"; 
             PreparedStatement pre = this.getCon().prepareStatement(sql);
             ResultSet rs = pre.executeQuery();
             
@@ -37,4 +37,5 @@ public class DepartamentoDAO extends Conexion{
         
         return listaDep;
     }
-}
+    
+    }
