@@ -47,10 +47,10 @@
           Reportes
         </a> 
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Reporte 1</a>
-          <a class="dropdown-item" href="#">Reporte 2</a>
+          <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte1.jsp">Reporte 1</a>
+          <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte2.jsp">Reporte 2</a>
           <a class="dropdown-item" href="#">Reporte 3</a>
-          <a class="dropdown-item" href="#">Reporte 4</a>
+          <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte4.jsp">Reporte 4</a>
           <a class="dropdown-item" href="#">Reporte 5</a>
         </div>
       </li>            

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e2a8a8da-7607-4d31-bf36-5d95d52e775a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="primeraFecha" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="segundaFecha" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select idProyecto, proyecto, EstadoP as estado, costoInicial, FechaInicio from proyecto 
+where EstadoP="Confirmado" and str_to_date(  `FechaInicio`, '%d/%m/%Y') 
+between str_to_date( $P{primeraFecha}, '%d/%m/%Y') and str_to_date($P{segundaFecha}, '%d/%m/%Y') ;]]>
+	</queryString>
+	<field name="idProyecto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="proyecto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.String"/>
+	<field name="costoInicial" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FechaInicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="edf15266-c95f-42ca-9a2b-55cd744cc44c"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Reporte #1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="82" y="46" width="192" height="22" uuid="bf2b9fb3-104f-4a16-b041-316b374c82b2"/>
+				<text><![CDATA[Proyectos en ejecución]]></text>
+			</staticText>
+			<image>
+				<reportElement x="333" y="0" width="220" height="70" uuid="d2b58f7a-9e37-4b67-b497-141d4b52ca86"/>
+				<imageExpression><![CDATA["C:\\Users\\marce\\Documents\\CICLO II - 2022\\DAUTE\\PROYECTO\\Constructora\\ConstructoraLaG\\web\\img\\logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="1610dbea-88dc-486e-bf03-3148cd85c9f3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="111" height="15" uuid="964e9859-5cb0-4c5c-931c-115ee3138a5e"/>
+				<text><![CDATA[idProyecto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="111" y="19" width="111" height="15" uuid="2dcfe2be-d4d9-4e33-a5f8-f486a73d3f57"/>
+				<text><![CDATA[proyecto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="222" y="19" width="111" height="15" uuid="0bdf0ec0-1f9d-4ddf-9c19-24a05aa1c0bc"/>
+				<text><![CDATA[estado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="333" y="19" width="111" height="15" uuid="e53f59f3-1fbb-4b34-95d5-2b9a8f058fda"/>
+				<text><![CDATA[costoInicial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="444" y="19" width="111" height="15" uuid="e18fbf1f-1a17-415e-880f-0040ea9dcaa0"/>
+				<text><![CDATA[FechaInicio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="faddc70a-afbf-4879-8a7d-559c8acfadc1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="111" height="15" uuid="d7016914-1484-4d72-9caf-9a98202fdf92"/>
+				<textFieldExpression><![CDATA[$F{idProyecto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="111" y="0" width="111" height="15" uuid="e6b36e0f-1790-427c-81f2-699e9e53ec89"/>
+				<textFieldExpression><![CDATA[$F{proyecto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="222" y="0" width="111" height="15" uuid="267db7b8-4488-425f-aa5c-072689e58343"/>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="333" y="0" width="111" height="15" uuid="7325e00e-252a-4315-98bc-a293fbca6e62"/>
+				<textFieldExpression><![CDATA[$F{costoInicial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="444" y="0" width="111" height="15" uuid="7205444d-699c-4a14-bc68-ba1aa23ce435"/>
+				<textFieldExpression><![CDATA[$F{FechaInicio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="8b2fefdd-be31-4664-a6f2-674068c35f34"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="9c9b7321-98ca-427c-85c9-2215080f7c2d"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="a92211a3-11f2-4f08-8be4-5c76c3d1f078"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="94b04026-bacb-4d5e-9154-794dfb9d1506"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
