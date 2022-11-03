@@ -180,16 +180,11 @@
                               <span>Id</span>
                               <input type="number" name="txtId" data="xdsd" id="txtId" value="0" class="form-control" readonly>
                              <span>Nombre del Proyecto</span>
-                             <input type="text" name="txtProyecto" id="txtProyecto" class="form-control">
-                             Contraseña 
-                             <div class="container contenedor">
-                                  <input type="password" class="passw form-control" name="txtPassword" id="txtPassword"> 
-                              <img src="${pageContext.servletContext.contextPath}/img/Show.png" alt="" class="icon" id="Eye">
-                              </div>                                                         
+                             <input type="text" name="txtProyecto" id="txtProyecto" class="form-control">                                                         
                              <span>Municipio</span>  
                              <center>
                              <select class="sMunicipio" style="width:100%;"  name="sMunicipio" id="sMunicipio"  class="form-control">
-                                 <option value='' selected="true" style="text-align: center;">Seleccione o busque un municipio</option>
+                                 <option value='' style="text-align: center;">Seleccione o busque un municipio</option>
                                 <% 
                                         ArrayList<Municipio> lista2 = municipioDAO.mostrarMunicipios();
                                          for (Municipio elem : lista2) {
@@ -264,8 +259,7 @@
             });
      </script>
    
-     <script src="${pageContext.servletContext.contextPath}/js/Proyecto.js"></script>   
-     <script src="${pageContext.servletContext.contextPath}/js/code.js"></script>
+     <script src="${pageContext.servletContext.contextPath}/js/proyecto.js"></script>   
 
                                    <script type="text/javascript">
 	                            $(document).ready(function(){

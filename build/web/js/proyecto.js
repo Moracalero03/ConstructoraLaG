@@ -15,13 +15,15 @@ $('body').on('click', '#eliminar', function (){
     llenarFormulario($(this).closest("tr"));
 }); 
 
+
+//limpiar formulario
 $('#mdlProyecto').on('hide.bs.modal', function (event) {
     $("#mdlProyecto input").val("");
-       $("#txtId").val(0);       
+    $("#txtId").val(0);       
     $("#mdlProyecto button").prop("disabled", false);
     $("#mdlProyecto textarea").val("");
-      $('#sMunicipio').find('option:selected').attr('selected', false);
-   $('#sEstado').find('option:selected').attr('selected', false);
+    $('#sMunicipio').find('option:selected').attr('selected', false);
+    $('#sEstado').find('option:selected').attr('selected', false);
 
 });
 

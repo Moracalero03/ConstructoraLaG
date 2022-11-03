@@ -7,9 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-   
-        <!-- jQuery -->
+<!-- jQuery -->
         <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/bootstrap/select2.css">
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -24,10 +22,9 @@
     </script>
       
     
-    <!--datatable--> 
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" type="text/javascript"></script> 
+    <!--datatable-->
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet">
-    
     
     
 </head>
@@ -44,7 +41,7 @@
         <a class="nav-link" href="${pageContext.servletContext.contextPath}/index.jsp">Inicio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Empleado</a>
+        <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Empleado.jsp">Empleado</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Proyecto.jsp">Proyecto</a>

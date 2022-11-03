@@ -4,7 +4,7 @@
  */
 
 var eye = document.getElementById('Eye');
-var input = document.getElementById('txtPassword');
+var input = document.getElementById('txtContrasena');
 eye.addEventListener("click", function(){
     if (input.type === "password") {
         input.type = "text";
