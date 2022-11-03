@@ -4,7 +4,7 @@
  */
 package com.modelo;
 
-import java.io.InputStream;
+
 
 /**
  *
@@ -18,14 +18,13 @@ public class Empleado {
     private String usuario;
     private String password;
     private Double salario;
-    private InputStream archivoimg;
-    private byte[] archivoimg2;
+    private String ruta;
     private String estadoE;
 
     public Empleado() {
     }
 
-    public Empleado(int idEmpleado, int idRol, String rol, String empleado, String usuario, String password, Double salario, InputStream archivoimg, byte[] archivoimg2, String estadoE) {
+    public Empleado(int idEmpleado, int idRol, String rol, String empleado, String usuario, String password, Double salario, String ruta, String estadoE) {
         this.idEmpleado = idEmpleado;
         this.idRol = idRol;
         this.rol = rol;
@@ -33,16 +32,7 @@ public class Empleado {
         this.usuario = usuario;
         this.password = password;
         this.salario = salario;
-        this.archivoimg = archivoimg;
-        this.archivoimg2 = archivoimg2;
-        this.estadoE = estadoE;
-    }
-
-    public String getEstadoE() {
-        return estadoE;
-    }
-
-    public void setEstadoE(String estadoE) {
+        this.ruta = ruta;
         this.estadoE = estadoE;
     }
 
@@ -102,21 +92,25 @@ public class Empleado {
         this.salario = salario;
     }
 
-    public InputStream getArchivoimg() {
-        return archivoimg;
+    public String getRuta() {
+        return ruta;
     }
 
-    public void setArchivoimg(InputStream archivoimg) {
-        this.archivoimg = archivoimg;
+    public void setRuta(String ruta) {
+        this.ruta = ruta;
     }
 
-    public byte[] getArchivoimg2() {
-        return archivoimg2;
+    public String getEstadoE() {
+        return estadoE;
     }
 
-    public void setArchivoimg2(byte[] archivoimg2) {
-        this.archivoimg2 = archivoimg2;
+    public void setEstadoE(String estadoE) {
+        this.estadoE = estadoE;
     }
+
+    
+
+    
     
     
 }

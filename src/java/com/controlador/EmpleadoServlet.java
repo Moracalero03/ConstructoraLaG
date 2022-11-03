@@ -4,20 +4,28 @@
  */
 package com.controlador;
 
-import com.modelo.Maquinaria;
-import com.modelo.MaquinariaDAO;
+
+import com.modelo.Empleado;
+import com.modelo.EmpleadoDAO;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.Part;
+@MultipartConfig
 /**
  *
- * @author Ernesto Navarro
+ * @author canel
  */
-public class MaquinasServlet extends HttpServlet {
+@WebServlet(name = "EmpleadoServlet", urlPatterns = {"/EmpleadoServlet"})
+public class EmpleadoServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,33 +40,37 @@ public class MaquinasServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-            /* captura de datos */
-            int idMaquinaria = Integer.parseInt(request.getParameter("txtIdM"));
-            String nombre = request.getParameter("txtNombreM");
-            String modelo = request.getParameter("txtModelo");
-            String marca = request.getParameter("txtMarca");
-            String tipo = request.getParameter("txtTipo");
-            double operativo = Double.parseDouble(request.getParameter("txtOperatividad"));
-            String estado = request.getParameter("sEstado");
             
-            Maquinaria maquinaria = new Maquinaria(idMaquinaria, nombre, modelo, marca, tipo, operativo, estado);
-            MaquinariaDAO maquinariaDAO = new MaquinariaDAO();
-            //CRUD
-            String mensaje="";
+            /* TODO output your page here. You may use following sample code. */
+          
+          int id = Integer.parseInt(request.getParameter("txtIdEmpleado"));
+          int idRol = Integer.parseInt(request.getParameter("sRol"));
+          String empleado = request.getParameter("txtEmpleado");
+          String  usuario = request.getParameter("txtUsuario");
+          String contra =  request.getParameter("txtContrasena");
+          double salario = Double.parseDouble(request.getParameter("txtSalario"));
+           String foto = request.getParameter("txtFoto");
+          String estado = request.getParameter("sEstado");
+          
+          Empleado empleados = new Empleado(id, idRol, "", empleado, usuario, contra, salario, foto, estado);
+          EmpleadoDAO empleadoDAO = new EmpleadoDAO();
+          String mensaje="";
+          
             if (request.getParameter("btnAgregar")!=null) {
-                int res = maquinariaDAO.insertarMaquinaria(maquinaria);
-                mensaje = (res!=0)?"Maquinaria insertada":"Error";
-            }else if (request.getParameter("btnEditar")!=null) {
-                int res = maquinariaDAO.modificarMaquinaria(maquinaria);
-                mensaje = (res!=0)?"Maquinaria actualizada":"Error";
-            }else if (request.getParameter("btnEliminar")!=null) {
-                int res = maquinariaDAO.eliminarMaquinaria(maquinaria);
-                mensaje = (res!=0)?"Maquinaria Eliminada":"Error";
+               int res = empleadoDAO.insertarEmpleado(empleados);
+                      mensaje =(res!=0)?"Empleado Ingresado":"Error";    
+            }else if (request.getParameter("btnEditar")!=null){
+               int res = empleadoDAO.modificarEmpleado(empleados);
+                       mensaje =(res!=0)?"Empleado Modificado":"Error";  
+            }else if (request.getParameter("btnEliminar")!=null){
+                int res = empleadoDAO.eliminarEmpleado(empleados);
+                      mensaje =(res!=0)?"Empleado Eliminado":"Error";  
             }
-            //enviar data a la vista
-            request.setAttribute("mensaje", mensaje);
-            //redirecionar
-            request.getRequestDispatcher("/vistas/Maquina.jsp").forward(request, response);
+
+            
+            request.setAttribute("mensaje",mensaje);
+            
+            request.getRequestDispatcher("/vistas/Empleado.jsp").forward(request, response); 
         }
     }
 
