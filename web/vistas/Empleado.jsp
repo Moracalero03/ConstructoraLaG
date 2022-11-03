@@ -117,8 +117,11 @@
                                 <input type="text" name="txtEmpleado" id="txtEmpleado" class="form-control">
                                 Usuario
                                 <input type="text" name="txtUsuario" id="txtUsuario" class="form-control">
-                                Contraseña
-                                <input type="text" name="txtContrasena" id="txtContrasena" class="form-control">
+                                Contraseña 
+                                <div class="container contenedor">
+                                     <input type="password" class="passw form-control" name="txtContrasena" id="txtContrasena"> 
+                                 <img src="${pageContext.servletContext.contextPath}/img/Show.png" alt="" class="icon" id="Eye">
+                                 </div>
                                 Salario
                                 <input type="number" name="txtSalario" id="txtSalario" class="form-control">
                                 Foto<br>
@@ -145,7 +148,11 @@
         </div>
             </div>
         </div>
-         <script>
+         
+        <jsp:include page="../template/pie.jsp"/>
+
+    </body> 
+    <script>
             $(document).ready(function () {
                 $('#tblMaquina').DataTable({
                      "language": {
@@ -154,6 +161,8 @@
             });
         </script>
         <script src="${pageContext.servletContext.contextPath}/js/Empleados.js"></script>
+        <script src="${pageContext.servletContext.contextPath}/js/code.js"></script>
+
                 <%
             if (request.getAttribute("mensaje")!=null) {
                 %>  
@@ -161,6 +170,4 @@
                 <%
                 }
                 %>
-                <jsp:include page="../template/pie.jsp"/>
-    </body>  
 </html>

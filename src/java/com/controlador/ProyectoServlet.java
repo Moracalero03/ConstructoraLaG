@@ -55,7 +55,7 @@ public class ProyectoServlet extends HttpServlet {
                        mensaje =(res!=0)?"Proyecto Modificado":"Error";  
             }else if (request.getParameter("btnEliminar")!=null){
                 int res = proyectoDAO.eliminarProyecto(proyectos);
-                      mensaje =(res!=0)?"Proyecto Eliminado":"Error";  
+                      mensaje =(res!=0)?"Proyecto Eliminado":"La Marce dice que no";  
             }
 
             
