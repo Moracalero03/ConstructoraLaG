@@ -47,7 +47,8 @@ function llenarFormulario(fila){
     $('#txtCostoF').val(costoF);
     $('#txtFechaI').val(fechaI);
     $('#txtFechaF').val(fechaF);
-}
+} 
+
 
 function agregar(){    
     jQuery( document ).ready(function() { 

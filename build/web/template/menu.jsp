@@ -24,8 +24,18 @@
     
     <!--datatable-->
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" type="text/javascript"></script>
-    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet"> 
     
+    <!--    validetta-->
+    <script src="${pageContext.servletContext.contextPath}/bootstrap/validetta/validetta.min.js" type="text/javascript"></script>
+    <link href="${pageContext.servletContext.contextPath}/bootstrap/validetta/validetta.min.css" rel="stylesheet" type="text/css"/>
+    <script src="${pageContext.servletContext.contextPath}/bootstrap/validetta/validettaLang-es-ES.js" type="text/javascript"></script> 
+    
+    <!--    validacion de campos--> 
+    <script src="${pageContext.servletContext.contextPath}/js/validarCampos.js" type="text/javascript"></script> 
+    
+    <!--SWEETALERT-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
     
 </head>
 

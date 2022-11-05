@@ -21,7 +21,7 @@ public class EmpleadoDAO extends Conexion {
     //funcion para insertar imagen
 
     
-    public int insertarEmpleado(Empleado em) throws Exception{
+    public int insertarEmpleado(Empleado em){
     int res =0;
         try {
             this.conectar();
@@ -36,7 +36,7 @@ public class EmpleadoDAO extends Conexion {
             pre.setString(7, em.getEstadoE());
             
              res= pre.executeUpdate();
-        }catch (SQLException e) {
+        }catch (Exception e) {
             System.out.println("Error al insertar wacha: "+e.getMessage());
         } finally {
             this.desconectar();
@@ -52,35 +52,6 @@ public class EmpleadoDAO extends Conexion {
         try {
             this.conectar();
             String sql = "SELECT * FROM  empleado em INNER JOIN rol ro ON em.idRol=ro.idRol";
-            PreparedStatement pre = this.getCon().prepareStatement(sql);
-            ResultSet rs;
-            rs = pre.executeQuery();
-            while (rs.next()){
-                Empleado c = new Empleado();
-                c.setIdEmpleado(rs.getInt(1));
-                c.setIdRol(rs.getInt(2));
-                c.setEmpleado(rs.getString(3));
-                c.setUsuario(rs.getString(4));
-                c.setPassword(rs.getString(5));
-                c.setSalario(rs.getDouble(6));
-                c.setRuta(rs.getString(7));
-                c.setEstadoE(rs.getString(8));
-                c.setRol(rs.getString(10));
-                lista.add(c);
-            }
-        } catch (SQLException e) {
-            System.out.println("Error al mostrar wacha: "+e.getMessage());
-        } finally {
-            this.desconectar();
-        }
-        return lista;
-    }
-    
-    public ArrayList<Empleado>mostrarDetalleEmpleados(){
-        ArrayList<Empleado> lista = new ArrayList<>();
-        try {
-            this.conectar();
-            String sql = "select * from empleado em INNER JOIN rol ro ON em.idRol=ro.idRol where estadoE!='Asignado'";
             PreparedStatement pre = this.getCon().prepareStatement(sql);
             ResultSet rs;
             rs = pre.executeQuery();
