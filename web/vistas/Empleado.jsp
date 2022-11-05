@@ -159,15 +159,19 @@
                 %>
         <jsp:include page="../template/pie.jsp"/>
 
-    </body> 
-    <script>
+        
+        
+    </body>
+    
+    
+           <script>
             $(document).ready(function () {
                 $('#tblEmpleado').DataTable({
                      "language": {
                             "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"}
                 });
             });
-        </script>
+     </script>
         <script src="${pageContext.servletContext.contextPath}/js/Empleados.js"></script>
         <script src="${pageContext.servletContext.contextPath}/js/code.js"></script>
 
