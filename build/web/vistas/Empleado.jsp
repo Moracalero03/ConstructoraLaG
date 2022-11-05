@@ -132,7 +132,6 @@
                                 <select name="sEstado" id="sEstado" class="form-control">
                                  <option value="Disponible">Disponible</option>
                                  <option value="Asignado">Asignado</option>
-                             </select>
                                 </select>
                             </div>
                             <div class="modal-footer">
