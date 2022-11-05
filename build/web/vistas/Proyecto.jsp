@@ -74,7 +74,7 @@
                           <td><%=elem.getFechaFinal()%></td>
                         <td>
                             <div class="btn-group">
-                                <button type="button" class="btn " style="background:#CECECE" data-toggle="modal" data-target="#mdlProyecto" onclick="modificar()" id="modificar">Modificar</button>
+                                <button type="button" class="btn " style="background:#F4D859" data-toggle="modal" data-target="#mdlProyecto" onclick="modificar()" id="modificar">Editar</button>
                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#mdlProyecto" id="eliminar" onclick="eliminar()">Eliminar</button>
                              
                             </div>
@@ -92,7 +92,7 @@
                     
                     
                              
-                    <div class="modal"  role="dialog" id="mdlProyecto">
+                <div class="modal" onclick="activar()" role="dialog"  id="mdlProyecto">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -110,8 +110,9 @@
                             <span>Municipio</span>  
                              <center>
                              <select class="sMunicipio" style="width:100%;"  name="sMunicipio" id="sMunicipio"  class="form-control">
-                                 <option value='' selected="true" style="text-align: center;">Seleccione o busque un municipio</option>
+                                 <option value='' selected="true" style="text-align: center;">Listado de municipios</option>
                                 <% 
+                                    
                                         ArrayList<Municipio> lista1 = municipioDAO.mostrarMunicipios();
                                          for (Municipio elem : lista1) {
                                        
@@ -123,7 +124,7 @@
                              </select>
                           </center>                                                       
                              <span>Estado</span>
-                             <select name="sEstado" id="sEstado" onclick="activar(this.form)" class="form-control">
+                             <select name="sEstado" id="sEstado" onChange="activar(this.form)"  class="form-control">
                                  <option value="Confirmado">Confirmado</option>
                                  <option value="Entregado">Entregado</option>
                                  <option value="Cancelado">Cancelado</option>   
@@ -151,14 +152,14 @@
                              </div>
                              <div id="aparece" style="display:none" >
                              <span>Comentario</span>
-                             <textarea class="form-control" disabled=""  name="txtComentario" id="txtComentario"></textarea>
+                             <input class="form-control" Style="display:none"   name="txtComentario" id="txtComentario">
                              </div>
                              </div> 
                               
                           <div class="modal-footer"> 
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> 
                             <button class="btn btn-primary" id="btnGuardar" name="btnGuardar">Guardar</button>  
-                            <button class="btn btn-warning" id="btnModificar" name="btnModificar">Modificar</button> 
+                            <button class="btn" style="background:#F4D859" id="btnModificar" name="btnModificar">Editar</button> 
                             <button class="btn btn-danger" id="btnEliminar" name="btnEliminar">Eliminar</button> 
                           </div>
                              </form>
@@ -197,7 +198,7 @@
                              </select>
                           </center>
                              <span>Estado</span>
-                             <select name="sEstado" id="sEstado" dropzone="" onclick="activar(this.form)" class="form-control">
+                             <select name="sEstado" id="sEstado" dropzone=""  class="form-control">
                                  <option value="Ingresado">Ingresado</option> 
                              </select>
                                                            
@@ -228,9 +229,9 @@
                              </div> 
                               
                           <div class="modal-footer"> 
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> 
                             <button class="btn btn-primary" id="btnGuardar" name="btnGuardar">Guardar</button>  
-                            <button class="btn btn-warning" disabled="" id="btnModificar" name="btnModificar">Modificar</button> 
+                            <button class="btn" style="background:#F4D859" disabled="" id="btnModificar" name="btnModificar">Editar</button> 
                             <button class="btn btn-danger" disabled="" id="btnEliminar" name="btnEliminar">Eliminar</button> 
                           </div>
                              </form>
@@ -245,9 +246,9 @@
                 }
             %>
        
+            
 
             <br><br>
-
         <jsp:include page="../template/pie.jsp"/>
     </body> 
      <script>

@@ -65,7 +65,7 @@
                         <td><%=elem.getMaquiaria()%></td>
                         <td>   
                             <div class="btn-group">
-                                <button type="button" class="btn " style="background:#CECECE" onclick="modificar()" data-toggle="modal" data-target="#mdlGestion" id="modificar">Modificar</button>
+                                <button type="button" class="btn " style="background:#F4D859" onclick="modificar()" data-toggle="modal" data-target="#mdlGestion" id="modificar">Editar</button>
                                 <button type="button" class="btn btn-danger" data-toggle="modal" onclick="eliminar()" data-target="#mdlGestion" id="eliminar">Eliminar</button>
                              
                             </div>
@@ -137,7 +137,7 @@
                            <div class="modal-footer"> 
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
                             <button class="btn btn-primary" id="btnGuardar" name="btnGuardar">Guardar</button>  
-                            <button class="btn btn-warning" id="btnModificar" name="btnModificar">Modificar</button> 
+                            <button class="btn" style="background:#F4D859" id="btnModificar" name="btnModificar">Editar</button> 
                             <button class="btn btn-danger" id="btnEliminar" name="btnEliminar">Eliminar</button> 
                           </div>
                               </form>

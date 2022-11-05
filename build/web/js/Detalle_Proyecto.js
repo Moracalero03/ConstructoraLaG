@@ -30,24 +30,27 @@ function llenarFormulario(fila){
 
 
 function agregar(){    
-    jQuery( document ).ready(function() { 
-      jQuery('#btnModificar').prop("disabled", true);
-       jQuery('#btnEliminar').prop("disabled", true);  // true para desactivarlo o false para volverlo a activar
+    jQuery( document ).ready(function() {
+      $('#btnGuardar').prop("disabled", false);   
+      $('#btnModificar').prop("disabled", true);
+      $('#btnEliminar').prop("disabled", true);  // true para desactivarlo o false para volverlo a activar
    }); 
 }
 
 
 function modificar(){    
     jQuery( document ).ready(function() { 
-      jQuery('#btnGuardar').prop("disabled", true);
-       jQuery('#btnEliminar').prop("disabled", true);  // true para desactivarlo o false para volverlo a activar
+      $('#btnGuardar').prop("disabled", true);
+      $('#btnModificar').prop("disabled", false);
+      $('#btnEliminar').prop("disabled", true);  // true para desactivarlo o false para volverlo a activar
    }); 
 }
 
 function eliminar(){
         jQuery( document ).ready(function() { 
-      jQuery('#btnGuardar').prop("disabled", true);
-       jQuery('#btnModificar').prop("disabled", true);  // true para desactivarlo o false para volverlo a activar
+      $('#btnGuardar').prop("disabled", true);
+      $('#btnModificar').prop("disabled", true);
+      $('#btnEliminar').prop("disabled", false); // true para desactivarlo o false para volverlo a activar
    }); 
 }
 
