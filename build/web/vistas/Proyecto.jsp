@@ -106,7 +106,7 @@
                               <span>Id</span>
                               <input type="number" name="txtId" id="txtId" value="0" class="form-control" readonly>
                              <span>Nombre del Proyecto</span>
-                              <input type="text" name="txtProyecto" id="txtProyecto" class="form-control">
+                              <input type="text" name="txtProyecto" id="txtProyecto" class="form-control" onkeypress="return validarTexto(event)">
                             <span>Municipio</span>  
                              <center>
                              <select class="sMunicipio" style="width:100%;"  name="sMunicipio" id="sMunicipio"  class="form-control">
@@ -132,12 +132,12 @@
                              <div class=" container-fluid row justify-content-center">
                              <div>    
                              <span>Costo inicial</span>
-                             <input type="number" id="txtCostoI"  name="txtCostoI" class="form-control">
+                             <input type="number" id="txtCostoI"  name="txtCostoI" class="form-control" onkeypress="return validarNumero(event)">
                              </div>                             
                              &nbsp&nbsp&nbsp&nbsp&nbsp;                             
                              <div style="float: right;">    
                              <span>Costo final</span>
-                             <input type="number" id="txtCostoF" name="txtCostoF" class="form-control">
+                             <input type="number" id="txtCostoF" name="txtCostoF" class="form-control" onkeypress="return validarNumero(event)">
                              </div> 
                              <div>    
                              <span>Fecha inicial</span>
@@ -151,7 +151,7 @@
                              </div>
                              <div id="aparece" style="display:none" >
                              <span>Comentario</span>
-                             <textarea class="form-control" disabled=""  name="txtComentario" id="txtComentario"></textarea>
+                             <textarea class="form-control" disabled=""  name="txtComentario" id="txtComentario" onkeypress="return validarTexto(event)"></textarea>
                              </div>
                              </div> 
                               
@@ -176,14 +176,14 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                              <form action="${pageContext.servletContext.contextPath}/ProyectoServlet" id="Form" method="post">
+                              <form action="${pageContext.servletContext.contextPath}/ProyectoServlet" id="Form" method="POST">
                               <span>Id</span>
                               <input type="number" name="txtId" data="xdsd" id="txtId" value="0" class="form-control" readonly>
                              <span>Nombre del Proyecto</span>
-                             <input type="text" name="txtProyecto" id="txtProyecto" class="form-control">                                                         
+                             <input type="text" name="txtProyecto" id="txtProyecto" class="form-control" data-validetta="required" onkeypress="return validarTexto(event)">                                                         
                              <span>Municipio</span>  
                              <center>
-                             <select class="sMunicipio" style="width:100%;"  name="sMunicipio" id="sMunicipio"  class="form-control">
+                             <select class="sMunicipio" style="width:100%;"  name="sMunicipio" id="sMunicipio"  class="form-control" data-validetta="required">
                                  <option value='' style="text-align: center;">Seleccione o busque un municipio</option>
                                 <% 
                                         ArrayList<Municipio> lista2 = municipioDAO.mostrarMunicipios();
@@ -197,19 +197,19 @@
                              </select>
                           </center>
                              <span>Estado</span>
-                             <select name="sEstado" id="sEstado" dropzone="" onclick="activar(this.form)" class="form-control">
+                             <select name="sEstado" id="sEstado" dropzone="" onclick="activar(this.form)" class="form-control" data-validetta="required">
                                  <option value="Ingresado">Ingresado</option> 
                              </select>
                                                            
                              <div class=" container-fluid row justify-content-center">
                              <div>    
                              <span>Costo inicial</span>
-                             <input type="number" id="txtCostoI"  name="txtCostoI" class="form-control">
+                             <input type="number" id="txtCostoI"  name="txtCostoI" class="form-control" data-validetta="required" onkeypress="return validarNumero(event)">
                              </div>                             
                              &nbsp&nbsp&nbsp&nbsp&nbsp;                             
                              <div style="float: right;">    
                              <span>Costo final</span>
-                             <input type="number" id="txtCostoF" value="0" readonly name="txtCostoF" class="form-control">
+                             <input type="number" id="txtCostoF" value="0" readonly name="txtCostoF" class="form-control" onkeypress="return validarNumero(event)">
                              </div> 
                              <div>    
                              <span>Fecha inicial</span>
@@ -223,13 +223,13 @@
                              </div>
                              <div id="aparece" style="display:none" >
                              <span>Comentario</span>
-                             <textarea class="form-control" value=" " readonly name="txtComentario" id="txtComentario"></textarea>
+                             <textarea class="form-control" value=" " readonly name="txtComentario" id="txtComentario" onkeypress="return validarTexto(event)"></textarea>
                              </div>
                              </div> 
                               
                           <div class="modal-footer"> 
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
-                            <button class="btn btn-primary" id="btnGuardar" name="btnGuardar">Guardar</button>  
+                            <button class="btn btn-primary" id="btnAgregar" name="btnGuardar">Guardar</button>  
                             <button class="btn btn-warning" disabled="" id="btnModificar" name="btnModificar">Modificar</button> 
                             <button class="btn btn-danger" disabled="" id="btnEliminar" name="btnEliminar">Eliminar</button> 
                           </div>
@@ -240,7 +240,25 @@
                                                
             <% if (request.getAttribute("mensaje")!=null) {
                          %>
-             <script>alert("<%=request.getAttribute("mensaje")%>");</script>
+            <script>
+                        
+            					const Toast = Swal.mixin({
+	                                        toast: true,
+	                                        position: 'top-end',
+	                                        showConfirmButton: false,
+	                                        timer: 3000,
+	                                        timerProgressBar: true,
+	                                        didOpen: (toast) => {
+	                                          toast.addEventListener('mouseenter', Swal.stopTimer)
+	                                          toast.addEventListener('mouseleave', Swal.resumeTimer)
+	                                        }
+	                                      })
+	
+	                                      Toast.fire({
+	                                        icon: 'info',
+	                                        title: "<%=request.getAttribute("mensaje")%>"
+	                                      })
+            </script> 
             <%
                 }
             %>

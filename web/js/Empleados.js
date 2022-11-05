@@ -34,3 +34,65 @@ function llenarFormulario(fila){
     
 }
 
+
+$(document).ready(function() {
+    $('#btnAgregar').click(function(event) { 
+         $('#mdlEmpleado').validetta({
+            realTime: true,
+            onValid: function(e) {
+            event.preventDefault()
+                var codigo = $('#txtIdEmpleado').val();
+                var rol = $('#sRol').val();
+                var empleado = $('#txtEmpleado').val();
+                var usuario = $('#txtUsuario').val();
+                var contrasena = $('#txtContrasena').val();
+                var salario = $('#txtSalario').val();
+                var foto = $('#txtFoto').val(); 
+                var estado = $('#sEstado').val();
+                
+                $.post('EmpleadoServlet', {
+                        txtIdEmpleado : codigo,
+                        sRol : rol,
+                        txtEmpleado : empleado, 
+                        txtUsuario : usuario, 
+                        txtContrasena : contrasena,
+                        txtSalario : salario,
+                        txtFoto : foto,
+                        sEstado : estado
+                })
+        }
+    });
+});   
+});  
+
+
+$(document).ready(function() {
+    $('#btnEditar').click(function(event) { 
+         $('#mdlEmpleado').validetta({
+            realTime: true,
+            onValid: function(e) {
+            event.preventDefault()
+                var codigo = $('#txtIdEmpleado').val();
+                var rol = $('#sRol').val();
+                var empleado = $('#txtEmpleado').val();
+                var usuario = $('#txtUsuario').val();
+                var contrasena = $('#txtContrasena').val();
+                var salario = $('#txtSalario').val();
+                var foto = $('#txtFoto').val(); 
+                var estado = $('#sEstado').val();
+                
+                $.post('EmpleadoServlet', {
+                        txtIdEmpleado : codigo,
+                        sRol : rol,
+                        txtEmpleado : empleado, 
+                        txtUsuario : usuario, 
+                        txtContrasena : contrasena,
+                        txtSalario : salario,
+                        txtFoto : foto,
+                        sEstado : estado
+                })
+        }
+    });
+});   
+}); 
+

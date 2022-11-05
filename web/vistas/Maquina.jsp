@@ -82,21 +82,20 @@
                                 ID Maquinaria
                                 <input type="number" name="txtIdM" id="txtIdM" class="form-control" value="0" readonly>
                                 Maquinaria
-                                <input type="text" name="txtNombreM" id="txtNombreM" class="form-control">
+                                <input type="text" name="txtNombreM" id="txtNombreM" class="form-control" data-validetta="required" onkeypress="return validarTexto(event)">
                                 Modelo
-                                <input type="text" name="txtModelo" id="txtModelo" class="form-control">
+                                <input type="text" name="txtModelo" id="txtModelo" class="form-control" data-validetta="required">
                                 Marca
-                                <input type="text" name="txtMarca" id="txtMarca" class="form-control">
+                                <input type="text" name="txtMarca" id="txtMarca" class="form-control" data-validetta="required" onkeypress="return validarTexto(event)">
                                 Tipo
-                                <input type="text" name="txtTipo" id="txtTipo" class="form-control">
+                                <input type="text" name="txtTipo" id="txtTipo" class="form-control" data-validetta="required" onkeypress="return validarTexto(event)">
                                 Operatividad
-                                <input type="text" name="txtOperatividad" id="txtOperatividad" class="form-control">
+                                <input type="text" name="txtOperatividad" id="txtOperatividad" class="form-control" data-validetta="required" onkeypress="return validarNumero(event)">
                                 Estado
                                 <!--<input type="text" name="txtEstado" id="txtEstado" class="form-control">-->
                                 <select name="sEstado" id="sEstado" class="form-control">
                                  <option value="Disponible">Disponible</option>
                                  <option value="Asignado">Asignado</option>   
-                             </select>
                                 </select>
                             </div>
                             <div class="modal-footer">
@@ -124,7 +123,25 @@
                 <%
             if (request.getAttribute("mensaje")!=null) {
                 %>  
-                <script>alert("<%=request.getAttribute("mensaje") %>");</script>
+                <script>
+                        
+            					const Toast = Swal.mixin({
+	                                        toast: true,
+	                                        position: 'top-end',
+	                                        showConfirmButton: false,
+	                                        timer: 3000,
+	                                        timerProgressBar: true,
+	                                        didOpen: (toast) => {
+	                                          toast.addEventListener('mouseenter', Swal.stopTimer)
+	                                          toast.addEventListener('mouseleave', Swal.resumeTimer)
+	                                        }
+	                                      })
+	
+	                                      Toast.fire({
+	                                        icon: 'info',
+	                                        title: "<%=request.getAttribute("mensaje")%>"
+	                                      })
+                </script> 
                 <%
                 }
                 %>

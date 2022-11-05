@@ -35,3 +35,58 @@ function llenarFormulario(fila){
     
 }
 
+$(document).ready(function() {
+    $('#btnAgregar').click(function(event) { 
+         $('#mdlMaquina').validetta({
+            realTime: true,
+            onValid: function(e) {
+            event.preventDefault()
+                var codigo = $('#txtIdM').val();
+                var nombre = $('#txtNombreM').val();
+                var modelo = $('#txtModelo').val();
+                var marca = $('#txtMarca').val();
+                var tipo = $('#txtTipo').val();
+                var Operativo = $('#txtOperatividad').val();
+                var estado = $('#sEstado').val();
+                
+                $.post('MaquinasServlet', {
+                        txtIdM : codigo,
+                        txtNombreM : nombre, 
+                        txtModelo : modelo, 
+                        txtMarca : marca,
+                        txtTipo : tipo,
+                        txtOperatividad : Operativo,
+                        sEstado : estado
+                })
+        }
+    });
+});   
+}); 
+
+$(document).ready(function() {
+    $('#btnEditar').click(function(event) { 
+         $('#mdlMaquina').validetta({
+            realTime: true,
+            onValid: function(e) {
+            event.preventDefault()
+                var codigo = $('#txtIdM').val();
+                var nombre = $('#txtNombreM').val();
+                var modelo = $('#txtModelo').val();
+                var marca = $('#txtMarca').val();
+                var tipo = $('#txtTipo').val();
+                var Operativo = $('#txtOperatividad').val();
+                var estado = $('#sEstado').val();
+                
+                $.post('MaquinasServlet', {
+                        txtIdM : codigo,
+                        txtNombreM : nombre, 
+                        txtModelo : modelo, 
+                        txtMarca : marca,
+                        txtTipo : tipo,
+                        txtOperatividad : Operativo,
+                        sEstado : estado
+                })
+        }
+    });
+});   
+});
