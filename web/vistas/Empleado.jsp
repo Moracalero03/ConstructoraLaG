@@ -32,7 +32,7 @@
             <div class="col mt-4>"> 
                 <button type="button" value="Limpiar formulario" onclick="limpiarFormulario()" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlEmpleado">Agregar Empleado</button>
                 <br>
-        <table id="tblMaquina" class="table table-light table-bordered" style="width:100%">
+        <table id="tblEmpleado" class="table table-light table-bordered" style="width:100%">
             <thead class="thead-dark">
             <tr>
                 <th scope="col">ID</th>
@@ -117,8 +117,11 @@
                                 <input type="text" name="txtEmpleado" id="txtEmpleado" class="form-control">
                                 Usuario
                                 <input type="text" name="txtUsuario" id="txtUsuario" class="form-control">
-                                Contraseña
-                                <input type="text" name="txtContrasena" id="txtContrasena" class="form-control">
+                                Contraseña 
+                                <div class="container contenedor">
+                                     <input type="password" class="passw form-control" name="txtContrasena" id="txtContrasena"> 
+                                 <img src="${pageContext.servletContext.contextPath}/img/Show.png" alt="" class="icon" id="Eye">
+                                 </div>
                                 Salario
                                 <input type="number" name="txtSalario" id="txtSalario" class="form-control">
                                 Foto<br>
@@ -129,7 +132,6 @@
                                 <select name="sEstado" id="sEstado" class="form-control">
                                  <option value="Disponible">Disponible</option>
                                  <option value="Asignado">Asignado</option>
-                             </select>
                                 </select>
                             </div>
                             <div class="modal-footer">
@@ -145,15 +147,8 @@
         </div>
             </div>
         </div>
-         <script>
-            $(document).ready(function () {
-                $('#tblMaquina').DataTable({
-                     "language": {
-                            "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"}
-                });
-            });
-        </script>
-        <script src="${pageContext.servletContext.contextPath}/js/Empleados.js"></script>
+         
+                                 
                 <%
             if (request.getAttribute("mensaje")!=null) {
                 %>  
@@ -161,6 +156,18 @@
                 <%
                 }
                 %>
-                <jsp:include page="../template/pie.jsp"/>
-    </body>  
+        <jsp:include page="../template/pie.jsp"/>
+
+    </body> 
+    <script>
+            $(document).ready(function () {
+                $('#tblEmpleado').DataTable({
+                     "language": {
+                            "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"}
+                });
+            });
+        </script>
+        <script src="${pageContext.servletContext.contextPath}/js/Empleados.js"></script>
+        <script src="${pageContext.servletContext.contextPath}/js/code.js"></script>
+
 </html>
