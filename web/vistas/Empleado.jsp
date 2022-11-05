@@ -66,7 +66,7 @@
                             <img src="<%=elem.getRuta()%>" alt="images Here" width="200" height="200"/>
                             
                         </td>
-                        <td style="font-size: 10px" class="col-lg-2 col-xl-2 parram text-justify collapse"><%=elem.getRuta()%></td>
+                        <td class="collapse"><%=elem.getRuta()%></td>
                         <td><%=elem.getEstadoE()%></td>
                         <td>
                             <div class="btn-group">
