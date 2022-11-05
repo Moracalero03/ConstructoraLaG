@@ -8,6 +8,18 @@
         <servlet-name>ProyectoServlet</servlet-name>
         <servlet-class>com.controlador.ProyectoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Detalle_ProyectoServlet</servlet-name>
+        <servlet-class>com.controlador.Detalle_ProyectoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DepartamentoServlet</servlet-name>
+        <servlet-class>com.controlador.DepartamentoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MunicipioServlet</servlet-name>
+        <servlet-class>com.controlador.MunicipioServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MaquinasServlet</servlet-name>
         <url-pattern>/MaquinasServlet</url-pattern>
@@ -15,6 +27,18 @@
     <servlet-mapping>
         <servlet-name>ProyectoServlet</servlet-name>
         <url-pattern>/ProyectoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Detalle_ProyectoServlet</servlet-name>
+        <url-pattern>/Detalle_ProyectoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DepartamentoServlet</servlet-name>
+        <url-pattern>/DepartamentoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MunicipioServlet</servlet-name>
+        <url-pattern>/MunicipioServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

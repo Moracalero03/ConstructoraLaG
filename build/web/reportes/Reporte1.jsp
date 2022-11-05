@@ -21,13 +21,14 @@
     <body>
         <%@include file="../template/menu.jsp" %>
         <div class="container mt-4">
-            <div class="row">
+            <h1>Reporte de proyectos en ejecución</h1>
+            <div class="row justify-content-center">
                 <div class="col-8">
-                    <form method="POST">
-                        <label for="">Seleccione un rango de fechas</><br>
-                            <input type="text" class="datepicker form-control" name="primerafecha"><br>
-                            <input type="text" class="datepicker form-control"  name="segundafecha">
-                            <button class="btn btn-danger btn-block mt-4" name="btnGenerar">Generar reporte</button>
+                    <form>
+                            <label>Ponga un rango de fechas (yyyy-mm-dd)</label><br>
+                            <input type="text" class="form-control" name="primerafecha" placeholder="Ej: 2022-10-01"><br>
+                            <input type="text" class="form-control"  name="segundafecha" placeholder="Ej: 2023-10-01">
+                            <button class="btn btn-primary btn-block mt-4" name="btnGenerar">Generar reporte</button>
                     </form> 
                                 
                                 <% if (request.getParameter("btnGenerar")!=null) {

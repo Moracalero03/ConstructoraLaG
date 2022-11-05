@@ -16,7 +16,7 @@
 	<queryString>
 		<![CDATA[select idProyecto, proyecto  as Proyecto, EstadoP as Estado, costoInicial, costoFinal, FechaInicio, FechaFinal as FechaEntrega from proyecto 
 where EstadoP="Entregado" and str_to_date(  `FechaFinal`, '%d/%m/%Y') 
-between str_to_date($P{primeraFecha}, '%d/%m/%Y') and str_to_date($P{segundaFecha}, '%d/%m/%Y');]]>
+between $P{primeraFecha} and $P{segundaFecha};]]>
 	</queryString>
 	<field name="idProyecto" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>

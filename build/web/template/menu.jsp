@@ -7,19 +7,26 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- jQuery -->
+        <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/bootstrap/select2.css">
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="${pageContext.servletContext.contextPath}/bootstrap/select2.js"></script>
+        <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/bootstrap/style.css">
+        
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
+      
     
-    <!--datatable--> 
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" type="text/javascript"></script> 
+    <!--datatable-->
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet">
+    
+    
 </head>
 
  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-warning">
@@ -39,6 +46,9 @@
       <li class="nav-item">
         <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Proyecto.jsp">Proyecto</a>
       </li>
+            <li class="nav-item">
+        <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Detalle_Proyecto.jsp">Detalle proyecto</a>
+      </li>
       <li class="nav-item">
           <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Maquina.jsp">Maquina</a>
       </li>
@@ -49,9 +59,9 @@
         <div class="dropdown-menu">
           <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte1.jsp">Reporte 1</a>
           <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte2.jsp">Reporte 2</a>
-          <a class="dropdown-item" href="#">Reporte 3</a>
+          <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte3.jsp">Reporte 3</a>
           <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte4.jsp">Reporte 4</a>
-          <a class="dropdown-item" href="#">Reporte 5</a>
+          <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte5.jsp">Reporte 5</a>
         </div>
       </li>            
     </ul> <lu class="navbar-nav col-2">

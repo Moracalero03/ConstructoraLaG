@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e2a8a8da-7607-4d31-bf36-5d95d52e775a">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="260fa241-54da-4847-bc42-e2b4353a5d22">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -15,8 +15,8 @@
 	</parameter>
 	<queryString>
 		<![CDATA[select idProyecto, proyecto, EstadoP as estado, costoInicial, FechaInicio from proyecto 
-where EstadoP="Confirmado" and str_to_date(  `FechaInicio`, '%d/%m/%Y') 
-between str_to_date( $P{primeraFecha}, '%d/%m/%Y') and str_to_date($P{segundaFecha}, '%d/%m/%Y') ;]]>
+where EstadoP='Confirmado' and str_to_date(  `FechaInicio`, '%d/%m/%Y')  
+between $P{primeraFecha} and $P{segundaFecha};]]>
 	</queryString>
 	<field name="idProyecto" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
@@ -35,18 +35,18 @@ between str_to_date( $P{primeraFecha}, '%d/%m/%Y') and str_to_date($P{segundaFec
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="70" splitType="Stretch">
+		<band height="68" splitType="Stretch">
 			<staticText>
-				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="edf15266-c95f-42ca-9a2b-55cd744cc44c"/>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="0af52ff7-009c-4644-acf8-3c46253fc7bc"/>
 				<textElement verticalAlignment="Middle"/>
-				<text><![CDATA[Reporte #1]]></text>
+				<text><![CDATA[REPORTE #1]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="SubTitle" x="82" y="46" width="192" height="22" uuid="bf2b9fb3-104f-4a16-b041-316b374c82b2"/>
+				<reportElement style="SubTitle" x="73" y="46" width="201" height="22" uuid="4bbbb105-0df5-4f95-bc4d-de1d608be410"/>
 				<text><![CDATA[Proyectos en ejecución]]></text>
 			</staticText>
 			<image>
-				<reportElement x="333" y="0" width="220" height="70" uuid="d2b58f7a-9e37-4b67-b497-141d4b52ca86"/>
+				<reportElement x="348" y="1" width="207" height="67" uuid="99d9dbad-5720-4f02-ad92-2bedd25a36a5"/>
 				<imageExpression><![CDATA["C:\\Users\\marce\\Documents\\CICLO II - 2022\\DAUTE\\PROYECTO\\Constructora\\ConstructoraLaG\\web\\img\\logo.png"]]></imageExpression>
 			</image>
 		</band>
@@ -57,29 +57,29 @@ between str_to_date( $P{primeraFecha}, '%d/%m/%Y') and str_to_date($P{segundaFec
 	<columnHeader>
 		<band height="36" splitType="Stretch">
 			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="1610dbea-88dc-486e-bf03-3148cd85c9f3"/>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="42f8f93e-e602-4c93-9846-671676360e56"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement style="Column header" x="0" y="19" width="111" height="15" uuid="964e9859-5cb0-4c5c-931c-115ee3138a5e"/>
+				<reportElement style="Column header" x="0" y="19" width="111" height="15" uuid="386595f5-9245-483a-8926-cb22009e99ac"/>
 				<text><![CDATA[idProyecto]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="111" y="19" width="111" height="15" uuid="2dcfe2be-d4d9-4e33-a5f8-f486a73d3f57"/>
+				<reportElement style="Column header" x="111" y="19" width="111" height="15" uuid="a14fc488-83c5-4508-a5cd-4e7ce1525de2"/>
 				<text><![CDATA[proyecto]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="222" y="19" width="111" height="15" uuid="0bdf0ec0-1f9d-4ddf-9c19-24a05aa1c0bc"/>
+				<reportElement style="Column header" x="222" y="19" width="111" height="15" uuid="de54dc1d-c218-4ee7-b35d-1393febde336"/>
 				<text><![CDATA[estado]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="333" y="19" width="111" height="15" uuid="e53f59f3-1fbb-4b34-95d5-2b9a8f058fda"/>
+				<reportElement style="Column header" x="333" y="19" width="111" height="15" uuid="5eb77742-8346-4f85-9578-61c1302928da"/>
 				<text><![CDATA[costoInicial]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="444" y="19" width="111" height="15" uuid="e18fbf1f-1a17-415e-880f-0040ea9dcaa0"/>
+				<reportElement style="Column header" x="444" y="19" width="111" height="15" uuid="46c92b53-af7b-455c-9a40-ea4fc7253352"/>
 				<text><![CDATA[FechaInicio]]></text>
 			</staticText>
 		</band>
@@ -87,29 +87,29 @@ between str_to_date( $P{primeraFecha}, '%d/%m/%Y') and str_to_date($P{segundaFec
 	<detail>
 		<band height="16" splitType="Stretch">
 			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="faddc70a-afbf-4879-8a7d-559c8acfadc1"/>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="314f6fd8-e75e-49ae-a86e-849a593036b8"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>
 			</line>
 			<textField>
-				<reportElement style="Detail" x="0" y="0" width="111" height="15" uuid="d7016914-1484-4d72-9caf-9a98202fdf92"/>
+				<reportElement style="Detail" x="0" y="0" width="111" height="15" uuid="4c000e67-41b4-4061-9d20-7ce1ef897d8a"/>
 				<textFieldExpression><![CDATA[$F{idProyecto}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Detail" x="111" y="0" width="111" height="15" uuid="e6b36e0f-1790-427c-81f2-699e9e53ec89"/>
+				<reportElement style="Detail" x="111" y="0" width="111" height="15" uuid="8f59344b-77d2-4bba-8038-bd294b0be6a0"/>
 				<textFieldExpression><![CDATA[$F{proyecto}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Detail" x="222" y="0" width="111" height="15" uuid="267db7b8-4488-425f-aa5c-072689e58343"/>
+				<reportElement style="Detail" x="222" y="0" width="111" height="15" uuid="80d151b0-54bb-4399-9d55-a18e10cbb0d1"/>
 				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Detail" x="333" y="0" width="111" height="15" uuid="7325e00e-252a-4315-98bc-a293fbca6e62"/>
+				<reportElement style="Detail" x="333" y="0" width="111" height="15" uuid="c6502bdc-beb1-4800-b332-b9fb754c16c0"/>
 				<textFieldExpression><![CDATA[$F{costoInicial}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Detail" x="444" y="0" width="111" height="15" uuid="7205444d-699c-4a14-bc68-ba1aa23ce435"/>
+				<reportElement style="Detail" x="444" y="0" width="111" height="15" uuid="cccd116a-b0d4-48d2-b4ff-882a0a56406b"/>
 				<textFieldExpression><![CDATA[$F{FechaInicio}]]></textFieldExpression>
 			</textField>
 		</band>
@@ -117,7 +117,7 @@ between str_to_date( $P{primeraFecha}, '%d/%m/%Y') and str_to_date($P{segundaFec
 	<columnFooter>
 		<band height="45" splitType="Stretch">
 			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="8b2fefdd-be31-4664-a6f2-674068c35f34"/>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="9a20a07e-e68d-49c9-8e0e-cf15d42f5b7c"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>
@@ -127,21 +127,21 @@ between str_to_date( $P{primeraFecha}, '%d/%m/%Y') and str_to_date($P{segundaFec
 	<pageFooter>
 		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="9c9b7321-98ca-427c-85c9-2215080f7c2d"/>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="692460f9-82a7-44e7-a83d-1f1e50f6df37"/>
 				<textElement textAlignment="Right">
 					<font size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="a92211a3-11f2-4f08-8be4-5c76c3d1f078"/>
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="d711587b-adbd-4648-be4e-3a94e2d6d9fa"/>
 				<textElement>
 					<font size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 			<textField pattern="EEEEE dd MMMMM yyyy">
-				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="94b04026-bacb-4d5e-9154-794dfb9d1506"/>
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="ae21185e-826e-4276-96ef-e803b7861f61"/>
 				<textElement>
 					<font size="10" isBold="false"/>
 				</textElement>

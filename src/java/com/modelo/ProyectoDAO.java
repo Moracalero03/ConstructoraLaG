@@ -73,6 +73,34 @@ public ArrayList<Proyecto> mostrarProyectos(){
         return lista;
     }
     
+public ArrayList<Proyecto> mostrarDetalleProyectos(){
+       ArrayList<Proyecto> lista = new ArrayList<>();
+        try {
+            this.conectar();
+            String sql = "select idProyecto, proyecto,m.municipio, EstadoP, comentario, costoInicial,costoFinal, FechaInicio, FechaFinal from proyecto p INNER JOIN municipio m\n" +
+"ON p.idMunicipio = m.idMunicipio where EstadoP=\"Ingresado\" or EstadoP=\"Confirmado\"; ";
+            PreparedStatement pre = this.getCon().prepareStatement(sql);
+            ResultSet rs = pre.executeQuery();
+            while (rs.next()) {
+             Proyecto p = new Proyecto();
+             p.setIdProyecto(rs.getInt(1));
+             p.setProyecto(rs.getString(2));
+             p.setMunicipio(rs.getString(3));
+             p.setEstadoP(rs.getString(4));
+             p.setComentario(rs.getString(5));
+             p.setCostoInicial(rs.getDouble(6));
+             p.setCostoFinal(rs.getDouble(7));
+             p.setFechaInicio(rs.getString(8));
+             p.setFechaFinal(rs.getString(9));
+             lista.add(p);
+            }
+        } catch (Exception e) {
+            System.out.println("Error al mostrar "+e.getMessage());
+        } finally {
+            this.desconectar();
+        }
+        return lista;
+    }
 
     public int modificarProyecto(Proyecto p){
     int res= 0;

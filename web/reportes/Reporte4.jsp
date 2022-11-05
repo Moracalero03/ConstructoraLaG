@@ -16,16 +16,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Reporte 1</title>
+        <title>Reporte 4</title>
     </head>
     <body>
         <%@include file="../template/menu.jsp" %>
         <%! ProyectoDAO pDAO = new ProyectoDAO();%>
         <div class="container mt-4">
-            <div class="row">
+            <h1>Reporte de gastos por proyecto</h1>
+            <div class="row justify-content-center">
                 <div class="col-8">
-                    <form method="POST">
-                        <label for="">Seleccione un proyecto</><br>
+                    <form>
+                            <label>Seleccione un proyecto</label><br>
                             <select class="form-control" name="sProyecto">
                                 <% 
                                     ArrayList<Proyecto> lista = pDAO.mostrarProyectos();
@@ -37,7 +38,7 @@
                                       }
                                 %>
                             </select> 
-                            <button class="btn btn-danger btn-block mt-4" name="btnGenerar">Generar reporte</button>
+                            <button class="btn btn-primary btn-block mt-4" name="btnGenerar">Generar reporte</button>
                     </form> 
                                 
                                 <% if (request.getParameter("btnGenerar")!=null) {
