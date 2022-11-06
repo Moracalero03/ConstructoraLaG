@@ -24,7 +24,7 @@
             <center><h1>Maquina</h1> </center>
             <div class="row m-4 justify-content-center">
             <div class="col mt-4>"> 
-                <button type="button" value="Limpiar formulario" onclick="limpiarFormulario()" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlMaquina">Agregar maquinaria</button>
+                <button type="button" value="Limpiar formulario" onclick="agregar()" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlMaquina">Agregar maquinaria</button>
                 <br>
         <table id="tblMaquina" class="table table-light table-bordered" style="width:100%">
             <thead class="thead-dark">
@@ -56,8 +56,8 @@
                         <td><%=elem.getEstado() %></td>
                         <td>
                             <div class="btn-group">
-                                <button type="button" class="btn" style="background:#F4D859" data-toggle="modal" data-target="#mdlMaquina" id="editar">Editar</button>
-                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#mdlMaquina" id="eliminar">Eliminar</button>
+                                <button type="button" class="btn" style="background:#F4D859" data-toggle="modal" data-target="#mdlMaquina" onclick="modificar()" id="editar">Editar</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#mdlMaquina" onclick="eliminar()" id="eliminar">Eliminar</button>
                             </div>
                         </td>
                     </tr>
@@ -92,7 +92,6 @@
                                 Operatividad
                                 <input type="text" name="txtOperatividad" id="txtOperatividad" class="form-control" data-validetta="required" onkeypress="return validarNumero(event)">
                                 Estado
-                                <!--<input type="text" name="txtEstado" id="txtEstado" class="form-control">-->
                                 <select name="sEstado" id="sEstado" class="form-control">
                                  <option value="Disponible">Disponible</option>
                                  <option value="Asignado">Asignado</option>   
@@ -101,7 +100,7 @@
                             <div class="modal-footer">
                                 <button class="btn btn-secondary" data-dismiss="modal" onclick="limpiarFormulario()">Cerrar</button>
                                 <button class="btn btn-primary" name="btnAgregar" id="btnAgregar">Agregar</button>
-                                <button class="btn btn-warning" name="btnEditar" id="btnEditar">Editar</button>
+                                <button class="btn" style="background:#F4D859" name="btnEditar" id="btnEditar">Editar</button>
                                 <button class="btn btn-danger" name="btnEliminar" id="btnEliminar">Eliminar</button>
                             </div>
                         </form>

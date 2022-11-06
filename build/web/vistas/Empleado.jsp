@@ -30,7 +30,7 @@
             <center><h1>Empleado</h1> </center>
             <div class="row m-4 justify-content-center">
             <div class="col mt-4>"> 
-                <button type="button" value="Limpiar formulario" onclick="limpiarFormulario()" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlEmpleado">Agregar Empleado</button>
+                <button type="button" value="Limpiar formulario" id="" onclick="limpiarFormulario(), agregar()" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlEmpleado">Agregar Empleado</button>
                 <br>
                 
                 
@@ -75,8 +75,8 @@
                         <td><%=elem.getEstadoE()%></td>
                         <td>
                             <div class="btn-group">
-                                <button type="button" class="btn" style="background:#F4D859" data-toggle="modal" data-target="#mdlEmpleado" id="editar">Editar</button>
-                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#mdlEmpleado" id="eliminar">Eliminar</button>
+                                <button type="button" class="btn" style="background:#F4D859" onclick="modificar()" data-toggle="modal" data-target="#mdlEmpleado" id="editar">Editar</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" onclick="eliminar()" data-target="#mdlEmpleado" id="eliminar">Eliminar</button>
                             </div>
                         </td>
                     </tr>
@@ -142,9 +142,9 @@
                                 </select>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-secondary" data-dismiss="modal" onclick="limpiarFormulario()">Cerrar</button>
+                                <button class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                                 <button type="submit" class="btn btn-primary" name="btnAgregar" id="btnAgregar">Agregar</button>
-                                <button class="btn btn-warning" name="btnEditar" id="btnEditar">Editar</button>
+                                <button class="btn" style="background:#F4D859" name="btnEditar" id="btnEditar">Editar</button>
                                 <button class="btn btn-danger" name="btnEliminar" id="btnEliminar">Eliminar</button>
                             </div>
                         </form>
