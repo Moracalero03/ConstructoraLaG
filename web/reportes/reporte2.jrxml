@@ -49,10 +49,6 @@ between $P{primeraFecha} and $P{segundaFecha};]]>
 				<reportElement style="SubTitle" x="91" y="46" width="183" height="22" uuid="2c09a437-f85b-49d6-923b-60cf876b79b7"/>
 				<text><![CDATA[Proyectos entregados]]></text>
 			</staticText>
-			<image>
-				<reportElement x="347" y="-2" width="206" height="70" uuid="83c21c32-0e22-4481-bf25-a998f4e93c70"/>
-				<imageExpression><![CDATA["C:\\Users\\marce\\Documents\\CICLO II - 2022\\DAUTE\\PROYECTO\\Constructora\\ConstructoraLaG\\web\\img\\logo.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>

@@ -152,11 +152,11 @@
                              </div>
                              <div id="aparece" style="display:none" >
                              <span>Comentario</span>
-<<<<<<< HEAD
+
                              <input class="form-control" Style="display:none"   name="txtComentario" id="txtComentario">
-=======
+
                              <textarea class="form-control" disabled=""  name="txtComentario" id="txtComentario" onkeypress="return validarTexto(event)"></textarea>
->>>>>>> c3a70dfac7b626fd8fc9e56c6d0ad68c36129712
+
                              </div>
                              </div> 
                               
@@ -202,11 +202,9 @@
                              </select>
                           </center>
                              <span>Estado</span>
-<<<<<<< HEAD
-                             <select name="sEstado" id="sEstado" dropzone=""  class="form-control">
-=======
+
                              <select name="sEstado" id="sEstado" dropzone="" onclick="activar(this.form)" class="form-control" data-validetta="required">
->>>>>>> c3a70dfac7b626fd8fc9e56c6d0ad68c36129712
+
                                  <option value="Ingresado">Ingresado</option> 
                              </select>
                                                            
@@ -237,15 +235,10 @@
                              </div> 
                               
                           <div class="modal-footer"> 
-<<<<<<< HEAD
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> 
                             <button class="btn btn-primary" id="btnGuardar" name="btnGuardar">Guardar</button>  
                             <button class="btn" style="background:#F4D859" disabled="" id="btnModificar" name="btnModificar">Editar</button> 
-=======
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
-                            <button class="btn btn-primary" id="btnAgregar" name="btnGuardar">Guardar</button>  
-                            <button class="btn btn-warning" disabled="" id="btnModificar" name="btnModificar">Modificar</button> 
->>>>>>> c3a70dfac7b626fd8fc9e56c6d0ad68c36129712
+
                             <button class="btn btn-danger" disabled="" id="btnEliminar" name="btnEliminar">Eliminar</button> 
                           </div>
                              </form>

@@ -43,7 +43,7 @@ function llenarFormulario(fila){
     
 }
 
-<<<<<<< HEAD
+
 function agregar(){    
     jQuery( document ).ready(function() { 
      jQuery('#btnAgregar').prop("disabled", false);
@@ -72,13 +72,13 @@ function eliminar(){
     
    }); 
 }
-=======
+
 $(document).ready(function() {
     $('#btnAgregar').click(function(event) { 
          $('#mdlMaquina').validetta({
             realTime: true,
             onValid: function(e) {
-            event.preventDefault()
+            event.preventDefault();
                 var codigo = $('#txtIdM').val();
                 var nombre = $('#txtNombreM').val();
                 var modelo = $('#txtModelo').val();
@@ -95,7 +95,7 @@ $(document).ready(function() {
                         txtTipo : tipo,
                         txtOperatividad : Operativo,
                         sEstado : estado
-                })
+                });
         }
     });
 });   
@@ -106,7 +106,7 @@ $(document).ready(function() {
          $('#mdlMaquina').validetta({
             realTime: true,
             onValid: function(e) {
-            event.preventDefault()
+            event.preventDefault();
                 var codigo = $('#txtIdM').val();
                 var nombre = $('#txtNombreM').val();
                 var modelo = $('#txtModelo').val();
@@ -123,9 +123,9 @@ $(document).ready(function() {
                         txtTipo : tipo,
                         txtOperatividad : Operativo,
                         sEstado : estado
-                })
+                });
         }
     });
 });   
 });
->>>>>>> c3a70dfac7b626fd8fc9e56c6d0ad68c36129712
+

@@ -44,7 +44,7 @@ function llenarFormulario(fila){
     
 }
 
-<<<<<<< HEAD
+
 function agregar(){    
     jQuery( document ).ready(function() { 
      jQuery('#btnAgregar').prop("disabled", false);
@@ -73,14 +73,14 @@ function eliminar(){
     
    }); 
 }
-=======
+
 
 $(document).ready(function() {
     $('#btnAgregar').click(function(event) { 
          $('#mdlEmpleado').validetta({
             realTime: true,
             onValid: function(e) {
-            event.preventDefault()
+            event.preventDefault();
                 var codigo = $('#txtIdEmpleado').val();
                 var rol = $('#sRol').val();
                 var empleado = $('#txtEmpleado').val();
@@ -99,7 +99,7 @@ $(document).ready(function() {
                         txtSalario : salario,
                         txtFoto : foto,
                         sEstado : estado
-                })
+                });
         }
     });
 });   
@@ -111,7 +111,7 @@ $(document).ready(function() {
          $('#mdlEmpleado').validetta({
             realTime: true,
             onValid: function(e) {
-            event.preventDefault()
+            event.preventDefault();
                 var codigo = $('#txtIdEmpleado').val();
                 var rol = $('#sRol').val();
                 var empleado = $('#txtEmpleado').val();
@@ -130,10 +130,10 @@ $(document).ready(function() {
                         txtSalario : salario,
                         txtFoto : foto,
                         sEstado : estado
-                })
+                });
         }
     });
 });   
 }); 
 
->>>>>>> c3a70dfac7b626fd8fc9e56c6d0ad68c36129712
+
