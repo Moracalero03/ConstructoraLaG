@@ -46,7 +46,7 @@
                 <th scope="col">Salario</th>
                 <th scope="col">Foto</th>
                 <th scope="col">Estado</th>
-                <th scope="col" class="col-lg-2 col-xl-2 parram text-justify collapse"> </th>
+                <td class="collapse">Paraguay</td>
                 <th scope="col">Acciones</th>
             </tr>
         </thead>
