@@ -3,16 +3,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
 $('body').on('click','#editar', function(){
-    llenarFormulario($(this).closest('tr'))
+    llenarFormulario($(this).closest('tr'));
 });
 
 $('body').on('click','#eliminar', function(){
-    llenarFormulario($(this).closest('tr'))
+    llenarFormulario($(this).closest('tr'));
 });
 function limpiarFormulario() {
     document.getElementById("modalE").reset();
-  }
+     
+     
+  };
 
+$('#modalE').on('hide.bs.modal', function (event) {
+    $("#modalE input").val("");
+    $("#txtId").val(0);       
+    $("#modalE button").prop("disabled", false);
+    $('#sRol').find('option:selected').attr('selected', false);
+    $('#sEstado').find('option:selected').attr('selected', false);
+
+});
 function llenarFormulario(fila){
     var id = $(fila).children('td:eq(0)').html();
     var rol = $(fila).children('td:eq(1)').html();
@@ -32,6 +42,36 @@ function llenarFormulario(fila){
     $('#txtFoto').val(foto);
     $('#sEstado option:contains('+estado+')').attr('selected', true);
     
+}
+
+
+function agregar(){    
+    jQuery( document ).ready(function() { 
+     jQuery('#btnAgregar').prop("disabled", false);
+      jQuery('#btnEditar').prop("disabled", true);
+      jQuery('#btnEliminar').prop("disabled", true);
+
+            // true para desactivarlo o false para volverlo a activar
+   }); 
+}
+
+
+function modificar(){    
+    jQuery( document ).ready(function() { 
+      jQuery('#btnAgregar').prop("disabled", true);
+      $('#btnEditar').prop("disabled", false);
+       jQuery('#btnEliminar').prop("disabled", true);
+    
+   }); 
+}
+
+function eliminar(){
+        jQuery( document ).ready(function() { 
+      $('#btnAgregar').prop("disabled", true);
+       $('#btnEditar').prop("disabled", true);  
+        jQuery('#btnEliminar').prop("disabled", false);
+    
+   }); 
 }
 
 
