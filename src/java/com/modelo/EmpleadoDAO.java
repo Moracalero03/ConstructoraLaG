@@ -86,7 +86,7 @@ public class EmpleadoDAO extends Conexion {
             pre.setInt(1, c.getIdRol());
             pre.setString(2, c.getEmpleado());
             pre.setString(3, c.getUsuario());
-            pre.setString(4, c.getPassword());
+            pre.setString(4, md5(c.getPassword()));
             pre.setDouble(5, c.getSalario());
             pre.setString(6, c.getRuta());
             pre.setString(7, c.getEstadoE());
