@@ -97,7 +97,7 @@
                                  <select name="sProyecto" id="sProyecto" class="form-control">
                                        <option value="">Seleccione un proyecto</option>
                                    <% 
-                                        ArrayList<Proyecto> listaP= proyectoDAO.mostrarProyectos();
+                                        ArrayList<Proyecto> listaP= proyectoDAO.mostrarDetalleProyectos();
                                          for (Proyecto elem : listaP) {
                                        
                                    %>
@@ -110,7 +110,7 @@
                                  <select name="sEmpleado" id="sEmpleado" class="form-control">
                                        <option value="">Seleccione un empleado</option>
                                    <% 
-                                        ArrayList<Empleado> listaE= empleadoDAO.mostrarEmpleados();
+                                        ArrayList<Empleado> listaE= empleadoDAO.mostrarDetalleEmpleados();
                                          for (Empleado elem : listaE) {
                                        
                                    %>
@@ -123,7 +123,7 @@
                                  <select name="sMaquinaria" id="sMaquinaria" class="form-control">
                                      <option value="">Seleccione una Maquinaria</option>
                                    <% 
-                                        ArrayList<Maquinaria> listaM = maquinariaDAO.mostrarMaquinaria();
+                                        ArrayList<Maquinaria> listaM = maquinariaDAO.mostrarDetalleMaquinaria();
                                          for (Maquinaria elem : listaM) {
                                        
                                    %>
