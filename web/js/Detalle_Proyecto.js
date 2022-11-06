@@ -28,6 +28,50 @@ function llenarFormulario(fila){
      $('#sMaquinaria option:contains('+maquinaria+')').attr('selected', true);
 };
 
+$(document).ready(function() {
+    $('#btnGuardar').click(function(event) { 
+         $('#mdlGestion').validetta({
+            realTime: true,
+            onValid: function(e) {
+            event.preventDefault()
+                var codigo = $('#txtIdD').val();
+                var proyecto = $('#sProyecto').val();
+                var empleado = $('#sEmpleado').val();
+                var maquinaria = $('#sMaquinaria').val();
+                
+                $.post('MaquinasServlet', {
+                        txtIdD : codigo,
+                        sProyecto : proyecto, 
+                        sEmpleado : empleado, 
+                        sMaquinaria : maquinaria
+                })
+        }
+    });
+});   
+});  
+
+$(document).ready(function() {
+    $('#btnModificar').click(function(event) { 
+         $('#mdlGestion').validetta({
+            realTime: true,
+            onValid: function(e) {
+            event.preventDefault()
+                var codigo = $('#txtIdD').val();
+                var proyecto = $('#sProyecto').val();
+                var empleado = $('#sEmpleado').val();
+                var maquinaria = $('#sMaquinaria').val();
+                
+                $.post('MaquinasServlet', {
+                        txtIdD : codigo,
+                        sProyecto : proyecto, 
+                        sEmpleado : empleado, 
+                        sMaquinaria : maquinaria
+                })
+        }
+    });
+});   
+}); 
+
 
 function agregar(){    
     jQuery( document ).ready(function() {

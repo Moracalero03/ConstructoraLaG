@@ -5,6 +5,7 @@
 package com.modelo;
 
 import com.conexion.Conexion;
+import static com.modelo.Empleado.md5;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -29,13 +30,13 @@ public class EmpleadoDAO extends Conexion {
             pre.setInt(1, em.getIdRol());
             pre.setString(2, em.getEmpleado());
             pre.setString(3, em.getUsuario());
-            pre.setString(4, em.getPassword());
+            pre.setString(4, md5(em.getPassword()));
             pre.setDouble(5, em.getSalario());
             pre.setString(6, em.getRuta());
             pre.setString(7, em.getEstadoE());
             
              res= pre.executeUpdate();
-        }catch (SQLException e) {
+        }catch (Exception e) {
             System.out.println("Error al insertar wacha: "+e.getMessage());
         } finally {
             this.desconectar();
@@ -74,12 +75,6 @@ public class EmpleadoDAO extends Conexion {
         }
         return lista;
     }
-    
-    
-    
-    
-    
-    
     
     public int modificarEmpleado(Empleado c){
     int res = 0;

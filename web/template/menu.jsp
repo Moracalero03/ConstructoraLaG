@@ -24,8 +24,18 @@
     
     <!--datatable-->
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" type="text/javascript"></script>
-    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet"> 
     
+    <!--    validetta-->
+    <script src="${pageContext.servletContext.contextPath}/bootstrap/validetta/validetta.min.js" type="text/javascript"></script>
+    <link href="${pageContext.servletContext.contextPath}/bootstrap/validetta/validetta.min.css" rel="stylesheet" type="text/css"/>
+    <script src="${pageContext.servletContext.contextPath}/bootstrap/validetta/validettaLang-es-ES.js" type="text/javascript"></script> 
+    
+    <!--    validacion de campos--> 
+    <script src="${pageContext.servletContext.contextPath}/js/validarCampos.js" type="text/javascript"></script> 
+    
+    <!--SWEETALERT-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
     
 </head>
 
@@ -57,11 +67,11 @@
           Reportes
         </a> 
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Reporte 1</a>
-          <a class="dropdown-item" href="#">Reporte 2</a>
-          <a class="dropdown-item" href="#">Reporte 3</a>
-          <a class="dropdown-item" href="#">Reporte 4</a>
-          <a class="dropdown-item" href="#">Reporte 5</a>
+          <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte1.jsp">Reporte 1</a>
+          <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte2.jsp">Reporte 2</a>
+          <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte3.jsp">Reporte 3</a>
+          <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte4.jsp">Reporte 4</a>
+          <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte5.jsp">Reporte 5</a>
         </div>
       </li>            
     </ul> <lu class="navbar-nav col-2">

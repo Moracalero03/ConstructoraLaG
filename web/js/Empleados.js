@@ -44,6 +44,7 @@ function llenarFormulario(fila){
     
 }
 
+<<<<<<< HEAD
 function agregar(){    
     jQuery( document ).ready(function() { 
      jQuery('#btnAgregar').prop("disabled", false);
@@ -72,3 +73,67 @@ function eliminar(){
     
    }); 
 }
+=======
+
+$(document).ready(function() {
+    $('#btnAgregar').click(function(event) { 
+         $('#mdlEmpleado').validetta({
+            realTime: true,
+            onValid: function(e) {
+            event.preventDefault()
+                var codigo = $('#txtIdEmpleado').val();
+                var rol = $('#sRol').val();
+                var empleado = $('#txtEmpleado').val();
+                var usuario = $('#txtUsuario').val();
+                var contrasena = $('#txtContrasena').val();
+                var salario = $('#txtSalario').val();
+                var foto = $('#txtFoto').val(); 
+                var estado = $('#sEstado').val();
+                
+                $.post('EmpleadoServlet', {
+                        txtIdEmpleado : codigo,
+                        sRol : rol,
+                        txtEmpleado : empleado, 
+                        txtUsuario : usuario, 
+                        txtContrasena : contrasena,
+                        txtSalario : salario,
+                        txtFoto : foto,
+                        sEstado : estado
+                })
+        }
+    });
+});   
+});  
+
+
+$(document).ready(function() {
+    $('#btnEditar').click(function(event) { 
+         $('#mdlEmpleado').validetta({
+            realTime: true,
+            onValid: function(e) {
+            event.preventDefault()
+                var codigo = $('#txtIdEmpleado').val();
+                var rol = $('#sRol').val();
+                var empleado = $('#txtEmpleado').val();
+                var usuario = $('#txtUsuario').val();
+                var contrasena = $('#txtContrasena').val();
+                var salario = $('#txtSalario').val();
+                var foto = $('#txtFoto').val(); 
+                var estado = $('#sEstado').val();
+                
+                $.post('EmpleadoServlet', {
+                        txtIdEmpleado : codigo,
+                        sRol : rol,
+                        txtEmpleado : empleado, 
+                        txtUsuario : usuario, 
+                        txtContrasena : contrasena,
+                        txtSalario : salario,
+                        txtFoto : foto,
+                        sEstado : estado
+                })
+        }
+    });
+});   
+}); 
+
+>>>>>>> c3a70dfac7b626fd8fc9e56c6d0ad68c36129712

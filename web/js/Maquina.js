@@ -43,6 +43,7 @@ function llenarFormulario(fila){
     
 }
 
+<<<<<<< HEAD
 function agregar(){    
     jQuery( document ).ready(function() { 
      jQuery('#btnAgregar').prop("disabled", false);
@@ -71,3 +72,60 @@ function eliminar(){
     
    }); 
 }
+=======
+$(document).ready(function() {
+    $('#btnAgregar').click(function(event) { 
+         $('#mdlMaquina').validetta({
+            realTime: true,
+            onValid: function(e) {
+            event.preventDefault()
+                var codigo = $('#txtIdM').val();
+                var nombre = $('#txtNombreM').val();
+                var modelo = $('#txtModelo').val();
+                var marca = $('#txtMarca').val();
+                var tipo = $('#txtTipo').val();
+                var Operativo = $('#txtOperatividad').val();
+                var estado = $('#sEstado').val();
+                
+                $.post('MaquinasServlet', {
+                        txtIdM : codigo,
+                        txtNombreM : nombre, 
+                        txtModelo : modelo, 
+                        txtMarca : marca,
+                        txtTipo : tipo,
+                        txtOperatividad : Operativo,
+                        sEstado : estado
+                })
+        }
+    });
+});   
+}); 
+
+$(document).ready(function() {
+    $('#btnEditar').click(function(event) { 
+         $('#mdlMaquina').validetta({
+            realTime: true,
+            onValid: function(e) {
+            event.preventDefault()
+                var codigo = $('#txtIdM').val();
+                var nombre = $('#txtNombreM').val();
+                var modelo = $('#txtModelo').val();
+                var marca = $('#txtMarca').val();
+                var tipo = $('#txtTipo').val();
+                var Operativo = $('#txtOperatividad').val();
+                var estado = $('#sEstado').val();
+                
+                $.post('MaquinasServlet', {
+                        txtIdM : codigo,
+                        txtNombreM : nombre, 
+                        txtModelo : modelo, 
+                        txtMarca : marca,
+                        txtTipo : tipo,
+                        txtOperatividad : Operativo,
+                        sEstado : estado
+                })
+        }
+    });
+});   
+});
+>>>>>>> c3a70dfac7b626fd8fc9e56c6d0ad68c36129712

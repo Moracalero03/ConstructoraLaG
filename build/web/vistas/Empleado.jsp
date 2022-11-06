@@ -32,7 +32,10 @@
             <div class="col mt-4>"> 
                 <button type="button" value="Limpiar formulario" id="" onclick="limpiarFormulario(), agregar()" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlEmpleado">Agregar Empleado</button>
                 <br>
-        <table id="tblEmpleado" class="table table-light table-bordered" style="width:100%">
+                
+                
+                
+                <table id="tblEmpleado" class="table table-light table-bordered" style="width:100%">
             <thead class="thead-dark">
             <tr>
                 <th scope="col">ID</th>
@@ -42,7 +45,9 @@
                 <th scope="col">Contraseña</th>
                 <th scope="col">Salario</th>
                 <th scope="col">Foto</th>
+                <td class="collapse">Paraguay</td>
                 <th scope="col">Estado</th>
+                <th scope="col" class="col-lg-2 col-xl-2 parram text-justify collapse"> </th>
                 <th scope="col">Acciones</th>
             </tr>
         </thead>
@@ -66,7 +71,7 @@
                             <img src="<%=elem.getRuta()%>" alt="images Here" width="200" height="200"/>
                             
                         </td>
-                        <td style="font-size: 10px" class="col-lg-2 col-xl-2 parram text-justify collapse"><%=elem.getRuta()%></td>
+                        <td class="collapse"><%=elem.getRuta()%></td>
                         <td><%=elem.getEstadoE()%></td>
                         <td>
                             <div class="btn-group">
@@ -80,10 +85,11 @@
                     %>
                 </tbody>
             </table>
-                <%!
-                            EmpleadoDAO dao = new EmpleadoDAO();
-                            List<Empleado> lista = new ArrayList<>();
-                        %>
+                
+                
+                
+                
+        
                 
                 
 
@@ -114,18 +120,19 @@
                                     %>
                                 </select>
                                 Empleado
-                                <input type="text" name="txtEmpleado" id="txtEmpleado" class="form-control">
+                                <input type="text" name="txtEmpleado" id="txtEmpleado" class="form-control" data-validetta="required" onkeypress="return validarTexto(event)">
                                 Usuario
-                                <input type="text" name="txtUsuario" id="txtUsuario" class="form-control">
+                                <input type="text" name="txtUsuario" id="txtUsuario" class="form-control" data-validetta="required">
                                 Contraseña 
                                 <div class="container contenedor">
-                                     <input type="password" class="passw form-control" name="txtContrasena" id="txtContrasena"> 
+                                     <input type="password" class="passw form-control" name="txtContrasena" id="txtContrasena" data-validetta="required"> 
                                  <img src="${pageContext.servletContext.contextPath}/img/Show.png" alt="" class="icon" id="Eye">
                                  </div>
                                 Salario
-                                <input type="number" name="txtSalario" id="txtSalario" class="form-control">
+                                <input type="text" name="txtSalario" id="txtSalario" class="form-control" data-validetta="required" onkeypress="return validarNumero(event)">
+
                                 Foto<br>
-                                <input type="text" name="txtFoto" id="txtFoto" class="form-control">
+                                <input type="text" name="txtFoto" id="txtFoto" class="form-control" data-validetta="required">
                             
                                 Estado
                                 <!--<input type="text" name="txtEstado" id="txtEstado" class="form-control">-->
@@ -152,7 +159,25 @@
                 <%
             if (request.getAttribute("mensaje")!=null) {
                 %>  
-                <script>alert("<%=request.getAttribute("mensaje") %>");</script>
+                <script>
+                        
+            					const Toast = Swal.mixin({
+	                                        toast: true,
+	                                        position: 'top-end',
+	                                        showConfirmButton: false,
+	                                        timer: 3000,
+	                                        timerProgressBar: true,
+	                                        didOpen: (toast) => {
+	                                          toast.addEventListener('mouseenter', Swal.stopTimer)
+	                                          toast.addEventListener('mouseleave', Swal.resumeTimer)
+	                                        }
+	                                      })
+	
+	                                      Toast.fire({
+	                                        icon: 'info',
+	                                        title: "<%=request.getAttribute("mensaje")%>"
+	                                      })
+                </script> 
                 <%
                 }
                 %>

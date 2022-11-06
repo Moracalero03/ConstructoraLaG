@@ -94,10 +94,10 @@
                                <span>Id detalle</span>
                                <input type="number" name="txtIdD" id="txtIdD" value="0" class="form-control" readonly>                                  
                                <span>Proyecto</span>
-                                 <select name="sProyecto" id="sProyecto" class="form-control">
+                                 <select name="sProyecto" id="sProyecto" class="form-control" data-validetta="required">
                                        <option value="">Seleccione un proyecto</option>
                                    <% 
-                                        ArrayList<Proyecto> listaP= proyectoDAO.mostrarProyectos();
+                                        ArrayList<Proyecto> listaP= proyectoDAO.mostrarDetalleProyectos();
                                          for (Proyecto elem : listaP) {
                                        
                                    %>
@@ -107,7 +107,7 @@
                                     %>
                                   </select>
                                   <span>Empleado</span>
-                                 <select name="sEmpleado" id="sEmpleado" class="form-control">
+                                 <select name="sEmpleado" id="sEmpleado" class="form-control" data-validetta="required">
                                        <option value="">Seleccione un empleado</option>
                                    <% 
                                         ArrayList<Empleado> listaE= empleadoDAO.mostrarEmpleados();
@@ -120,7 +120,7 @@
                                     %>
                                   </select>
                                <span>Maquinaria</span>
-                                 <select name="sMaquinaria" id="sMaquinaria" class="form-control">
+                                 <select name="sMaquinaria" id="sMaquinaria" class="form-control" data-validetta="required">
                                      <option value="">Seleccione una Maquinaria</option>
                                    <% 
                                         ArrayList<Maquinaria> listaM = maquinariaDAO.mostrarMaquinaria();
@@ -153,7 +153,25 @@
                                  
             <% if (request.getAttribute("mensaje")!=null) {
                          %>
-             <script>alert("<%=request.getAttribute("mensaje")%>");</script>
+             <script>
+                        
+            					const Toast = Swal.mixin({
+	                                        toast: true,
+	                                        position: 'top-end',
+	                                        showConfirmButton: false,
+	                                        timer: 3000,
+	                                        timerProgressBar: true,
+	                                        didOpen: (toast) => {
+	                                          toast.addEventListener('mouseenter', Swal.stopTimer)
+	                                          toast.addEventListener('mouseleave', Swal.resumeTimer)
+	                                        }
+	                                      })
+	
+	                                      Toast.fire({
+	                                        icon: 'info',
+	                                        title: "<%=request.getAttribute("mensaje")%>"
+	                                      })
+                </script> 
             <%
                 }
             %>
