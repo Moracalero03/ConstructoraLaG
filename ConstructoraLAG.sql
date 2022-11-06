@@ -76,7 +76,7 @@ INSERT INTO `departamento` (`idDepartamento`, `departamento`) VALUES
 	(12, 'Morazán'),
 	(13, 'San Miguel'),
 	(14, 'La Unión'); 
-    
+
 INSERT INTO `municipio` (`idMunicipio`, `municipio`, `idDepartamento`) VALUES
 	(1, 'Ahuachapán', 1),
 	(2, 'Jujutla', 1),
@@ -341,8 +341,8 @@ INSERT INTO `municipio` (`idMunicipio`, `municipio`, `idDepartamento`) VALUES
 	(261, 'Tepetitán', 10),
 	(262, 'Verapaz', 10); 
 
-INSERT INTO `constructora`.`proyecto` (`idProyecto`, `idMunicipio`, `proyecto`, `EstadoP`, `comentario`, `costoInicial`, `costoFinal`, `FechaInicio`, `FechaFinal`) VALUES ('1', '2', 'Viaducto los Chorros', 'Ingresado', '', '100', '', '2022-10-11', '');
-INSERT INTO `constructora`.`proyecto` (`idProyecto`, `idMunicipio`, `proyecto`, `EstadoP`, `comentario`, `costoInicial`, `costoFinal`, `FechaInicio`, `FechaFinal`) VALUES ('2', '1', 'Biblioteca Nacional', 'Ingresado', '', '500', '', '2023-01-12', '');
+INSERT INTO `constructora`.`proyecto` (`idProyecto`, `idMunicipio`, `proyecto`, `EstadoP`, `comentario`, `costoInicial`, `costoFinal`, `FechaInicio`, `FechaFinal`) VALUES ('1', '2', 'Viaducto los Chorros', 'Confirmado', '', '100', '', '2022-10-11', '');
+INSERT INTO `constructora`.`proyecto` (`idProyecto`, `idMunicipio`, `proyecto`, `EstadoP`, `comentario`, `costoInicial`, `costoFinal`, `FechaInicio`, `FechaFinal`) VALUES ('2', '1', 'Biblioteca Nacional', 'Confirmado', '', '500', '', '2023-01-12', '');
 INSERT INTO `constructora`.`proyecto` (`idMunicipio`, `proyecto`, `EstadoP`, `comentario`, `costoInicial`, `FechaInicio`) VALUES ('3', 'Tren del Pacífico', 'Confirmado', '', '100', '2022-11-01');
 INSERT INTO `constructora`.`proyecto` (`idMunicipio`, `proyecto`, `EstadoP`, `comentario`, `costoInicial`, `FechaInicio`) VALUES ('3', 'Carretera Surf City', 'Confirmado', '', '100', '2022-11-05');
 INSERT INTO `constructora`.`proyecto` (`idMunicipio`, `proyecto`, `EstadoP`, `costoInicial`, `FechaInicio`) VALUES ('6', 'Surf City', 'Confirmado', '500', '2022-10-31');
@@ -355,21 +355,23 @@ INSERT INTO `constructora`.`proyecto` (`idMunicipio`, `proyecto`, `EstadoP`, `co
 INSERT INTO `constructora`.`proyecto` (`idMunicipio`, `proyecto`, `EstadoP`, `costoInicial`, `costoFinal`, `FechaInicio`) VALUES ('218', 'Remodelación del Palacio Nacional', 'Confirmado', '600', '0', '2003-01-05');
 INSERT INTO `constructora`.`proyecto` (`idMunicipio`, `proyecto`, `EstadoP`, `costoInicial`, `costoFinal`, `FechaInicio`) VALUES ('216', 'Paso del Tigre', 'Ingresado', '300', '0', '2016-08-14'); 
 
-INSERT INTO `constructora`.`maquinaria` (`idMaquinaria`, `maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('1', 'Excavadora', '11rtx', 'Caterpilar', 'Excavación', '1000', 'disponible');
-INSERT INTO `constructora`.`maquinaria` (`idMaquinaria`, `maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('2', 'Aplanadora', '3060Core', 'Caterpilar', 'Pesada', '5000', 'disponible');
-INSERT INTO `constructora`.`maquinaria` (`maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('Perforadora', '11yfg', 'Carmix', 'Pesada', '1000', 'disponible');
-INSERT INTO `constructora`.`maquinaria` (`maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('Bailarina', 'gfdfgXOP', 'Wacker Neuson', 'Pesada', '5000', 'disponible');
-INSERT INTO `constructora`.`maquinaria` (`maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('Volqueta', '2264', 'Caterpilar', 'Pesada', '1000', 'disponible');
-INSERT INTO `constructora`.`maquinaria` (`maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('Dragas', '43060go', 'Komatsu', 'Pesada', '5000', 'disponibile');
-INSERT INTO `constructora`.`maquinaria` (`maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('Pavimentadora', '40rtx', 'Zoomlion', 'Pesada', '1000', 'disponible');
-INSERT INTO `constructora`.`maquinaria` (`maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('Compactadora', 'qwe452', 'Hitachi Construction Machinery', 'Pesada', '5000', 'disponibile');
-INSERT INTO `constructora`.`maquinaria` (`maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('Tractores', 'vfgr456', 'Volvo Construction Equipment', 'Excavación', '1000', 'disponible');
-INSERT INTO `constructora`.`maquinaria` (`maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('Motovolquete', 'w4ds5e2d', 'Caterpilar', 'Semipesada', '5000', 'disponibile');
+
+INSERT INTO `constructora`.`maquinaria` (`idMaquinaria`, `maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('1', 'Excavadora', '11rtx', 'Caterpilar', 'Excavación', '1000', 'Asignado');
+INSERT INTO `constructora`.`maquinaria` (`idMaquinaria`, `maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('2', 'Aplanadora', '3060Core', 'Caterpilar', 'Pesada', '5000', 'Asignado');
+INSERT INTO `constructora`.`maquinaria` (`idMaquinaria`, `maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('3', 'Perforadora', '11yfg', 'Carmix', 'Pesada', '1000', 'Disponible');
+INSERT INTO `constructora`.`maquinaria` (`idMaquinaria`, `maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('4', 'Bailarina', 'gfdfgXOP', 'Wacker Neuson', 'Pesada', '5000', 'Disponible');
+INSERT INTO `constructora`.`maquinaria` (`idMaquinaria`, `maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('5', 'Volqueta', '2264', 'Caterpilar', 'Pesada', '1000', 'Disponible');
+INSERT INTO `constructora`.`maquinaria` (`idMaquinaria`, `maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('6', 'Dragas', '43060go', 'Komatsu', 'Pesada', '5000', 'Disponible');
+INSERT INTO `constructora`.`maquinaria` (`idMaquinaria`, `maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('7', 'Pavimentadora', '40rtx', 'Zoomlion', 'Pesada', '1000', 'Disponible');
+INSERT INTO `constructora`.`maquinaria` (`idMaquinaria`, `maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('8', 'Compactadora', 'qwe452', 'Hitachi Construction Machinery', 'Pesada', '5000', 'Disponible');
+INSERT INTO `constructora`.`maquinaria` (`idMaquinaria`, `maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('9', 'Tractores', 'vfgr456', 'Volvo Construction Equipment', 'Excavación', '1000', 'Disponible');
+INSERT INTO `constructora`.`maquinaria` (`idMaquinaria`, `maquinaria`, `modelo`, `marca`, `tipo`, `operatividad`, `estado`) VALUES ('10', 'Motovolquete', 'w4ds5e2d', 'Caterpilar', 'Semipesada', '5000', 'Disponible');
+
 
 INSERT INTO `constructora`.`rol` (`idRol`, `NivelAcceso`) VALUES ('1', 'Admin');
 INSERT INTO `constructora`.`rol` (`idRol`, `NivelAcceso`) VALUES ('2', 'Empleado');
 
-INSERT INTO `constructora`.`empleado` (`idEmpleado`, `idRol`, `empleado`, `usuario`, `contraseña`, `salario`, `foto`, `estadoE`) VALUES ('1', '2', 'Josue', 'J.Palacios', 'f20b85e64882a26195eeb465adcc0e87	', '1000', 'https://scontent.fsal3-1.fna.fbcdn.net/v/t39.30808-6/314529787_2509974785811538_2307035747957554953_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=spTTyPPbVb8AX_tXNMq&tn=KxFo8BBPjbJJkIuj&_nc_ht=scontent.fsal3-1.fna&oh=00_AfCKez9LS2X8xfQiZjaj6NEiqly2zh4CRFE5e2e5hKZWJw&oe=636DC9B5', 'Asignado');
+INSERT INTO `constructora`.`empleado` (`idEmpleado`, `idRol`, `empleado`, `usuario`, `contraseña`, `salario`, `foto`, `estadoE`) VALUES ('1', '2', 'Josue', 'J.Palacios', 'f20b85e64882a26195eeb465adcc0e87    ', '1000', 'https://scontent.fsal3-1.fna.fbcdn.net/v/t39.30808-6/314529787_2509974785811538_2307035747957554953_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=spTTyPPbVb8AX_tXNMq&tn=KxFo8BBPjbJJkIuj&_nc_ht=scontent.fsal3-1.fna&oh=00_AfCKez9LS2X8xfQiZjaj6NEiqly2zh4CRFE5e2e5hKZWJw&oe=636DC9B5', 'Asignado');
 INSERT INTO `constructora`.`empleado` (`idEmpleado`, `idRol`, `empleado`, `usuario`, `contraseña`, `salario`, `foto`, `estadoE`) VALUES ('2', '2', 'Paul', 'P.Ayala', '748e0dd3ea12e7887399d19ec7f8ed07', '1000', 'https://scontent.fsal3-1.fna.fbcdn.net/v/t39.30808-6/314697636_709392697423606_1478622458855905840_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=11eG6KIQOqoAX9TQsLB&_nc_ht=scontent.fsal3-1.fna&oh=00_AfAqelgmKH0ozaCpnErFxTFVRXwP43cNFGp0H8fpml7FzQ&oe=636C986E', 'Asignado');
 INSERT INTO `constructora`.`empleado` (`idEmpleado`, `idRol`, `empleado`, `usuario`, `contraseña`, `salario`, `foto`, `estadoE`) VALUES ('3', '1', 'Ernesto', 'E.Navarro', 'a096f53cbfc3266f7a875e775a31faf3', '500', 'https://scontent.fsal4-1.fna.fbcdn.net/v/t39.30808-6/236701290_3054181858239317_8508917019292694772_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHj1GAqizSw-dBxR7e5-pa7s-FMwyYCU3yz4UzDJgJTfEp94g8Qbgdy9WY4n85i8qTJczoPb30IQf5YEX907B-f&_nc_ohc=dhSm3XiOZvIAX9NgDGn&_nc_zt=23&_nc_ht=scontent.fsal4-1.fna&oh=00_AfDPq7LYL3wKLct_wg0WTbVaZhnoY4N3XtMB4JG30pVTnw&oe=636D209E', 'Asignado');
 INSERT INTO `constructora`.`empleado` (`idEmpleado`, `idRol`, `empleado`, `usuario`, `contraseña`, `salario`, `foto`, `estadoE`) VALUES ('4', '1', 'Marcela', 'M.Calero', '9de3a3d33e2b2138ea7c612ad1114dd8', '500', 'https://scontent.fsal6-1.fna.fbcdn.net/v/t39.30808-6/300908219_2177948855705931_5926486406527075017_n.jpg?_nc_cat=109&amp;ccb=1-7&amp;_nc_sid=09cbfe&amp;_nc_ohc=3lrFOrK0PA0AX-qfEGr&amp;_nc_ht=scontent.fsal6-1.fna&amp;oh=00_AfBetXk3XcTIE6sO9PKMpT9aMNhT7i1knsPeWFF45c_ktw&amp;oe=636C6BC7', 'Asignado');
@@ -393,11 +395,12 @@ where EstadoP="Entregado" and str_to_date(  `FechaFinal`, '%Y-%m-%d')
 between "2022-10-01" and "2023-09-01";
 
 /*Reporte de ganancias dentro de un rango de fechas*/ 
-select idProyecto, proyecto, EstadoP, comentario, costoInicial, costoFinal, 
-if(costoFinal != 0, costoFinal - costoInicial, costoFinal)  as ganancia, 
-FechaInicio, FechaFinal from proyecto
-where EstadoP="Entregado" and str_to_date(  `FechaFinal`, '%Y-%m-%d') 
+select idProyecto, proyecto, EstadoP, costoInicial, costoFinal, FechaInicio, FechaFinal,
+if(costoFinal != 0, costoFinal - costoInicial, costoFinal)  as ganancia from proyecto
+where EstadoP="Entregado" and FechaFinal
 between "2022-10-01" and "2023-09-01";   
+
+SELECT * FROM proyecto;
 
 select idProyecto, proyecto, FechaInicio, FechaFinal, EstadoP, costoInicial, costoFinal,
 if(costoFinal != 0, costoFinal - costoInicial, costoFinal)  as ganancia from proyecto
@@ -420,7 +423,7 @@ inner join departamento d
 on m.idDepartamento=d.idDepartamento
 where d.departamento="San Salvador" and p.EstadoP="Entregado"; 
 
-/*TRIGGERS*/
+/*TRIGGERS AL INSERTAR EL DETALLE*/
 DELIMITER $$
   create trigger EstadoEmpleado
   after insert on detalle_proyecto
@@ -448,12 +451,68 @@ DELIMITER $$
   END$$
 DELIMITER ; 
 
+/*TRIGGER AL ACTUALIZAR LOS DATOS DE DETALLE*/
+DELIMITER $$
+  create trigger EstadoUpdateEmpleado
+  after update on detalle_proyecto
+  for each row
+  update empleado 
+  set estadoE = "Asignado" where idEmpleado=new.idEmpleado;
+  END$$
+DELIMITER ; 
+
+DELIMITER $$
+  create trigger EstadoUpdateOldEmpleado
+  after update on detalle_proyecto
+  for each row
+  update empleado
+  set estadoE = "Disponible" where idEmpleado=old.idEmpleado;
+  END$$
+DELIMITER ;
+
+DELIMITER $$
+  create trigger EstadoUpdateMaquina
+  after update on detalle_proyecto
+  for each row
+  update maquinaria 
+  set estado = "Asignado" where idMaquinaria=new.idMaquinaria;
+  END$$
+DELIMITER ; 
+
+DELIMITER $$
+  create trigger EstadoUpdateOldMaquina
+  after update on detalle_proyecto
+  for each row
+  update maquinaria
+  set estado = "Disponible" where idMaquinaria=old.idMaquinaria;
+  END$$
+DELIMITER ;
+
+DELIMITER $$
+  create trigger EstadoUpdateProyecto
+  after update on detalle_proyecto
+  for each row
+  update proyecto 
+  set EstadoP = "Confirmado" where idProyecto=new.idProyecto;
+  END$$
+DELIMITER ; 
+
+DELIMITER $$
+  create trigger EstadoUpdateOldProyecto
+  after update on detalle_proyecto
+  for each row
+  update proyecto
+  set EstadoP = "Ingresado" where idProyecto=old.idProyecto;
+  END$$
+DELIMITER ; 
+
+/*TRIGGER AL ELIMINAR DEL DETALLE DE PROYECTO*/
 DELIMITER $$
   create trigger EstadoDeleteEmpleado
   after delete on detalle_proyecto
   for each row
   update empleado
-  set estadoE = "Disponible" where idEmpleado=idEmpleado;
+  set estadoE = "Disponible" where idEmpleado=old.idEmpleado;
   END$$
 DELIMITER ;
 
@@ -462,22 +521,22 @@ DELIMITER $$
   after delete on detalle_proyecto
   for each row
   update maquinaria
-  set estado = "Disponible" where idMaquinaria=idMaquinaria;
+  set estado = "Disponible" where idMaquinaria=old.idMaquinaria;
   END$$
-DELIMITER ;
+DELIMITER ; 
+
 DELIMITER $$
   create trigger EstadoDeleteProyecto
   after delete on detalle_proyecto
   for each row
   update proyecto
-  set EstadoP = "Ingresado" where idProyecto=idProyecto;
+  set EstadoP = "Ingresado" where idProyecto=old.idProyecto;
   END$$
-DELIMITER ;
-
+DELIMITER ; 
 
 /*CONSULTA PARA LOS SELECT DEL DETALLE DE PROYECTO*/
 select * from empleado em INNER JOIN rol ro ON em.idRol=ro.idRol where estadoE!="Asignado";
 select * from maquinaria where estado!="Asignado";
 select idProyecto, proyecto,m.municipio, EstadoP, comentario, costoInicial,costoFinal, FechaInicio, FechaFinal 
 from proyecto p INNER JOIN municipio m
-ON p.idMunicipio = m.idMunicipio where EstadoP="Ingresado" or EstadoP="Confirmado"; 
+ON p.idMunicipio = m.idMunicipio where EstadoP="Ingresado" or EstadoP="Confirmado";  
