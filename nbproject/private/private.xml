@@ -2,35 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <group>
-            <file>file:/C:/Users/marce/Documents/CICLO%20II%20-%202022/DAUTE/PROYECTO/Constructora/ConstructoraLaG/web/vistas/Empleado.jsp</file>
-            <file>file:/C:/Users/marce/Documents/CICLO%20II%20-%202022/DAUTE/PROYECTO/Constructora/ConstructoraLaG/web/template/menu.jsp</file>
-            <file>file:/C:/Users/marce/Documents/CICLO%20II%20-%202022/DAUTE/PROYECTO/Constructora/ConstructoraLaG/web/js/proyecto.js</file>
-            <file>file:/C:/Users/marce/Documents/CICLO%20II%20-%202022/DAUTE/PROYECTO/Constructora/ConstructoraLaG/web/vistas/Proyecto.jsp</file>
-        </group>
-=======
         <group/>
->>>>>>> 8c80f74b01d8dbcbb56cdc31402eaa6a40f1d73e
-=======
-        <group>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/modelo/EmpleadoDAO.java</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/controlador/MaquinasServlet.java</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/vistas/Proyecto.jsp</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/js/Empleados.js</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/controlador/EmpleadoServlet.java</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/modelo/Empleado.java</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/js/Maquina.js</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/vistas/Maquina.jsp</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/controlador/ProyectoServlet.java</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/modelo/Maquinaria.java</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/js/proyecto.js</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/conexion/Conexion.java</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/js/code.js</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/vistas/Empleado.jsp</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/modelo/MaquinariaDAO.java</file>
-        </group>
->>>>>>> c492c9a44fed8d0714a1f4cca7d5c802cdf5d67f
     </open-files>
 </project-private>

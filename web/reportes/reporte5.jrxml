@@ -60,8 +60,8 @@ where d.departamento=$P{depa} and p.EstadoP=$P{estado};]]>
 				<text><![CDATA[Proyectos por departamento y estado]]></text>
 			</staticText>
 			<image>
-				<reportElement x="356" y="0" width="199" height="70" uuid="b2083294-c923-436f-9ba5-90eef06f6a4b"/>
-				<imageExpression><![CDATA["C:\\Users\\marce\\Documents\\CICLO II - 2022\\DAUTE\\PROYECTO\\Constructora\\ConstructoraLaG\\web\\img\\logo.png"]]></imageExpression>
+				<reportElement x="359" y="0" width="196" height="70" uuid="b9718e16-791a-4cfe-bc6b-5e86d1960418"/>
+				<imageExpression><![CDATA["C:\\Users\\marce\\Documents\\CICLO II - 2022\\DAUTE\\PROYECTO\\Constructora\\ConstructoraLaG\\web\\reportes\\logo.png"]]></imageExpression>
 			</image>
 		</band>
 	</title>
