@@ -64,6 +64,33 @@ public class MaquinariaDAO extends Conexion {
         return lista;
     }
     
+     public ArrayList<Maquinaria>mostrarDetalleMaquinaria(){
+        ArrayList<Maquinaria> lista = new ArrayList<>();
+        try {
+            this.conectar();
+            String sql = "select * from maquinaria where estado!=\"Asignado\"";
+            PreparedStatement pre = this.getCon().prepareStatement(sql);
+            ResultSet rs;
+            rs = pre.executeQuery();
+            while (rs.next()){
+                Maquinaria m = new Maquinaria();
+                m.setIdMaquinaria(rs.getInt(1));
+                m.setMaquinaria(rs.getString(2));
+                m.setModelo(rs.getString(3));
+                m.setMarca(rs.getString(4));
+                m.setTipo(rs.getString(5));
+                m.setOperatividad(rs.getDouble(6));
+                m.setEstado(rs.getString(7));
+                lista.add(m);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al mostrar wacha: "+e.getMessage());
+        } finally {
+            this.desconectar();
+        }
+        return lista;
+    }
+    
     public int modificarMaquinaria(Maquinaria m){
     int res = 0;
         try {
