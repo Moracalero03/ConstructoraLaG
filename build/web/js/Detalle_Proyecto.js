@@ -8,7 +8,7 @@ $('body').on('click', '#eliminar', function(){
 
 $('#mdlGestion').on('hide.bs.modal', function (event) {
    $("#mdlGestion input").val("");
-  $("#mdlGestion button").prop("disabled", false);
+   $("#mdlGestion button").prop("disabled", false);
    $("#txtIdD").val(0);
    $('#sProyecto').find('option:selected').attr('selected', false);
    $('#sEmpleado').find('option:selected').attr('selected', false);
@@ -75,6 +75,7 @@ $(document).ready(function() {
 
 function agregar(){    
     jQuery( document ).ready(function() {
+      $('#mdlGestion select').prop("disabled", false),
       $('#btnGuardar').prop("disabled", false);   
       $('#btnModificar').prop("disabled", true);
       $('#btnEliminar').prop("disabled", true);  // true para desactivarlo o false para volverlo a activar
@@ -84,6 +85,7 @@ function agregar(){
 
 function modificar(){    
     jQuery( document ).ready(function() { 
+      $('#mdlGestion select').prop("disabled", false),
       $('#btnGuardar').prop("disabled", true);
       $('#btnModificar').prop("disabled", false);
       $('#btnEliminar').prop("disabled", true);  // true para desactivarlo o false para volverlo a activar
@@ -92,6 +94,7 @@ function modificar(){
 
 function eliminar(){
         jQuery( document ).ready(function() { 
+      $('#mdlGestion select').prop("disabled", true),
       $('#btnGuardar').prop("disabled", true);
       $('#btnModificar').prop("disabled", true);
       $('#btnEliminar').prop("disabled", false); // true para desactivarlo o false para volverlo a activar

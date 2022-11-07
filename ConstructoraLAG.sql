@@ -497,14 +497,17 @@ DELIMITER $$
   END$$
 DELIMITER ; 
 
-DELIMITER $$
-  create trigger EstadoUpdateOldProyecto
-  after update on detalle_proyecto
-  for each row
-  update proyecto
-  set EstadoP = "Ingresado" where idProyecto=old.idProyecto;
-  END$$
-DELIMITER ; 
+-- DELIMITER $$
+--   create trigger EstadoUpdateOldProyecto
+--   after update on detalle_proyecto
+--   for each row
+--   update proyecto
+--   set EstadoP = "Ingresado" where idProyecto=old.idProyecto;
+--   END$$
+-- DELIMITER ; 
+
+use constructora
+detalle_proyectodrop trigger EstadoUpdateOldProyecto
 
 /*TRIGGER AL ELIMINAR DEL DETALLE DE PROYECTO*/
 DELIMITER $$
