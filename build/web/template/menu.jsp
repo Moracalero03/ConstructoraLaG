@@ -31,11 +31,11 @@
     <link href="${pageContext.servletContext.contextPath}/bootstrap/validetta/validetta.min.css" rel="stylesheet" type="text/css"/>
     <script src="${pageContext.servletContext.contextPath}/bootstrap/validetta/validettaLang-es-ES.js" type="text/javascript"></script> 
     
-    <!--    validacion de campos--> 
+   <!--    validacion de campos--> 
     <script src="${pageContext.servletContext.contextPath}/js/validarCampos.js" type="text/javascript"></script> 
     
     <!--SWEETALERT-->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
   
     
 </head>
@@ -88,14 +88,21 @@
         </a>
           
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/index.jsp?cerrar=true">Cerrar sesión</a>
+            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/index.jsp?cerrar=true" onclick="window.close()" target="_blank" >Cerrar sesión</a>
         </div>
       </li>
     </lu>   
   </div>
- </nav>        
+ </nav>
+            
 <%
-}
+    }
 %>
+<script languaje:"javascript>
+window.close();
+</script>
+
+
       <br>
       <br>
+      
