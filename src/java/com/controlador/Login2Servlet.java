@@ -47,6 +47,7 @@ public class Login2Servlet extends HttpServlet {
                    //Sesion
                    HttpSession sesion = request.getSession();
                    sesion.setAttribute("usuario", usuario);
+                   
                    sesion.setAttribute("idRol", rol);
                   request.getRequestDispatcher("/vistas/Inicio.jsp").forward(request, response);
                    

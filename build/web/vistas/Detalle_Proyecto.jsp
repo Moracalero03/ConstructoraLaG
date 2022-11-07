@@ -56,8 +56,30 @@
         <tbody>
                       <% ArrayList<Detalle_Proyecto> listaD = detalle_ProyectoDAO.mostrarDetalles();
                   for (Detalle_Proyecto elem : listaD) {
+                  
+if (sesion.getAttribute("idRol").equals(2) ) {
+if (sesion.getAttribute("usuario").equals(elem.getUsuario()) ) {
                       %> 
                       <tr>
+                        <td><%=elem.getIdDetalle_Proyecto()%></td>
+                        <td><%=elem.getIdProyecto()%></td>
+                        <td><%=elem.getProyecto()%></td>
+                        <td><%=elem.getEmpleado()%></td>
+                        <td><%=elem.getMaquiaria()%></td>
+                        <td>   
+                            <div class="btn-group">
+
+                            </div>
+                        </td>
+                      </tr>
+                  
+                    <%
+                        
+                        }}
+                                       
+                        if (sesion.getAttribute("idRol").equals(1) ){
+                    %>
+                     <tr>
                         <td><%=elem.getIdDetalle_Proyecto()%></td>
                         <td><%=elem.getIdProyecto()%></td>
                         <td><%=elem.getProyecto()%></td>
@@ -70,9 +92,9 @@
                              
                             </div>
                         </td>
-                      </tr>    
-                    <%
-                      }
+                      </tr>    <%
+
+}}
                     %>
                                   
                 </tbody>

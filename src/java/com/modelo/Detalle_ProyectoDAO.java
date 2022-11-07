@@ -40,9 +40,9 @@ public ArrayList<Detalle_Proyecto> mostrarDetalles(){
        ArrayList<Detalle_Proyecto> lista = new ArrayList<>();
         try {
             this.conectar();
-            String sql = "select idDetalleProyecto, de.idProyecto, proyecto, empleado, maquinaria from detalle_proyecto de \n" +
-"INNER JOIN proyecto pr ON de.idProyecto=pr.idProyecto\n" +
-"INNER JOIN empleado em ON de.idEmpleado=em.idEmpleado\n" +
+            String sql = "select idDetalleProyecto, de.idProyecto, proyecto, empleado, maquinaria, usuario from detalle_proyecto de\n" +
+"INNER JOIN proyecto pr ON de.idProyecto=pr.idProyecto \n" +
+"INNER JOIN empleado em ON de.idEmpleado=em.idEmpleado \n" +
 "INNER JOIN maquinaria ma ON de.idMaquinaria=ma.idMaquinaria";
             PreparedStatement pre = this.getCon().prepareStatement(sql);
             ResultSet rs = pre.executeQuery();
@@ -53,6 +53,7 @@ public ArrayList<Detalle_Proyecto> mostrarDetalles(){
              d.setProyecto(rs.getString(3));
              d.setEmpleado(rs.getString(4));
              d.setMaquiaria(rs.getString(5));
+             d.setUsuario(rs.getString(6));
              lista.add(d);
             }
         } catch (Exception e) {
