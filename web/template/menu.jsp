@@ -54,9 +54,12 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Inicio.jsp">Inicio</a>
       </li>
+    <% 
+                  if (session.getAttribute("idRol").toString().equals("1")) {
+    %>
       <li class="nav-item">
         <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Empleado.jsp">Empleado</a>
       </li>
@@ -80,7 +83,14 @@
           <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte4.jsp">Reporte 4</a>
           <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte5.jsp">Reporte 5</a>
         </div>
-      </li>           
+      </li>
+      
+      <%
+        }
+      %> 
+    <li class="nav-item">
+          <a class="nav-link" href="${pageContext.servletContext.contextPath}">Boleta de pago</a>
+    </li>
     </ul> <lu class="navbar-nav col-2">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">

@@ -11,6 +11,9 @@
 <%@page import="com.modelo.Empleado"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.modelo.EmpleadoDAO"%>
+<%
+    if (session.getAttribute("usuario") != null && session.getAttribute("idRol").toString().equals("1")) {
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -199,3 +202,8 @@
         <script src="${pageContext.servletContext.contextPath}/js/code.js"></script>
 
 </html>
+<%
+    }else{
+    response.sendRedirect(request.getContextPath() + "/index.jsp");
+    }
+%>

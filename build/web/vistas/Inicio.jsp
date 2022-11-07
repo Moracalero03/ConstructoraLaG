@@ -5,6 +5,9 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    if (session.getAttribute("usuario") != null) {
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -112,4 +115,9 @@
 </body>
   
 </html>
+<%
+    }else{
+    response.sendRedirect(request.getContextPath() + "/index.jsp");
+    }
+%>
 

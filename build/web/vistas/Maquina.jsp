@@ -8,6 +8,9 @@
 <%@page import="com.modelo.Maquinaria"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    if (session.getAttribute("usuario") != null && session.getAttribute("idRol").toString().equals("1")) {
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -147,3 +150,8 @@
                 <jsp:include page="../template/pie.jsp"/>
     </body>  
 </html>
+<%
+    }else{
+    response.sendRedirect(request.getContextPath() + "/index.jsp");
+    }
+%>
