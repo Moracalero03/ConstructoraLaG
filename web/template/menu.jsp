@@ -6,6 +6,9 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+   <?Php
+   response.setHeader("Cache-Control","no-store");
+   ?>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- jQuery -->
       <link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath}/bootstrap/select2.css">
@@ -36,8 +39,7 @@
     
     <!--SWEETALERT-->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
-  
-    
+
 </head>
 
 <%
@@ -88,7 +90,8 @@
         </a>
           
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/index.jsp?cerrar=true">Cerrar sesión</a>
+            <a class="dropdown-item" id="open" href="${pageContext.servletContext.contextPath}/index.jsp">Cerrar sesión</a>
+           
         </div>
       </li>
     </lu>   
