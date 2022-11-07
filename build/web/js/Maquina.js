@@ -46,8 +46,6 @@ function llenarFormulario(fila){
 
 function agregar(){    
     jQuery( document ).ready(function() { 
-     $('#mdlMaquina input').prop("disabled", false),
-     $('#mdlMaquina select').prop("disabled", false),
      jQuery('#btnAgregar').prop("disabled", false);
       jQuery('#btnEditar').prop("disabled", true);
       jQuery('#btnEliminar').prop("disabled", true);
@@ -59,8 +57,6 @@ function agregar(){
 
 function modificar(){    
     jQuery( document ).ready(function() { 
-      $('#mdlMaquina input').prop("disabled", false),
-      $('#mdlMaquina select').prop("disabled", false),
       jQuery('#btnAgregar').prop("disabled", true);
       $('#btnEditar').prop("disabled", false);
        jQuery('#btnEliminar').prop("disabled", true);
@@ -70,8 +66,6 @@ function modificar(){
 
 function eliminar(){
         jQuery( document ).ready(function() { 
-      $('#mdlMaquina input').prop("disabled", true),
-      $('#mdlMaquina select').prop("disabled", true),
       $('#btnAgregar').prop("disabled", true);
        $('#btnEditar').prop("disabled", true);  
         jQuery('#btnEliminar').prop("disabled", false);

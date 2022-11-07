@@ -75,7 +75,6 @@ $(document).ready(function() {
 
 function agregar(){    
     jQuery( document ).ready(function() {
-      $('#mdlGestion select').prop("disabled", false),
       $('#btnGuardar').prop("disabled", false);   
       $('#btnModificar').prop("disabled", true);
       $('#btnEliminar').prop("disabled", true);  // true para desactivarlo o false para volverlo a activar
@@ -85,7 +84,6 @@ function agregar(){
 
 function modificar(){    
     jQuery( document ).ready(function() { 
-      $('#mdlGestion select').prop("disabled", false),
       $('#btnGuardar').prop("disabled", true);
       $('#btnModificar').prop("disabled", false);
       $('#btnEliminar').prop("disabled", true);  // true para desactivarlo o false para volverlo a activar
@@ -94,7 +92,6 @@ function modificar(){
 
 function eliminar(){
         jQuery( document ).ready(function() { 
-      $('#mdlGestion select').prop("disabled", true),
       $('#btnGuardar').prop("disabled", true);
       $('#btnModificar').prop("disabled", true);
       $('#btnEliminar').prop("disabled", false); // true para desactivarlo o false para volverlo a activar
