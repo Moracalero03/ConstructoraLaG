@@ -10,16 +10,21 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Inicio</title> 
-
+<%@ page language="java"%>
       
-    
+         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   
     </head>
+<script> 
+    $(function (){
+       $("#header").load("${pageContext.servletContext.contextPath}/template/menu.jsp");
+       $("#footer").load("${pageContext.servletContext.contextPath}/template/pie.jsp");
+    });
+</script>
     <body  style="background-color: #EFF0EB">  
-        <%@include file="../template/menu.jsp" %>
-        
+        <div id="header"></div>      
         <br>
-         
         <center><h1>"Constructora La Gerencia"</h1></center> 
         <div class="container-fluid">
             <div class="row mb-3 justify-content-center">
@@ -102,7 +107,9 @@
                  </div> 
             </div>
         </div>
-       <jsp:include page="${pageContext.servletContext.contextPath}/template/pie.jsp" />
-    </body>
+        
+ <div id="footer"></div>
+</body>
   
 </html>
+
