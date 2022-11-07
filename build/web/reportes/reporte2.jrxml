@@ -35,7 +35,23 @@ between $P{Fecha1} and $P{Fecha2}]]>
 		<band/>
 	</background>
 	<title>
+<<<<<<< HEAD
 		<band height="73">
+=======
+<<<<<<< HEAD
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="c61ff1a8-aafd-41b5-b66f-e5ea7524e2de"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Reporte #2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="91" y="46" width="183" height="22" uuid="2c09a437-f85b-49d6-923b-60cf876b79b7"/>
+				<text><![CDATA[Proyectos entregados]]></text>
+			</staticText>
+=======
+		<band height="72">
+>>>>>>> af08eb385c140e79522fe3f289dbafc5bca0310c
 			<frame>
 				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#FF9933" uuid="4e56fe86-75c7-4b56-971a-a41f5ddae993"/>
 				<staticText>
@@ -60,6 +76,7 @@ between $P{Fecha1} and $P{Fecha2}]]>
 					<text><![CDATA[Reporte de Proyectos Entregados en un Rango de Fechas]]></text>
 				</staticText>
 			</frame>
+>>>>>>> b542080edf739db416ac60b1bb0bc87f7244ea5f
 		</band>
 	</title>
 	<pageHeader>

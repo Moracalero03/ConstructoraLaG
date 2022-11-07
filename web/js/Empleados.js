@@ -86,7 +86,7 @@ $(document).ready(function() {
          $('#mdlEmpleado').validetta({
             realTime: true,
             onValid: function(e) {
-            event.preventDefault()
+            event.preventDefault();
                 var codigo = $('#txtIdEmpleado').val();
                 var rol = $('#sRol').val();
                 var empleado = $('#txtEmpleado').val();
@@ -105,7 +105,7 @@ $(document).ready(function() {
                         txtSalario : salario,
                         txtFoto : foto,
                         sEstado : estado
-                })
+                });
         }
     });
 });   
@@ -117,7 +117,7 @@ $(document).ready(function() {
          $('#mdlEmpleado').validetta({
             realTime: true,
             onValid: function(e) {
-            event.preventDefault()
+            event.preventDefault();
                 var codigo = $('#txtIdEmpleado').val();
                 var rol = $('#sRol').val();
                 var empleado = $('#txtEmpleado').val();
@@ -136,7 +136,7 @@ $(document).ready(function() {
                         txtSalario : salario,
                         txtFoto : foto,
                         sEstado : estado
-                })
+                });
         }
     });
 });   

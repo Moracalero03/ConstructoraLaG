@@ -4,20 +4,21 @@
  */
 package com.controlador;
 
-import com.modelo.Proyecto;
-import com.modelo.ProyectoDAO;
+import com.modelo.Usuario;
+import com.modelo.UsuarioDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Ernesto Navarro
  */
-public class ProyectoServlet extends HttpServlet {
+public class Login2Servlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,35 +34,25 @@ public class ProyectoServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-          int id = Integer.parseInt(request.getParameter("txtId"));
-          String proyecto = request.getParameter("txtProyecto");
-          int  municipio = Integer.parseInt(request.getParameter("sMunicipio"));
-          String estado =  request.getParameter("sEstado");
-          String comentario = request.getParameter("txtComentario");
-          double costoI = Double.parseDouble(request.getParameter("txtCostoI"));
-          double costoF = Double.parseDouble(request.getParameter("txtCostoF"));  
-          String fechaInicial = request.getParameter("txtFechaI");
-          String fechaFinal = request.getParameter("txtFechaF");
-          
-          Proyecto proyectos = new Proyecto(id, proyecto, municipio, "", estado, comentario, costoI, costoF, fechaInicial, fechaFinal);
-          ProyectoDAO proyectoDAO = new ProyectoDAO();
-          String mensaje="";
-          
-            if (request.getParameter("btnGuardar")!=null) {
-               int res = proyectoDAO.ingresarProyecto(proyectos);
-                      mensaje =(res!=0)?"Proyecto Ingresado":"Error";    
-            }else if (request.getParameter("btnModificar")!=null){
-               int res = proyectoDAO.modificarProyecto(proyectos);
-                       mensaje =(res!=0)?"Proyecto Modificado":"Error";  
-            }else if (request.getParameter("btnEliminar")!=null){
-                int res = proyectoDAO.eliminarProyecto(proyectos);
-                      mensaje =(res!=0)?"Proyecto Eliminado":"Este proyecto no se puede eliminar debido a que tiene un detalle";  
-            }
-
-            
-            request.setAttribute("mensaje",mensaje);
-            
-            request.getRequestDispatcher("/vistas/Proyecto.jsp").forward(request, response);  
+                if(request.getParameter("btnLogin")!=null){
+             String usuario = request.getParameter("txtUsuario");
+             String clave = request.getParameter("txtContrasena");
+               
+               //out.printl(usuario);
+             Usuario user = new Usuario(usuario,clave);
+             UsuarioDAO usuarioDAO = new UsuarioDAO();
+               
+               int rol = usuarioDAO.validarLogin(user);
+               if(rol!=0){
+                   //Sesion
+                   HttpSession sesion = request.getSession();
+                   sesion.setAttribute("usuario", usuario);
+                   sesion.setAttribute("idRol", rol);
+                  request.getRequestDispatcher("/vistas/Inicio.jsp").forward(request, response);
+                   
+               }
+               request.getRequestDispatcher("index.jsp").forward(request, response);
+           }
         }
     }
 

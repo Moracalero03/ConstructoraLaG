@@ -41,6 +41,18 @@ between $P{primeraFecha} and $P{segundaFecha};]]>
 		<band/>
 	</background>
 	<title>
+<<<<<<< HEAD
+		<band height="67" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="284138d0-f03e-4fc4-9410-d66c84d95a4d"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[REPORTE #3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="79" y="45" width="201" height="22" uuid="522bef38-1634-44f1-be24-e59270c1c764"/>
+				<text><![CDATA[Ganancias por proyecto]]></text>
+			</staticText>
+=======
 		<band height="72">
 			<frame>
 				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#FF9933" uuid="6d5cc702-9a9f-420c-a495-0e94c0ae2397"/>
@@ -66,6 +78,7 @@ between $P{primeraFecha} and $P{segundaFecha};]]>
 					<text><![CDATA[Reporte 3]]></text>
 				</staticText>
 			</frame>
+>>>>>>> b542080edf739db416ac60b1bb0bc87f7244ea5f
 		</band>
 	</title>
 	<pageHeader>

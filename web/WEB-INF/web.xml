@@ -20,6 +20,14 @@
         <servlet-name>MunicipioServlet</servlet-name>
         <servlet-class>com.controlador.MunicipioServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.controlador.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Login2Servlet</servlet-name>
+        <servlet-class>com.controlador.Login2Servlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MaquinasServlet</servlet-name>
         <url-pattern>/MaquinasServlet</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>MunicipioServlet</servlet-name>
         <url-pattern>/MunicipioServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login2Servlet</servlet-name>
+        <url-pattern>/Login2Servlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -45,6 +45,18 @@ between $P{primeraFecha} and $P{segundaFecha};]]>
 		<band/>
 	</background>
 	<title>
+<<<<<<< HEAD
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="0af52ff7-009c-4644-acf8-3c46253fc7bc"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[REPORTE #1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="73" y="46" width="201" height="22" uuid="4bbbb105-0df5-4f95-bc4d-de1d608be410"/>
+				<text><![CDATA[Proyectos en ejecución]]></text>
+			</staticText>
+=======
 		<band height="72">
 			<frame>
 				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#FF9933" uuid="35f15efd-5238-4256-8533-7241d2a7630c"/>
@@ -70,6 +82,7 @@ between $P{primeraFecha} and $P{segundaFecha};]]>
 					<text><![CDATA[Reporte de proyectos que se están ejecutando dentro de un rango de fechas]]></text>
 				</staticText>
 			</frame>
+>>>>>>> b542080edf739db416ac60b1bb0bc87f7244ea5f
 		</band>
 	</title>
 	<pageHeader>

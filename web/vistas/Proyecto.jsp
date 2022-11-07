@@ -152,7 +152,6 @@
                              </div>
                              <div id="aparece" style="display:none" >
                              <span>Comentario</span>
-
                              <textarea class="form-control" Style="display:none" disabled=""  name="txtComentario" id="txtComentario" onkeypress="return validarTexto(event)"></textarea>
                              </div>
                              </div> 
@@ -240,9 +239,11 @@
                         </div>
                       </div>          
                     </div>          
-                                               
+                   </div>
+    
             <% if (request.getAttribute("mensaje")!=null) {
                          %>
+
             <script>
                         
             					const Toast = Swal.mixin({
@@ -260,7 +261,7 @@
 	                                      Toast.fire({
 	                                        icon: 'info',
 	                                        title: "<%=request.getAttribute("mensaje")%>"
-	                                      })
+	                                      });
             </script> 
             <%
                 }
@@ -268,8 +269,8 @@
        
             
 
-            <br><br>
-        <jsp:include page="../template/pie.jsp"/>
+
+                                 <jsp:include page="../template/pie.jsp"/>
     </body> 
      <script>
             $(document).ready(function () {
