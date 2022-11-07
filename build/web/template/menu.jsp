@@ -101,7 +101,7 @@
         </a>
  
         <div class="dropdown-menu">
-            <a class="dropdown-item"  href="${pageContext.servletContext.contextPath}/index.jsp?cerrar=true"  target="_blank" >Cerrar sesión</a>
+            <a class="dropdown-item"  href="${pageContext.servletContext.contextPath}/index.jsp?cerrar=true"  onclick="window.close()" target="_blank" >Cerrar sesión</a>
         </div>
       </li>
     </lu>   
@@ -111,7 +111,6 @@
 <%
     }
 %>
-
       <br>
       <br>
       

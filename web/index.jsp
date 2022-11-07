@@ -17,6 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
+
     
     <body style="background-image: url('./img/banner.png')">          
         <div class="container" >
@@ -47,9 +48,13 @@
     </body>    
         <script src="${pageContext.servletContext.contextPath}/js/code.js"></script>
 </html>
-<%
+    <%
     if (request.getParameter("cerrar")!=null) {
                                HttpSession sesion = request.getSession();
                                sesion.invalidate();
+                              %>
+                     <META HTTP-EQUIV="REFRESH" CONTENT="1;${pageContext.servletContext.contextPath}/index.jsp">
+
+<% 
         }
 %>
