@@ -17,7 +17,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    if (session.getAttribute("usuario") != null && session.getAttribute("idRol").toString().equals("1")) {
+    if (session.getAttribute("usuario") != null) {
 %>
 <!DOCTYPE html>
 <html>
@@ -42,8 +42,15 @@
             <center><h1>Detalle de Proyectos</h1> </center>
             <div class="row m-4 justify-content-center">
             <div class="col mt-4>"> 
-                                               
+                
+                <%
+                    if (session.getAttribute("usuario") != null && session.getAttribute("idRol").toString().equals("1")) {
+                %>
                 <button type="button" id="btnAgregar" name="btnAgregar" onclick="agregar()" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlGestion">Agregar detalle proyecto</button>
+                <% 
+                }
+                %>
+                
                 <br>
              <table id="tblDetalleP" class="table table-light table-responsive" style="width:100%">
             <thead class="thead-dark">
@@ -59,8 +66,30 @@
         <tbody>
                       <% ArrayList<Detalle_Proyecto> listaD = detalle_ProyectoDAO.mostrarDetalles();
                   for (Detalle_Proyecto elem : listaD) {
+                  
+if (sesion.getAttribute("idRol").equals(2) ) {
+if (sesion.getAttribute("usuario").equals(elem.getUsuario()) ) {
                       %> 
                       <tr>
+                        <td><%=elem.getIdDetalle_Proyecto()%></td>
+                        <td><%=elem.getIdProyecto()%></td>
+                        <td><%=elem.getProyecto()%></td>
+                        <td><%=elem.getEmpleado()%></td>
+                        <td><%=elem.getMaquiaria()%></td>
+                        <td>   
+                            <div class="btn-group">
+
+                            </div>
+                        </td>
+                      </tr>
+                  
+                    <%
+                        
+                        }}
+                                       
+                        if (sesion.getAttribute("idRol").equals(1) ){
+                    %>
+                     <tr>
                         <td><%=elem.getIdDetalle_Proyecto()%></td>
                         <td><%=elem.getIdProyecto()%></td>
                         <td><%=elem.getProyecto()%></td>
@@ -73,9 +102,9 @@
                              
                             </div>
                         </td>
-                      </tr>    
-                    <%
-                      }
+                      </tr>    <%
+
+}}
                     %>
                                   
                 </tbody>

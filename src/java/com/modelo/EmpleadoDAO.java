@@ -150,5 +150,28 @@ public class EmpleadoDAO extends Conexion {
             }
             return res;
     }
+    //Reporte
+    public ArrayList<Empleado>mostrarUsuarios(){
+        ArrayList<Empleado> lista = new ArrayList<>();
+        try {
+            this.conectar();
+            String sql = "SELECT usuario FROM  empleado";
+            PreparedStatement pre = this.getCon().prepareStatement(sql);
+            ResultSet rs;
+            rs = pre.executeQuery();
+            while (rs.next()){
+                Empleado c = new Empleado();
+               
+                c.setUsuario(rs.getString(1));
+                
+                lista.add(c);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al mostrar wacha: "+e.getMessage());
+        } finally {
+            this.desconectar();
+        }
+        return lista;
+    }
     
 }

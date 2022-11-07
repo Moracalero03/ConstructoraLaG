@@ -36,7 +36,7 @@
     
     <!--SWEETALERT-->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
-  
+
     
 </head>
 
@@ -44,6 +44,7 @@
     HttpSession sesion = request.getSession();
     if (sesion.getAttribute("usuario")==null && sesion.getAttribute("idRol")==null ) {
            response.sendRedirect(request.getContextPath()+"/index.jsp");
+
      }else{
 %>
  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-warning">
@@ -66,9 +67,7 @@
       <li class="nav-item">
         <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Proyecto.jsp">Proyecto</a>
       </li>
-            <li class="nav-item">
-        <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Detalle_Proyecto.jsp">Detalle proyecto</a>
-      </li>
+           
       <li class="nav-item">
           <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Maquina.jsp">Maquina</a>
       </li>
@@ -88,17 +87,21 @@
       <%
         }
       %> 
-    <li class="nav-item">
-          <a class="nav-link" href="${pageContext.servletContext.contextPath}">Boleta de pago</a>
-    </li>
+       <li class="nav-item">
+        <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Detalle_Proyecto.jsp">Detalle proyecto</a>
+      </li>
+      </li>  
+              <li class="nav-item">
+          <a class="nav-link" href="${pageContext.servletContext.contextPath}/reportes/ReporteBoleta.jsp">Boleta de pago</a>
+      </li> 
     </ul> <lu class="navbar-nav col-2">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
           <%=sesion.getAttribute("usuario") %>
         </a>
-          
+ 
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/index.jsp?cerrar=true" onclick="window.close()" target="_blank" >Cerrar sesión</a>
+            <a class="dropdown-item"  href="${pageContext.servletContext.contextPath}/index.jsp?cerrar=true"  target="_blank" >Cerrar sesión</a>
         </div>
       </li>
     </lu>   
@@ -108,10 +111,6 @@
 <%
     }
 %>
-<script languaje:"javascript>
-window.close();
-</script>
-
 
       <br>
       <br>

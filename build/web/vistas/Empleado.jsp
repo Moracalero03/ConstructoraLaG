@@ -38,7 +38,7 @@
                 
                 
                 
-                <table id="tblEmpleado" class="table table-light table-bordered" style="width:100%">
+<table id="tblEmpleado" class="table table-light table-bordered" style="width:100%">
             <thead class="thead-dark">
             <tr>
                 <th scope="col">ID</th>
@@ -58,7 +58,8 @@
                         ArrayList<Empleado> listaMaquinaria = empleadoDAO.mostrarEmpleados();
                         for (Empleado elem : listaMaquinaria) {
                         String imagen = new String(elem.getRuta());
-
+                      if (sesion.getAttribute("idRol").equals(1) ) {
+                   if (!sesion.getAttribute("usuario").equals(elem.getUsuario()) ) {
                     %>                 
                             
                     
@@ -77,24 +78,53 @@
                         <td><%=elem.getEstadoE()%></td>
                         <td>
                             <div class="btn-group">
+                                <% if (!sesion.getAttribute("usuario").equals(elem.getUsuario()) ) { %>
                                 <button type="button" class="btn" style="background:#F4D859" onclick="modificar()" data-toggle="modal" data-target="#mdlEmpleado" id="editar">Editar</button>
+                                
                                 <button type="button" class="btn btn-danger" data-toggle="modal" onclick="eliminar()" data-target="#mdlEmpleado" id="eliminar">Eliminar</button>
+                                <%
+                                    }
+                                    %>
                             </div>
                         </td>
                     </tr>
                     <%
                         }
+                        }
+                        if (sesion.getAttribute("usuario").equals(elem.getUsuario()) ) {
                     %>
+                    <tr>
+                        <td><%=elem.getIdEmpleado()%></td>
+                        <td><%=elem.getRol()%></td>
+                        <td><%=elem.getEmpleado()%></td>
+                        <td><%=elem.getUsuario()%></td>
+                        <td><%=elem.getPassword()%></td>
+                        <td><%=elem.getSalario()%></td>
+                        <td>
+                            <img src="<%=elem.getRuta()%>" alt="images Here" width="200" height="200"/>
+                            
+                        </td>
+                        <td class="collapse"><%=elem.getRuta()%></td>
+                        <td><%=elem.getEstadoE()%></td>
+                        <td>
+                            <div class="btn-group">
+                                <% if (!sesion.getAttribute("usuario").equals(elem.getUsuario()) ) { %>
+                                <button type="button" class="btn" style="background:#F4D859" onclick="modificar()" data-toggle="modal" data-target="#mdlEmpleado" id="editar">Editar</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" onclick="eliminar()" data-target="#mdlEmpleado" id="eliminar">Eliminar</button>
+                                <%
+                                    }
+                                    %>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    
+                    <%
+                        }
+                        }
+                        %>
                 </tbody>
-            </table>
-                
-                
-                
-                
-        
-                
-                
-
+            </table>
 
             <!-- Modal para agregar-->
              <div class="modal" tabindex="-1" role="dialog" id="mdlEmpleado">

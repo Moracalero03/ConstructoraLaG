@@ -38,7 +38,7 @@ public class Detalle_ProyectoServlet extends HttpServlet {
            int idProyecto = Integer.parseInt(request.getParameter("sProyecto"));
            
            Detalle_ProyectoDAO detalle_ProyectoDAO = new Detalle_ProyectoDAO();
-           Detalle_Proyecto detalle_Proyecto = new Detalle_Proyecto(id, idMaquinaria, "", idEmpleado, "", idProyecto, "");
+           Detalle_Proyecto detalle_Proyecto = new Detalle_Proyecto(id, idMaquinaria, "", idEmpleado, "", idProyecto, "", "" );
            String mensaje = "";
            
             if (request.getParameter("btnGuardar")!=null) {
