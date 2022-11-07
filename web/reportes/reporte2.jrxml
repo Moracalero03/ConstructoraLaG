@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fc80f8e4-4551-4703-a157-f9857d563fcc">
-	<property name="ireport.zoom" value="2.357947691000002"/>
-	<property name="ireport.x" value="312"/>
+	<property name="ireport.zoom" value="1.7715610000000013"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="Fecha1" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -35,9 +35,9 @@ between $P{Fecha1} and $P{Fecha2}]]>
 		<band/>
 	</background>
 	<title>
-		<band height="72">
+		<band height="73">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="4e56fe86-75c7-4b56-971a-a41f5ddae993"/>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#FF9933" uuid="4e56fe86-75c7-4b56-971a-a41f5ddae993"/>
 				<staticText>
 					<reportElement x="35" y="0" width="268" height="92" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="87fd4249-a18d-4ae9-9aaa-552e6efd7984"/>
 					<textElement textAlignment="Center">
@@ -63,57 +63,57 @@ between $P{Fecha1} and $P{Fecha2}]]>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="13"/>
+		<band/>
 	</pageHeader>
 	<columnHeader>
-		<band height="22">
+		<band height="23">
 			<line>
 				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="57099b16-e579-4131-b4ae-af4ea9cc69fa"/>
 			</line>
 			<staticText>
-				<reportElement mode="Opaque" x="-20" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="856b11dd-9757-4e58-b42c-10a6a88896d6"/>
+				<reportElement mode="Opaque" x="-20" y="0" width="53" height="20" forecolor="#3333FF" backcolor="#E6E6E6" uuid="856b11dd-9757-4e58-b42c-10a6a88896d6"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[idProyecto]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="69" y="0" width="62" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="92a341ee-9105-46ce-ba35-cd875440f4a9"/>
+				<reportElement mode="Opaque" x="33" y="0" width="100" height="20" forecolor="#3333FF" backcolor="#E6E6E6" uuid="92a341ee-9105-46ce-ba35-cd875440f4a9"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Proyecto]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="138" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="ea0032ca-bc2e-4796-a10f-ccf32e5cb674"/>
+				<reportElement mode="Opaque" x="133" y="0" width="80" height="20" forecolor="#3333FF" backcolor="#E6E6E6" uuid="ea0032ca-bc2e-4796-a10f-ccf32e5cb674"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Estado]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="225" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="7200feb7-4cb8-4237-8318-53fb895ee932"/>
+				<reportElement mode="Opaque" x="213" y="0" width="91" height="20" forecolor="#3333FF" backcolor="#E6E6E6" uuid="7200feb7-4cb8-4237-8318-53fb895ee932"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[costoInicial]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="316" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a41a16ce-7c88-486d-acb9-2cf769cc38da"/>
+				<reportElement mode="Opaque" x="304" y="0" width="90" height="20" forecolor="#3333FF" backcolor="#E6E6E6" uuid="a41a16ce-7c88-486d-acb9-2cf769cc38da"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[costoFinal]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="407" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="c9091afc-3c23-4700-9a04-8707ab9a22c8"/>
+				<reportElement mode="Opaque" x="394" y="0" width="82" height="20" forecolor="#3333FF" backcolor="#E6E6E6" uuid="c9091afc-3c23-4700-9a04-8707ab9a22c8"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[FechaInicio]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="496" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="5aed77fb-edf3-4f22-8506-4bea79770940"/>
+				<reportElement mode="Opaque" x="476" y="0" width="99" height="20" forecolor="#3333FF" backcolor="#E6E6E6" uuid="5aed77fb-edf3-4f22-8506-4bea79770940"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -127,53 +127,53 @@ between $P{Fecha1} and $P{Fecha2}]]>
 				<reportElement positionType="FixRelativeToBottom" x="-20" y="19" width="595" height="1" uuid="846304e3-3a31-4464-8df9-3ee767263165"/>
 			</line>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="59" y="0" width="79" height="20" uuid="c3f19ed2-21c7-484f-ae5e-8ce1684c64ba"/>
+				<reportElement x="38" y="0" width="79" height="20" uuid="c3f19ed2-21c7-484f-ae5e-8ce1684c64ba"/>
 				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Proyecto}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="145" y="0" width="67" height="20" uuid="3fcd9877-0c86-4d73-9f13-1ed0e112a2a3"/>
+				<reportElement x="133" y="0" width="80" height="20" uuid="3fcd9877-0c86-4d73-9f13-1ed0e112a2a3"/>
 				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Estado}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="225" y="0" width="67" height="20" uuid="d83a91da-762f-4ee0-b34b-edb22a0e99ce"/>
-				<textElement textAlignment="Center">
-					<font size="14"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{costoInicial}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="320" y="0" width="64" height="20" uuid="a95758b2-6f6b-4c42-9c5f-739f5c003351"/>
+				<reportElement x="305" y="0" width="78" height="20" uuid="a95758b2-6f6b-4c42-9c5f-739f5c003351"/>
 				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{costoFinal}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="410" y="0" width="76" height="20" uuid="6f97db54-0d16-4068-a48d-736217d728b2"/>
+				<reportElement x="397" y="0" width="76" height="20" uuid="6f97db54-0d16-4068-a48d-736217d728b2"/>
 				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FechaInicio}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="-10" y="0" width="43" height="20" uuid="3e9c09a3-1bd1-4c6c-bed9-e701eac56081"/>
+				<reportElement x="-20" y="0" width="43" height="20" uuid="3e9c09a3-1bd1-4c6c-bed9-e701eac56081"/>
 				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{idProyecto}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="496" y="0" width="79" height="20" uuid="052899c7-171b-4ae4-b2a3-36560d25e437"/>
+				<reportElement x="476" y="0" width="99" height="20" uuid="052899c7-171b-4ae4-b2a3-36560d25e437"/>
 				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FechaEntrega}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="216" y="0" width="67" height="20" uuid="d83a91da-762f-4ee0-b34b-edb22a0e99ce"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{costoInicial}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

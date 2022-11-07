@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="942f74a4-b9d9-4b1c-bdb2-90ac92610d10">
-	<property name="ireport.zoom" value="1.7715610000000017"/>
+	<property name="ireport.zoom" value="1.771561000000002"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="Proyecto" class="java.lang.String">
@@ -30,7 +30,7 @@ where p.proyecto=$P{Proyecto};]]>
 	<title>
 		<band height="72">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="d3f028d0-a264-48b3-8519-6f6d52e09ada"/>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#FF9933" uuid="d3f028d0-a264-48b3-8519-6f6d52e09ada"/>
 				<staticText>
 					<reportElement x="0" y="0" width="281" height="92" forecolor="#FFFFFF" uuid="cb3424ed-ae1e-41d3-a163-27503db8ce6e"/>
 					<textElement textAlignment="Center">
@@ -56,7 +56,7 @@ where p.proyecto=$P{Proyecto};]]>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="13"/>
+		<band height="1"/>
 	</pageHeader>
 	<columnHeader>
 		<band height="21">
@@ -64,42 +64,21 @@ where p.proyecto=$P{Proyecto};]]>
 				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="d3b9c668-9b7c-4028-b9c6-d7a29dc3353f"/>
 			</line>
 			<staticText>
-				<reportElement mode="Opaque" x="-20" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="7d5368b8-4fba-46ee-af7b-db5bd9d98e7f"/>
+				<reportElement mode="Opaque" x="-20" y="0" width="99" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="7d5368b8-4fba-46ee-af7b-db5bd9d98e7f"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Proyecto]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="79" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a09905b0-e20a-45f0-9fee-e3b9bd00f6c2"/>
-				<textElement textAlignment="Center">
-					<font size="14" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Estado]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="147" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="0c7100fa-f88c-49a0-97c4-6c062c10d9fa"/>
-				<textElement textAlignment="Center">
-					<font size="14" isBold="true"/>
-				</textElement>
-				<text><![CDATA[IdDetalle]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="237" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f94db49f-c280-4bb6-8e94-6946a3f9ed7a"/>
+				<reportElement mode="Opaque" x="237" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f94db49f-c280-4bb6-8e94-6946a3f9ed7a"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Costo]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="316" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3a594ef7-8226-46b7-9b4e-c939ca6affc3"/>
-				<textElement textAlignment="Center">
-					<font size="14" isBold="true"/>
-				</textElement>
-				<text><![CDATA[SalarioTotal]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="405" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a6280067-94dc-49ff-b81b-bf6786753f50"/>
+				<reportElement mode="Opaque" x="417" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a6280067-94dc-49ff-b81b-bf6786753f50"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -112,6 +91,27 @@ where p.proyecto=$P{Proyecto};]]>
 				</textElement>
 				<text><![CDATA[Gastos]]></text>
 			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="329" y="0" width="88" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3a594ef7-8226-46b7-9b4e-c939ca6affc3"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SalarioTotal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="158" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="0c7100fa-f88c-49a0-97c4-6c062c10d9fa"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IdDetalle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="79" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a09905b0-e20a-45f0-9fee-e3b9bd00f6c2"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
@@ -120,50 +120,50 @@ where p.proyecto=$P{Proyecto};]]>
 				<reportElement positionType="FixRelativeToBottom" x="-20" y="19" width="595" height="1" uuid="312efbd2-d35f-4e8a-ae94-59c617708958"/>
 			</line>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="-10" y="0" width="79" height="20" uuid="219ee6ce-b71b-4140-837c-768ccb599052"/>
+				<reportElement x="-10" y="0" width="89" height="20" uuid="219ee6ce-b71b-4140-837c-768ccb599052"/>
 				<textElement>
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Proyecto}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="337" y="0" width="68" height="20" uuid="af60a22c-a00f-4c9e-aa55-14623ae82eb1"/>
-				<textElement>
+				<reportElement x="329" y="0" width="88" height="20" uuid="af60a22c-a00f-4c9e-aa55-14623ae82eb1"/>
+				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SalarioTotal}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="515" y="0" width="60" height="20" uuid="d2259d02-c534-40dc-9479-66e2c111125e"/>
-				<textElement>
+				<reportElement x="496" y="0" width="79" height="20" uuid="d2259d02-c534-40dc-9479-66e2c111125e"/>
+				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Gastos}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="429" y="0" width="67" height="20" uuid="259e6f8b-969f-4231-9dd3-39fcbfe5b36e"/>
-				<textElement>
+				<reportElement x="417" y="0" width="79" height="20" uuid="259e6f8b-969f-4231-9dd3-39fcbfe5b36e"/>
+				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OperatividadTotal}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="181" y="0" width="45" height="20" uuid="88e903ec-f93d-42d4-a1d2-46f16efab1af"/>
-				<textElement>
+				<reportElement x="158" y="0" width="79" height="20" uuid="88e903ec-f93d-42d4-a1d2-46f16efab1af"/>
+				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{IdDetalle}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="90" y="0" width="68" height="20" uuid="48bbd66f-d5bf-4950-a169-aaa4ff2ccd99"/>
-				<textElement>
+				<reportElement x="79" y="0" width="79" height="20" uuid="48bbd66f-d5bf-4950-a169-aaa4ff2ccd99"/>
+				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Estado}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="261" y="0" width="68" height="20" uuid="62dda11b-e44b-4fd9-ba61-6b0f897b5260"/>
-				<textElement>
+				<reportElement x="237" y="0" width="92" height="20" uuid="62dda11b-e44b-4fd9-ba61-6b0f897b5260"/>
+				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Costo}]]></textFieldExpression>
