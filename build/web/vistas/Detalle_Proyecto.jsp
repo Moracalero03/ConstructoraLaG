@@ -97,7 +97,7 @@
                                  <select name="sProyecto" id="sProyecto" class="form-control" data-validetta="required">
                                        <option value="">Seleccione un proyecto</option>
                                    <% 
-                                        ArrayList<Proyecto> listaP= proyectoDAO.mostrarDetalleProyectos();
+                                        ArrayList<Proyecto> listaP= proyectoDAO.mostrarProyectos();
                                          for (Proyecto elem : listaP) {
                                        
                                    %>

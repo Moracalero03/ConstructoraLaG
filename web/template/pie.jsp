@@ -12,7 +12,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4">
                 <h6><b>CONTACTOS:</b></h6>
-                <h6 class=" small" style="color: white">
+                <h6 class="small" style="color: white">
              <b>Dirección: Carrera 8h No. 166-71 Local 2 Santa Cruz de la Ronda.<br>
             Teléfonos: 3115988953 – 3112641818.<br>
             Fax: 941 446 227.</b></h6><br>
@@ -20,7 +20,7 @@
 
                 <div class="col-lg-4">
             <h6><b>AUTORES:</b></h6>
-            <p class=" small " style="color:white;"> <b>Ayala González, Paul Christian<br>Palacios Solózano, Josué Elias <br>Navarro Guardado, José Ernesto<br>Calero Morales, Marcela Stephanie<br></b></p>
+            <p class="small " style="color:white;"> <b>Ayala González, Paul Christian<br>Palacios Solózano, Josué Elias <br>Navarro Guardado, José Ernesto<br>Calero Morales, Marcela Stephanie<br></b></p>
                 </div>
 
                 <div class="col-lg-4">

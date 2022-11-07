@@ -152,11 +152,7 @@
                              </div>
                              <div id="aparece" style="display:none" >
                              <span>Comentario</span>
-
-                             <input class="form-control" Style="display:none"   name="txtComentario" id="txtComentario">
-
-                             <textarea class="form-control" disabled=""  name="txtComentario" id="txtComentario" onkeypress="return validarTexto(event)"></textarea>
-
+                             <textarea class="form-control" Style="display:none" disabled=""  name="txtComentario" id="txtComentario" onkeypress="return validarTexto(event)"></textarea>
                              </div>
                              </div> 
                               
@@ -202,9 +198,7 @@
                              </select>
                           </center>
                              <span>Estado</span>
-
                              <select name="sEstado" id="sEstado" dropzone="" onclick="activar(this.form)" class="form-control" data-validetta="required">
-
                                  <option value="Ingresado">Ingresado</option> 
                              </select>
                                                            
@@ -232,7 +226,7 @@
                              <span>Comentario</span>
                              <textarea class="form-control" value=" " readonly name="txtComentario" id="txtComentario" onkeypress="return validarTexto(event)"></textarea>
                              </div>
-                             </div> 
+                             
                               
                           <div class="modal-footer"> 
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> 
@@ -245,9 +239,11 @@
                         </div>
                       </div>          
                     </div>          
-                                               
+                   </div>
+    
             <% if (request.getAttribute("mensaje")!=null) {
                          %>
+
             <script>
                         
             					const Toast = Swal.mixin({
@@ -265,7 +261,7 @@
 	                                      Toast.fire({
 	                                        icon: 'info',
 	                                        title: "<%=request.getAttribute("mensaje")%>"
-	                                      })
+	                                      });
             </script> 
             <%
                 }
@@ -273,8 +269,8 @@
        
             
 
-            <br><br>
-        <jsp:include page="../template/pie.jsp"/>
+
+                                 <jsp:include page="../template/pie.jsp"/>
     </body> 
      <script>
             $(document).ready(function () {

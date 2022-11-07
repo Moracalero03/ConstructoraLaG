@@ -36,8 +36,8 @@
                                         String segundafecha = request.getParameter("segundafecha");
 
                                         HashMap parametros = new HashMap();
-                                        parametros.put("primeraFecha",primerafecha);
-                                        parametros.put("segundaFecha",segundafecha);
+                                        parametros.put("Fecha1",primerafecha);
+                                        parametros.put("Fecha2",segundafecha);
                                    
                                     try { 
                                         Conexion con = new Conexion();

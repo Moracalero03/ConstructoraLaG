@@ -3,100 +3,53 @@
     Created on : 10-12-2022, 10:10:46 AM
     Author     : marce
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Inicio</title> 
-    </head>
-    <body  style="background-color: #EFF0EB">  
-        <%@include file="template/menu.jsp"%> 
-        
-        <br>
-        <center><h1>"Constructora La Gerencia"</h1></center> 
-        <div class="container-fluid">
-            <div class="row mb-3 justify-content-center">
-                <div class="col-6">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                              <img src="img/construccion.jpg" class="d-block w-90" alt="construccion" width="750px" height="375px">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="img/construccion2.jpg" class="d-block w-90" alt="construccion" width="750px" height="375px">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="img/casa.jpg" class="d-block w-90" alt="construccion" width="750px" height="375px">
-                          </div>
-                        </div>
-                       <button class="carousel-control-prev" style="background-color: transparent ;border: none;" type="button" data-target="#carouselExampleControls" data-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" style="background-color: transparent ;border: none;" type="button" data-target="#carouselExampleControls" data-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Next</span>
-                        </button>
-                      </div>
-                </div>
+        <title>Login</title>             
+        <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/bootstrap/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+    
+    <body style="background-image: url('./img/banner.png')">          
+        <div class="container" >
+<div class="row align-items-center justify-content-center vh-100" >
+    <div class="col-lg-4 col-md-4 col-sm-12 card"  style="box-shadow: 0px 0px 5px 2px #AFCBC0 ;background: #FFFEE7;  background: rgba(250, 250, 250, 0.8) ">
+        <div class="card-body">
+        <img src="${pageContext.servletContext.contextPath}/img/logo.png" width='200' class="mx-auto img-fluid d-block my-1">       
+         <br> 
+            <form action="${pageContext.servletContext.contextPath}/Login2Servlet" method="POST">
+                Usuario
+                <input type="text" class="form-control" name="txtUsuario" id="txtUsuario">
+                Contraseña 
+            <div class="container contenedor">
+            <input type="password" class="passw form-control" name="txtContrasena" id="txtContrasena"> 
+            <img src="${pageContext.servletContext.contextPath}/img/Show.png" alt="" class="icon" id="Eye">                               
             </div>
-            <div class="row">
-                 <div class="col-12">
-                    <div class="card border-secondary mb-3">
-                        <div class="card-header" style="background-color: #B6E6E9;">
-                          MISIÓN
-                        </div>
-                        <div class="card-body text-secondary">
-                          <h5 class="card-title"></h5>
-                          <p class="card-text">Proveer servicios de Construcción de Obras Civiles y Arquitectura de la más alta calidad:</p> 
-                          <ul>
-                              <li>Satisfaciendo las necesidades de nuestros clientes y comprometidos con la mejora continua de nuestros procesos.</li>
-                              <li>Desarrollando nuestras actividades en un ambiente de trabajo seguro y saludable, comprometidos con el medio ambiente y la comunidad, generando condiciones para el desarrollo profesional y personal de nuestra gente.</li>
-                          </ul>          
-                        </div>
-                    </div> 
-                 </div> 
-            </div>
-            
-            <div class="row">
-                <div class="col-12">
-                     <div class="card border-secondary mb-3">
-                        <div class="card-header" style="background-color: #F5BA8C;">
-                          VALORES
-                        </div>
-                        <div class="card-body text-secondary">
-                          <h5 class="card-title"></h5>
-                          <p class="card-text">
-                          <ul>
-                            <li>Liderazgo</li>
-                            <li>Compromiso</li>
-                            <li>Integridad</li>
-                            <li>Eficiencia</li>
-                            <li>Proactividad</li>
-                            <li>Trabajo en equipo</li>
-                          </ul>
-                          </p>
-                        </div>
-                    </div>
-                 </div>
-            </div>
-            
-             <div class="row"> 
-                 <div class="col-12">
-                     <div class="card text-white border-secondary mb-3">
-                        <div class="card-header bg-secondary border-secondary">
-                          VISIÓN
-                        </div>
-                        <div class="card-body text-secondary">
-                          <h5 class="card-title"></h5>
-                          <p class="card-text">Ser líderes nacionales en la Construcción de Obras Civiles y de Arquitectura, siendo reconocidos como una empresa confiable, organizada, competitiva y con altos estándares de calidad.</p>
-                        </div>
-                    </div>
-                 </div> 
-            </div>
-        </div> 
-    </body>
-    <jsp:include page="template/pie.jsp"/>
+            <br>                                 
+            <button class="btn btn-primary mt-2 btn-block btn-sm" type="submit" name="btnLogin">
+            <svg xmlns="http://www.w3.org/2000/svg" width="4%" height="4%" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg>&nbsp;
+               Iniciar sesión</button>
+            </form>
+        </div>                              
+    </div>
+</div>
+</div>
+    </body>    
+        <script src="${pageContext.servletContext.contextPath}/js/code.js"></script>
 </html>
+<%
+    if (request.getParameter("cerrar")!=null) {
+                               HttpSession sesion = request.getSession();
+                               sesion.invalidate();
+        }
+%>

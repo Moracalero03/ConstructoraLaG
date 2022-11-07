@@ -34,7 +34,6 @@
                                 <% if (request.getParameter("btnGenerar")!=null) {
                                         String primerafecha = request.getParameter("primerafecha");
                                         String segundafecha = request.getParameter("segundafecha");
-
                                         HashMap parametros = new HashMap();
                                         parametros.put("primeraFecha",primerafecha);
                                         parametros.put("segundaFecha",segundafecha);
@@ -42,18 +41,14 @@
                                     try { 
                                         Conexion con = new Conexion();
                                         con.conectar(); 
-
                                         File file = new File(application.getRealPath("/reportes/reporte1.jasper")); 
                                         byte[] bytes = JasperRunManager.runReportToPdf(file.getPath(), parametros, con.getCon());
-
                                         ServletOutputStream output = response.getOutputStream();
                                         response.setContentType("application/pdf");  
                                         response.setContentLength(bytes.length); 
-
                                         output.write(bytes);
                                         output.flush(); 
                                         output.close();
-
                                     } catch (Exception e) {
                                         out.println("Error al mostrar" + e.getMessage());
                                     } 
@@ -64,5 +59,4 @@
         </div>
     </body>
 </html>  
-
 

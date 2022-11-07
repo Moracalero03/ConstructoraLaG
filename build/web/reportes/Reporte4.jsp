@@ -44,7 +44,7 @@
                                 <% if (request.getParameter("btnGenerar")!=null) {
                                         String proy = request.getParameter("sProyecto"); 
                                         HashMap parametros = new HashMap();
-                                        parametros.put("proyecto",proy);
+                                        parametros.put("Proyecto",proy);
                                    
                                     try { 
                                         Conexion con = new Conexion();

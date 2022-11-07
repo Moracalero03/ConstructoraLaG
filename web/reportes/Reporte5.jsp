@@ -60,18 +60,14 @@
                                     try { 
                                         Conexion con = new Conexion();
                                         con.conectar(); 
-
                                         File file = new File(application.getRealPath("/reportes/reporte5.jasper")); 
                                         byte[] bytes = JasperRunManager.runReportToPdf(file.getPath(), parametros, con.getCon());
-
                                         ServletOutputStream output = response.getOutputStream();
                                         response.setContentType("application/pdf");  
                                         response.setContentLength(bytes.length); 
-
                                         output.write(bytes);
                                         output.flush(); 
                                         output.close();
-
                                     } catch (Exception e) {
                                         out.println("Error al mostrar" + e.getMessage());
                                     } 
