@@ -17,11 +17,13 @@ public class Detalle_Proyecto {
    private String empleado;
    private int idProyecto;
    private String proyecto;
+   private String usuario;
 
     public Detalle_Proyecto() {
     }
 
-    public Detalle_Proyecto(int idDetalle_Proyecto, int idMaquinaria, String maquiaria, int idEmpleado, String empleado, int idProyecto, String proyecto) {
+   
+    public Detalle_Proyecto(int idDetalle_Proyecto, int idMaquinaria, String maquiaria, int idEmpleado, String empleado, int idProyecto, String proyecto, String usuario) {
         this.idDetalle_Proyecto = idDetalle_Proyecto;
         this.idMaquinaria = idMaquinaria;
         this.maquiaria = maquiaria;
@@ -29,14 +31,15 @@ public class Detalle_Proyecto {
         this.empleado = empleado;
         this.idProyecto = idProyecto;
         this.proyecto = proyecto;
+        this.usuario = usuario;
     }
 
-    public String getProyecto() {
-        return proyecto;
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setProyecto(String proyecto) {
-        this.proyecto = proyecto;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 
     public int getIdDetalle_Proyecto() {
@@ -86,4 +89,14 @@ public class Detalle_Proyecto {
     public void setIdProyecto(int idProyecto) {
         this.idProyecto = idProyecto;
     }
-}      
+
+    public String getProyecto() {
+        return proyecto;
+    }
+
+    public void setProyecto(String proyecto) {
+        this.proyecto = proyecto;
+    }
+
+   
+    }      

@@ -6,9 +6,9 @@ $('body').on('click', '#eliminar', function(){
     llenarFormulario($(this).closest('tr'));
 });
 
-$('#mdlGestion').on('hide.bs.modal', function (event) {
-   $("#mdlGestion input").val("");
-   $("#mdlGestion button").prop("disabled", false);
+$('#mdlGestionEliminar').on('hide.bs.modal', function (event) {
+   $("#mdlGestionEliminar input").val("");
+   $("#mdlGestionEliminar button").prop("disabled", false);
    $("#txtIdD").val(0);
    $('#sProyecto').find('option:selected').attr('selected', false);
    $('#sEmpleado').find('option:selected').attr('selected', false);

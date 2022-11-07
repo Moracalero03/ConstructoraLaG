@@ -14,6 +14,9 @@
 <%@page import="java.io.File"%>
 <%@page import="com.conexion.Conexion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    if (session.getAttribute("usuario") != null && session.getAttribute("idRol").toString().equals("1")) {
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -78,3 +81,8 @@
         </div>    
     </body>
 </html> 
+<%
+    }else{
+    response.sendRedirect(request.getContextPath() + "/index.jsp");
+    }
+%>

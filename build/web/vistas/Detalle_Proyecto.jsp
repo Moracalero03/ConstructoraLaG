@@ -16,6 +16,9 @@
 <%@page import="com.modelo.Proyecto"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    if (session.getAttribute("usuario") != null) {
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -39,8 +42,15 @@
             <center><h1>Detalle de Proyectos</h1> </center>
             <div class="row m-4 justify-content-center">
             <div class="col mt-4>"> 
-                                               
+                
+                <%
+                    if (session.getAttribute("usuario") != null && session.getAttribute("idRol").toString().equals("1")) {
+                %>
                 <button type="button" id="btnAgregar" name="btnAgregar" onclick="agregar()" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlGestion">Agregar detalle proyecto</button>
+                <% 
+                }
+                %>
+                
                 <br>
              <table id="tblDetalleP" class="table table-light table-responsive" style="width:100%">
             <thead class="thead-dark">
@@ -56,6 +66,9 @@
         <tbody>
                       <% ArrayList<Detalle_Proyecto> listaD = detalle_ProyectoDAO.mostrarDetalles();
                   for (Detalle_Proyecto elem : listaD) {
+                  
+if (sesion.getAttribute("idRol").equals(2) ) {
+if (sesion.getAttribute("usuario").equals(elem.getUsuario()) ) {
                       %> 
                       <tr>
                         <td><%=elem.getIdDetalle_Proyecto()%></td>
@@ -65,21 +78,108 @@
                         <td><%=elem.getMaquiaria()%></td>
                         <td>   
                             <div class="btn-group">
-                                <button type="button" class="btn " style="background:#F4D859" onclick="modificar()" data-toggle="modal" data-target="#mdlGestion" id="modificar">Editar</button>
-                                <button type="button" class="btn btn-danger" data-toggle="modal" onclick="eliminar()" data-target="#mdlGestion" id="eliminar">Eliminar</button>
+
+                            </div>
+                        </td>
+                      </tr>
+                  
+                    <%
+                        
+                        }}
+                                       
+                        if (sesion.getAttribute("idRol").equals(1) ){
+                    %>
+                     <tr>
+                        <td><%=elem.getIdDetalle_Proyecto()%></td>
+                        <td><%=elem.getIdProyecto()%></td>
+                        <td><%=elem.getProyecto()%></td>
+                        <td><%=elem.getEmpleado()%></td>
+                        <td><%=elem.getMaquiaria()%></td>
+                        <td>   
+                            <div class="btn-group">
+                                <!--<button type="button" class="btn " style="background:#F4D859" onclick="modificar()" data-toggle="modal" data-target="#mdlGestion" id="modificar">Editar</button>-->
+                                <button type="button" class="btn btn-danger" data-toggle="modal" onclick="eliminar()" data-target="#mdlGestionEliminar" id="eliminar">Eliminar</button>
                              
                             </div>
                         </td>
-                      </tr>    
-                    <%
-                      }
+                      </tr>    <%
+
+}}
                     %>
                                   
                 </tbody>
     </table>             
         </div>
      </div>                 
-</div>
+</div> 
+                      
+                                 <div class="modal" tabindex="-1" role="dialog" id="mdlGestionEliminar">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Eliminar Proyecto</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                              <form action="${pageContext.servletContext.contextPath}/Detalle_ProyectoServlet" id="Form" method="post">
+                               <span>Id detalle</span>
+                               <input type="number" name="txtIdD" id="txtIdD" value="0" class="form-control" readonly>                                  
+                               <span>Proyecto</span>
+                                 <select name="sProyecto" id="sProyecto" class="form-control" data-validetta="required">
+                                       <option value="">Seleccione un proyecto</option>
+                                   <% 
+                                        ArrayList<Proyecto> listapr= proyectoDAO.mostrarDetalleProyectos();
+                                         for (Proyecto elem : listapr) {
+                                       
+                                   %>
+                                   <option value="<%=elem.getIdProyecto()%>"><%=elem.getProyecto()%></option>
+                                   <%                                    
+                                    }
+                                    %>
+                                  </select>
+                                  <span>Empleado</span>
+                                 <select name="sEmpleado" id="sEmpleado" class="form-control" data-validetta="required">
+                                       <option value="">Seleccione un empleado</option>
+                                   <% 
+                                        ArrayList<Empleado> listaem= empleadoDAO.mostrarEmpleados();
+                                         for (Empleado elem : listaem) {
+                                       
+                                   %>
+                                   <option value="<%=elem.getIdEmpleado()%>"><%=elem.getEmpleado()%></option>
+                                   <%                                    
+                                    }
+                                    %>
+                                  </select>
+                               <span>Maquinaria</span>
+                                 <select name="sMaquinaria" id="sMaquinaria" class="form-control" data-validetta="required">
+                                     <option value="">Seleccione una Maquinaria</option>
+                                   <% 
+                                        ArrayList<Maquinaria> listama = maquinariaDAO.mostrarMaquinaria();
+                                         for (Maquinaria elem : listama) {
+                                       
+                                   %>
+                                   <option value="<%=elem.getIdMaquinaria()%>"><%=elem.getMaquinaria()%></option>
+                                   <%                                    
+                                    }
+                                    %>
+                                 </select>
+
+
+                           <div class="modal-footer"> 
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+                            <button class="btn btn-primary" id="btnGuardar" name="btnGuardar">Guardar</button>  
+                            <!--<button class="btn" style="background:#F4D859" id="btnModificar" name="btnModificar">Editar</button>--> 
+                            <button class="btn btn-danger" id="btnEliminar" name="btnEliminar">Eliminar</button> 
+                          </div>
+                              </form>
+                        </div>
+                      </div>
+                    </div>             
+                    
+                </div> 
+                                 
                      <div class="modal" tabindex="-1" role="dialog" id="mdlGestion">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -97,7 +197,7 @@
                                  <select name="sProyecto" id="sProyecto" class="form-control" data-validetta="required">
                                        <option value="">Seleccione un proyecto</option>
                                    <% 
-                                        ArrayList<Proyecto> listaP= proyectoDAO.mostrarProyectos();
+                                        ArrayList<Proyecto> listaP= proyectoDAO.mostrarDetalleProyectos();
                                          for (Proyecto elem : listaP) {
                                        
                                    %>
@@ -110,7 +210,7 @@
                                  <select name="sEmpleado" id="sEmpleado" class="form-control" data-validetta="required">
                                        <option value="">Seleccione un empleado</option>
                                    <% 
-                                        ArrayList<Empleado> listaE= empleadoDAO.mostrarEmpleados();
+                                        ArrayList<Empleado> listaE= empleadoDAO.mostrarDetalleEmpleados();
                                          for (Empleado elem : listaE) {
                                        
                                    %>
@@ -123,7 +223,7 @@
                                  <select name="sMaquinaria" id="sMaquinaria" class="form-control" data-validetta="required">
                                      <option value="">Seleccione una Maquinaria</option>
                                    <% 
-                                        ArrayList<Maquinaria> listaM = maquinariaDAO.mostrarMaquinaria();
+                                        ArrayList<Maquinaria> listaM = maquinariaDAO.mostrarDetalleMaquinaria();
                                          for (Maquinaria elem : listaM) {
                                        
                                    %>
@@ -137,15 +237,16 @@
                            <div class="modal-footer"> 
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
                             <button class="btn btn-primary" id="btnGuardar" name="btnGuardar">Guardar</button>  
-                            <button class="btn" style="background:#F4D859" id="btnModificar" name="btnModificar">Editar</button> 
-                            <button class="btn btn-danger" id="btnEliminar" name="btnEliminar">Eliminar</button> 
+                            <!--<button class="btn" style="background:#F4D859" id="btnModificar" name="btnModificar">Editar</button>--> 
+                            <button class="btn btn-danger" disabled="" id="btnEliminar" name="btnEliminar">Eliminar</button> 
                           </div>
                               </form>
                         </div>
                       </div>
                     </div>             
                     
-                </div>
+                </div> 
+                               
                                  
                                  
                                  
@@ -190,3 +291,8 @@
 
                         
 </html>
+<%
+    }else{
+    response.sendRedirect(request.getContextPath() + "/index.jsp");
+    }
+%>

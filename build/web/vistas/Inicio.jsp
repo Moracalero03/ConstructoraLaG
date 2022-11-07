@@ -5,17 +5,32 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    if (session.getAttribute("usuario") != null) {
+%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Inicio</title> 
+<<<<<<< HEAD
+=======
+<%@ page language="java"%>
+      
+         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
+>>>>>>> f3b9ff76e819f00c153a97b07aabf84c948969e7
     </head>
+<script> 
+    $(function (){
+       $("#header").load("${pageContext.servletContext.contextPath}/template/menu.jsp");
+       $("#footer").load("${pageContext.servletContext.contextPath}/template/pie.jsp");
+    });
+</script>
     <body  style="background-color: #EFF0EB">  
-        <%@include file="../template/menu.jsp" %>
-        
+        <div id="header"></div>      
         <br>
-         
         <center><h1>"Constructora La Gerencia"</h1></center> 
         <div class="container-fluid">
             <div class="row mb-3 justify-content-center">
@@ -98,8 +113,20 @@
                  </div> 
             </div>
         </div>
+<<<<<<< HEAD
         <%@include file="../template/pie.jsp" %>
        <jsp:include page="./template/pie.jsp" flush="true"/>
     </body>
+=======
+        
+ <div id="footer"></div>
+</body>
+>>>>>>> f3b9ff76e819f00c153a97b07aabf84c948969e7
   
 </html>
+<%
+    }else{
+    response.sendRedirect(request.getContextPath() + "/index.jsp");
+    }
+%>
+

@@ -34,18 +34,25 @@
     <link href="${pageContext.servletContext.contextPath}/bootstrap/validetta/validetta.min.css" rel="stylesheet" type="text/css"/>
     <script src="${pageContext.servletContext.contextPath}/bootstrap/validetta/validettaLang-es-ES.js" type="text/javascript"></script> 
     
-    <!--    validacion de campos--> 
+   <!--    validacion de campos--> 
     <script src="${pageContext.servletContext.contextPath}/js/validarCampos.js" type="text/javascript"></script> 
     
     <!--SWEETALERT-->
+<<<<<<< HEAD
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
 
+=======
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
+
+    
+>>>>>>> f3b9ff76e819f00c153a97b07aabf84c948969e7
 </head>
 
 <%
     HttpSession sesion = request.getSession();
     if (sesion.getAttribute("usuario")==null && sesion.getAttribute("idRol")==null ) {
            response.sendRedirect(request.getContextPath()+"/index.jsp");
+
      }else{
 %>
  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-warning">
@@ -56,18 +63,19 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Inicio.jsp">Inicio</a>
       </li>
+    <% 
+                  if (session.getAttribute("idRol").toString().equals("1")) {
+    %>
       <li class="nav-item">
         <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Empleado.jsp">Empleado</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Proyecto.jsp">Proyecto</a>
       </li>
-            <li class="nav-item">
-        <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Detalle_Proyecto.jsp">Detalle proyecto</a>
-      </li>
+           
       <li class="nav-item">
           <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Maquina.jsp">Maquina</a>
       </li>
@@ -82,23 +90,41 @@
           <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte4.jsp">Reporte 4</a>
           <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/Reporte5.jsp">Reporte 5</a>
         </div>
-      </li>           
+      </li>
+      
+      <%
+        }
+      %> 
+       <li class="nav-item">
+        <a class="nav-link" href="${pageContext.servletContext.contextPath}/vistas/Detalle_Proyecto.jsp">Detalle proyecto</a>
+      </li>
+      </li>  
+              <li class="nav-item">
+          <a class="nav-link" href="${pageContext.servletContext.contextPath}/reportes/ReporteBoleta.jsp">Boleta de pago</a>
+      </li> 
     </ul> <lu class="navbar-nav col-2">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
           <%=sesion.getAttribute("usuario") %>
         </a>
-          
+ 
         <div class="dropdown-menu">
+<<<<<<< HEAD
             <a class="dropdown-item" id="open" href="${pageContext.servletContext.contextPath}/index.jsp">Cerrar sesión</a>
            
+=======
+            <a class="dropdown-item"  href="${pageContext.servletContext.contextPath}/index.jsp?cerrar=true"  target="_blank" >Cerrar sesión</a>
+>>>>>>> f3b9ff76e819f00c153a97b07aabf84c948969e7
         </div>
       </li>
     </lu>   
   </div>
- </nav>        
+ </nav>
+            
 <%
-}
+    }
 %>
+
       <br>
       <br>
+      

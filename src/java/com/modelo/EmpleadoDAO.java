@@ -74,6 +74,35 @@ public class EmpleadoDAO extends Conexion {
             this.desconectar();
         }
         return lista;
+    } 
+    
+        public ArrayList<Empleado>mostrarDetalleEmpleados(){
+        ArrayList<Empleado> lista = new ArrayList<>();
+        try {
+            this.conectar();
+            String sql = "select * from empleado em INNER JOIN rol ro ON em.idRol=ro.idRol where estadoE!=\"Asignado\";";
+            PreparedStatement pre = this.getCon().prepareStatement(sql);
+            ResultSet rs;
+            rs = pre.executeQuery();
+            while (rs.next()){
+                Empleado c = new Empleado();
+                c.setIdEmpleado(rs.getInt(1));
+                c.setIdRol(rs.getInt(2));
+                c.setEmpleado(rs.getString(3));
+                c.setUsuario(rs.getString(4));
+                c.setPassword(rs.getString(5));
+                c.setSalario(rs.getDouble(6));
+                c.setRuta(rs.getString(7));
+                c.setEstadoE(rs.getString(8));
+                c.setRol(rs.getString(10));
+                lista.add(c);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al mostrar wacha: "+e.getMessage());
+        } finally {
+            this.desconectar();
+        }
+        return lista;
     }
     
     public int modificarEmpleado(Empleado c){
@@ -120,6 +149,29 @@ public class EmpleadoDAO extends Conexion {
                 this.desconectar();
             }
             return res;
+    }
+    //Reporte
+    public ArrayList<Empleado>mostrarUsuarios(){
+        ArrayList<Empleado> lista = new ArrayList<>();
+        try {
+            this.conectar();
+            String sql = "SELECT usuario FROM  empleado";
+            PreparedStatement pre = this.getCon().prepareStatement(sql);
+            ResultSet rs;
+            rs = pre.executeQuery();
+            while (rs.next()){
+                Empleado c = new Empleado();
+               
+                c.setUsuario(rs.getString(1));
+                
+                lista.add(c);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al mostrar wacha: "+e.getMessage());
+        } finally {
+            this.desconectar();
+        }
+        return lista;
     }
     
 }

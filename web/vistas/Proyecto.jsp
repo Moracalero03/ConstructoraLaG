@@ -17,7 +17,10 @@
 <%@page import="com.modelo.Municipio"%>
 <%@page import="com.modelo.ProyectoDAO"%>
 <%@page import="com.modelo.Proyecto"%>
-<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.ArrayList"%> 
+<%
+    if (session.getAttribute("usuario") != null && session.getAttribute("idRol").toString().equals("1")) {
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -289,3 +292,8 @@
 	                                  });
                                        </script>  
 </html>
+<%
+    }else{
+    response.sendRedirect(request.getContextPath() + "/index.jsp");
+    }
+%>

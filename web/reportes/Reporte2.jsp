@@ -12,6 +12,9 @@
 <%@page import="com.conexion.Conexion"%>
 <%@page import="java.util.HashMap"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    if (session.getAttribute("usuario") != null && session.getAttribute("idRol").toString().equals("1")) {
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,8 +29,8 @@
                 <div class="col-8">
                     <form target="bank">
                             <label>Ponga un rango de fechas (yyyy-mm-dd)</label><br>
-                            <input type="text" class="form-control" name="primerafecha" placeholder="Ej: 2022-10-01"><br>
-                            <input type="text" class="form-control"  name="segundafecha" placeholder="Ej: 2023-10-01">
+                            <input type="text" class="form-control" name="primerafecha" placeholder="Ej: 2022-10-01" required><br>
+                            <input type="text" class="form-control"  name="segundafecha" placeholder="Ej: 2023-10-01" required>
                             <button class="btn btn-primary btn-block mt-4" name="btnGenerar">Generar reporte</button>
                     </form>  
                                 
@@ -64,5 +67,9 @@
         </div>
     </body>
 </html>  
-
+<%
+    }else{
+    response.sendRedirect(request.getContextPath() + "/index.jsp");
+    }
+%>
 
