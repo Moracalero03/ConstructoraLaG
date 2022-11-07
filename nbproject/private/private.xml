@@ -5,6 +5,7 @@
         <group>
             <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/modelo/EmpleadoDAO.java</file>
             <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/controlador/MaquinasServlet.java</file>
+            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/controlador/Detalle_ProyectoServlet.java</file>
             <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/vistas/Proyecto.jsp</file>
             <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/js/Empleados.js</file>
             <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/controlador/EmpleadoServlet.java</file>
@@ -17,7 +18,7 @@
             <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/conexion/Conexion.java</file>
             <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/js/code.js</file>
             <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/vistas/Empleado.jsp</file>
-            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/reportes/reporte1.jrxml</file>
+            <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/index.jsp</file>
             <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/src/java/com/modelo/MaquinariaDAO.java</file>
             <file>file:/C:/Users/canel/Downloads/ITCA%20PERIODO%204/DAUTE/A-PROYECTODAUTE/ConstructoraLaG/web/reportes/Reporte1.jsp</file>
         </group>
