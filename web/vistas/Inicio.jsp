@@ -102,7 +102,7 @@
                  </div> 
             </div>
         </div>
-       <jsp:include page="./template/pie.jsp" />
+       <jsp:include page="${pageContext.servletContext.contextPath}/template/pie.jsp" />
     </body>
   
 </html>
