@@ -25,7 +25,7 @@
             <h1>Reporte de gastos por proyecto</h1>
             <div class="row justify-content-center">
                 <div class="col-8">
-                    <form>
+                    <form target="bank">
                             <label>Seleccione un proyecto</label><br>
                             <select class="form-control" name="sProyecto">
                                 <% 

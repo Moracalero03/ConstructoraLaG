@@ -27,7 +27,7 @@
             <h1>Reporte proyectos por departamento y estado</h1>
             <div class="row justify-content-center">
                 <div class="col-8">
-                    <form>
+                    <form target="bank">
                             <label>Seleccione un departamento</label><br>
                             <select class="form-control" name="sDepa">
                                 <% 

@@ -24,7 +24,7 @@
             <h1>Reporte de proyectos en ejecución</h1>
             <div class="row justify-content-center">
                 <div class="col-8">
-                    <form>
+                    <form target="bank">
                             <label>Ponga un rango de fechas (yyyy-mm-dd)</label><br>
                             <input type="text" class="form-control" name="primerafecha" placeholder="Ej: 2022-10-01"><br>
                             <input type="text" class="form-control"  name="segundafecha" placeholder="Ej: 2023-10-01">
