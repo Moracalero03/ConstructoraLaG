@@ -10,10 +10,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Inicio</title> 
-
-      
-    
-  
     </head>
     <body  style="background-color: #EFF0EB">  
         <%@include file="../template/menu.jsp" %>
@@ -102,7 +98,8 @@
                  </div> 
             </div>
         </div>
-       <jsp:include page="./template/pie.jsp" />
+        <%@include file="../template/pie.jsp" %>
+       <jsp:include page="./template/pie.jsp" flush="true"/>
     </body>
   
 </html>
